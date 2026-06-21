@@ -1,6 +1,6 @@
-<p align="center">
+<div align="center">
   <img src="assets/IconPyAnalytics.png" alt="PyAnalytics" width="180"/>
-</p>
+</div>
 
 # PyAnalytics
 
