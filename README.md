@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Assets/IconPyAnalytics.png" alt="PyAnalytics" width="180"/>
+  <img src="assets/IconPyAnalytics.png" alt="PyAnalytics" width="180"/>
 </p>
 
 # PyAnalytics
@@ -19,7 +19,7 @@ O objetivo é apoiar membros da comunidade na exploração de informações rele
 
 ```
 pyanalytics/
-├── Assets/              # Identidade visual do projeto
+├── assets/              # Identidade visual do projeto
 ├── data/
 │   ├── raw/             # Dados brutos (downloads e fontes originais)
 │   └── processed/       # Dados tratados prontos para análise
