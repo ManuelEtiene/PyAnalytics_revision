@@ -13,8 +13,10 @@ build/
 # Dados locais (mantém apenas .gitkeep nas pastas)
 data/raw/*
 !data/raw/.gitkeep
-data/processed/*
 !data/processed/.gitkeep
+data/processed/sim_por_ano/*
+data/processed/sim_sc_processado.state.json
+data/processed/sim_por_ano_teste/*
 
 # Jupyter
 .ipynb_checkpoints/
