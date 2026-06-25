@@ -72,3 +72,42 @@ Este é um projeto de extensão em construção. Para contribuir:
 
 **Universidade Federal de Santa Catarina (UFSC)**  
 Campus Araranguá — Projeto de Extensão PyAnalytics
+
+## Dúvidas
+
+##### Tem alguma  padronização que devemos seguir nos nomes das branchs?
+Coloquem o nome da atividade sem acentuação, por exemplo: saude_materna_infantil
+
+##### Há diferentes opções para pegar os dados para a utilização, direto do csv no repositório ou por meio da API, podemos escolher qualquer uma?
+Podem usar diretamente do CSV, já fizemos a limpeza para vocês seguirem para a próxima etapa de análise conforme as tarefas.
+
+##### Quando for filtrar os dados que for utilizar na minha tarefa, devo salvar em um csv ou algo do tipo na parte dados processados ou algo assim?
+Use os filtros no código em cima do CSV do repositório. Não precisa salvar o resultado. dos filtros, uma vez que ao filtrar o CSV novamente terá os mesmos resultados.
+CSV inteiro > filtro dos dados que você vai usar > Dados na variavel > Gráficos.
+
+##### Devo salvar os gráficos e análises (os scripts) na pasta de notebooks ou na pasta src/data? 
+Salve em notebooks/Sprint_1_{nome da branch conforme a primeira pergunta}, no exemplo ficaria. Sprint_1_saude_materna_infantil
+
+##### As semanas de desenvolvimento (atualmente 5) são para desenvolver por database ou por item da tarefa?
+Vocês podem se organizar como preferirem, mas recomendamos dividir para as semanas os subtopicos e fazer fragmentado e ir validando, a organização é de vocês.
+##### Vamos explorar e analisar outras bases de dados ou só essa?
+Nessa sprint será somente essa.
+
+##### O que eu escrevo na credencial para conectar meu computador ao repositório no gitlab importa (nunca usei o GitLab, apenas o GitHub)?
+Você precisa gerar um token em "personal access tokens" nas configurações de usuário, para conseguir usar no terminal, mas também é possivel adicionar tudo direto pelo web se achar mais fácil, ou seja, criar no colab, baixar o .ipynb e enviar para a sua branch. (Vou fazer um vídeo explicando como usar das 2 formas neste final de semana).
+
+##### Pode me explicar melhor a estrutura do repositório e o formato de entrega ao fim das semanas?
+Pasta assets - contém arquivos para exibição no projeto (como png, pdf, etc)
+
+Pasta data - está organizado os dados para serem utilizados, no momento tem apenas em precessed os dados do SIM.
+
+Pasta dicionaries - contém dicionário para as bases de dados que vamos utilizar.
+
+Pasta notebooks - conterá os códigos de vocês gerados durante as sprints.
+
+Pasta src - Conterá os arquivos do Streamlit e refinamento inicial dos dados.
+
+Readme - instruções gerais do projeto inclusive da estrutura das pastas e organização do projeto.
+
+Issues board - Conterá as tarefas para cada sprint para vocês.
+
