@@ -89,7 +89,9 @@ CSV inteiro > filtro dos dados que você vai usar > Dados na variavel > Gráfico
 Salve em notebooks/Sprint_1_{nome da branch conforme a primeira pergunta}, no exemplo ficaria. Sprint_1_saude_materna_infantil
 
 ##### As semanas de desenvolvimento (atualmente 5) são para desenvolver por database ou por item da tarefa?
+Cada tarefa é para uma sprint.
 Vocês podem se organizar como preferirem, mas recomendamos dividir para as semanas os subtopicos e fazer fragmentado e ir validando, a organização é de vocês.
+
 ##### Vamos explorar e analisar outras bases de dados ou só essa?
 Nessa sprint será somente essa.
 
