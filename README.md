@@ -73,7 +73,10 @@ Este é um projeto de extensão em construção. Para contribuir:
 **Universidade Federal de Santa Catarina (UFSC)**  
 Campus Araranguá — Projeto de Extensão PyAnalytics
 
-## Dúvidas
+## Dúvidas Frequentes
+
+##### Vídeo ensinando a usar Git:
+[Tutorial Git](https://drive.google.com/file/d/1ShWXZ8Hgi1KDzILxvw4i2ylfh_wKtYNr/view?usp=drive_link) 
 
 ##### Tem alguma  padronização que devemos seguir nos nomes das branchs?
 Coloquem o nome da atividade sem acentuação, por exemplo: saude_materna_infantil
