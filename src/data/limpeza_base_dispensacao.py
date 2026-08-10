@@ -14,7 +14,7 @@ from pathlib import Path
 DATE_FIELDS = {"data", "validade"}
 INTEGER_FIELDS = {"quantidade"}
 CURRENCY_FIELDS = {"custo_medio"}
-DEFAULT_REFERENCIA_PATH = Path("/home/konath/Documentos/Repos/medicamentos_2/Complementar/DADOS_ABERTOS_MEDICAMENTOS.csv")
+DEFAULT_REFERENCIA_PATH = Path("./Complementar/DADOS_ABERTOS_MEDICAMENTOS.csv")
 TEXT_REPLACEMENTS = {
     "centro_custo_nome": {
         "Sem Centro de Custro": "Sem Centro de Custo",
