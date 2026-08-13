@@ -36,3 +36,6 @@ Thumbs.db
 
 # Cache local do Streamlit (lookups CID, municípios, CBO)
 streamlit/.cache/
+
+# Config local do Streamlit
+.streamlit/
