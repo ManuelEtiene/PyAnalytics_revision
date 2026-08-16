@@ -1,0 +1,223 @@
+/* Tema escuro — injetado só quando tema_escuro=True */
+
+.stApp,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"],
+[data-testid="stMainBlockContainer"],
+[data-testid="stHeader"] {
+  background: #12151a !important;
+  color: #e8eaed !important;
+}
+
+html, body,
+h1, h2, h3, h4, h5, h6, p, li, label, span, small, strong, em,
+.stMarkdown,
+[data-testid="stMarkdownContainer"],
+[data-testid="stMarkdownContainer"] * ,
+[data-testid="stCaptionContainer"],
+[data-testid="stCaptionContainer"] *,
+[data-testid="stWidgetLabel"],
+[data-testid="stWidgetLabel"] *,
+.stCaption,
+.stExpander,
+.stExpander *,
+[data-testid="stExpander"],
+[data-testid="stExpander"] *,
+[data-testid="stExpanderDetails"],
+[data-testid="stExpanderDetails"] *,
+[data-testid="stAlert"],
+[data-testid="stText"],
+.stText,
+div[data-testid="stVerticalBlock"] > div {
+  color: #e8eaed !important;
+}
+
+[data-testid="stHorizontalBlock"]:has(.st-key-nav_search) {
+  background: #1a1e24 !important;
+  border-bottom-color: #2c333d !important;
+}
+
+.pya-title {
+  color: #6ba6ff !important;
+}
+
+.st-key-abrir_menu button,
+.st-key-header_home a,
+.st-key-header_sobre a,
+.st-key-header_nav a[href],
+.st-key-btn_tema button {
+  color: #e8eaed !important;
+}
+
+.st-key-abrir_menu button:hover,
+.st-key-header_home a:hover,
+.st-key-header_sobre a:hover,
+.st-key-btn_tema button:hover {
+  color: #6ba6ff !important;
+}
+
+.st-key-pya_drawer,
+div[class*="st-key-pya_drawer"] {
+  background: #1a1e24 !important;
+  border-right-color: #2c333d !important;
+  box-shadow: 8px 0 24px rgba(0, 0, 0, 0.45) !important;
+  color: #e8eaed !important;
+}
+
+.st-key-pya_drawer a,
+.st-key-pya_drawer p,
+.st-key-pya_drawer span,
+.st-key-pya_drawer [data-testid="stMarkdownContainer"],
+.st-key-pya_drawer [data-testid="stMarkdownContainer"] * {
+  color: #e8eaed !important;
+}
+
+/* Combobox de busca no dark mode */
+.st-key-nav_search .react-aria-ComboBox > [role="group"],
+.st-key-nav_search [data-testid="stSelectbox"] [role="group"] {
+  background: #2c333d !important;
+  border: 1.5px solid #5a6573 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.st-key-nav_search .react-aria-ComboBox > [role="group"]:focus-within,
+.st-key-nav_search [data-testid="stSelectbox"] [role="group"]:focus-within {
+  background: #1a1e24 !important;
+  border-color: #6ba6ff !important;
+  box-shadow: 0 0 0 2px rgba(107, 166, 255, 0.3) !important;
+}
+
+.st-key-nav_search input[role="combobox"],
+.st-key-nav_search input {
+  color: #e8eaed !important;
+  -webkit-text-fill-color: #e8eaed !important;
+  caret-color: #e8eaed !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+.st-key-nav_search input::placeholder {
+  color: #9aa3b2 !important;
+  -webkit-text-fill-color: #9aa3b2 !important;
+  opacity: 1 !important;
+}
+
+/* Chevron: não forçar fill em path[fill=none] (vira quadrado) */
+.st-key-nav_search [role="group"] > button {
+  color: #e8eaed !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.st-key-nav_search [role="group"] > button svg {
+  color: #e8eaed !important;
+  background: transparent !important;
+  fill: currentColor !important;
+}
+
+.st-key-nav_search [role="group"] > button svg path[fill="none"] {
+  fill: none !important;
+}
+
+.stTextInput input {
+  background: #2c333d !important;
+  color: #e8eaed !important;
+  border: 1.5px solid #5a6573 !important;
+}
+
+.stTextInput input:focus {
+  background: #1a1e24 !important;
+  border-color: #6ba6ff !important;
+  box-shadow: 0 0 0 2px rgba(107, 166, 255, 0.3) !important;
+}
+
+/* Lista do combobox no tema escuro */
+[data-baseweb="popover"] [data-baseweb="menu"],
+[data-baseweb="menu"],
+ul[role="listbox"] {
+  background: #1a1e24 !important;
+  color: #e8eaed !important;
+  border-color: #2c333d !important;
+}
+
+ul[role="listbox"] li,
+[data-baseweb="menu"] li {
+  color: #e8eaed !important;
+}
+
+ul[role="listbox"] li:hover,
+[data-baseweb="menu"] li:hover {
+  background: #2c333d !important;
+}
+
+.glass-card,
+.alert-card {
+  background: rgba(26, 30, 36, 0.95) !important;
+  border-color: #2c333d !important;
+  color: #e8eaed !important;
+}
+
+.glass-card *,
+.alert-card * {
+  color: #e8eaed !important;
+}
+
+.glass-card .kpi-value {
+  color: #6ba6ff !important;
+}
+
+.glass-card .topic-kicker,
+.glass-card .kpi-label,
+.glass-card .muted,
+.alert-card .alert-kicker,
+.alert-card .kpi-label,
+.alert-card .muted {
+  color: #c5cad3 !important;
+}
+
+.alert-card .alert-value {
+  color: #ff7a8a !important;
+}
+
+.section-title {
+  color: #c5cad3 !important;
+}
+
+.chip-gray {
+  background: #2c333d !important;
+  color: #e8eaed !important;
+}
+
+.pya-sobre-titulo h2 {
+  color: #e8eaed !important;
+}
+
+.pya-sobre-logo {
+  border-color: #e8eaed;
+  background: #ffffff;
+}
+
+a,
+.stPageLink a,
+[data-testid="stPageLink-NavLink"] {
+  color: #8bb6ff !important;
+}
+
+/* Expanders e detalhes Streamlit */
+[data-testid="stExpander"] details,
+[data-testid="stExpander"] summary {
+  background: #1a1e24 !important;
+  color: #e8eaed !important;
+  border-color: #2c333d !important;
+}
+
+/* Plotly: fundo transparente já vem do tema; reforça textos SVG */
+.js-plotly-plot .gtitle,
+.js-plotly-plot .xtick text,
+.js-plotly-plot .ytick text,
+.js-plotly-plot .legendtext,
+.js-plotly-plot text {
+  fill: #e8eaed !important;
+}

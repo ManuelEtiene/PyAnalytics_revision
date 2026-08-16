@@ -26,8 +26,19 @@ pyanalytics/
 ├── notebooks/           # Notebooks exploratórios e relatórios
 ├── src/
 │   └── data/            # Scripts de ingestão, limpeza e transformação
+├── streamlit/           # Portal web (dashboard público Streamlit)
+│   ├── app.py           # Entrada do site
+│   ├── components/      # Header, menu, cards, etc.
+│   ├── views/           # Páginas (home, sobre, SIM, retrato…)
+│   ├── data/            # Carga e preparação dos dados do portal
+│   ├── charts/          # Gráficos Plotly
+│   ├── styles/          # CSS (tema claro/escuro)
+│   └── README.md        # Documentação detalhada do portal
+├── requirements.txt     # Dependências (Streamlit, Pandas, Plotly…)
 └── README.md
 ```
+
+Documentação completa do site: [`streamlit/README.md`](streamlit/README.md).
 
 ## Como começar
 
@@ -53,12 +64,20 @@ pip install -r requirements.txt
 
 4. Coloque arquivos brutos em `data/raw/` e execute os scripts de `src/data/` para gerar dados em `data/processed/`.
 
+5. Para subir o **portal Streamlit** (com o CSV do SIM em `data/processed/`):
+
+```bash
+streamlit run streamlit/app.py
+```
+
+Abre em [http://localhost:8501](http://localhost:8501).
+
 ## Fluxo de trabalho sugerido
 
 1. **Obter dados** — salvar arquivos originais em `data/raw/`
 2. **Processar** — aplicar limpeza e transformações via `src/data/`
 3. **Explorar** — desenvolver análises em `notebooks/`
-4. **Publicar** — gerar visualizações para divulgação à comunidade
+4. **Publicar** — exibir no portal em `streamlit/` (e outras visualizações para a comunidade)
 
 ## Contribuindo
 
@@ -73,7 +92,10 @@ Este é um projeto de extensão em construção. Para contribuir:
 **Universidade Federal de Santa Catarina (UFSC)**  
 Campus Araranguá — Projeto de Extensão PyAnalytics
 
-## Dúvidas
+## Dúvidas Frequentes
+
+##### Vídeo ensinando a usar Git:
+[Tutorial Git](https://drive.google.com/file/d/1ShWXZ8Hgi1KDzILxvw4i2ylfh_wKtYNr/view?usp=drive_link) 
 
 ##### Tem alguma  padronização que devemos seguir nos nomes das branchs?
 Coloquem o nome da atividade sem acentuação, por exemplo: saude_materna_infantil
@@ -107,7 +129,9 @@ Pasta dicionaries - contém dicionário para as bases de dados que vamos utiliza
 
 Pasta notebooks - conterá os códigos de vocês gerados durante as sprints.
 
-Pasta src - Conterá os arquivos do Streamlit e refinamento inicial dos dados.
+Pasta src - scripts de ingestão, limpeza e transformação dos dados.
+
+Pasta streamlit - portal web público (dashboard Streamlit) com as análises.
 
 Readme - instruções gerais do projeto inclusive da estrutura das pastas e organização do projeto.
 

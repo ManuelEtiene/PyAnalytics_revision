@@ -33,3 +33,9 @@ Thumbs.db
 
 # Alocação de horas (local)
 .alocacao-horas.json
+
+# Cache local do Streamlit (lookups CID, municípios, CBO)
+streamlit/.cache/
+
+# Config local do Streamlit
+.streamlit/

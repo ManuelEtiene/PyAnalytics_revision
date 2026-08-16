@@ -35,6 +35,24 @@ ADDITIONAL_COLUMNS = [
     "SC_RESIDENCIA",
     "SC_OCORRENCIA",
 ]
+
+# Alguns layouts historicos do SIM usam estes nomes. Os campos canonicos sao
+# preenchidos sem apagar os campos de origem, o que mantem o arquivo completo
+# auditavel e da ao modo ``analytic`` um esquema consistente entre os anos.
+CANONICAL_ALIASES = {
+    "ESTCIV": ("ESTCIVIL",),
+    "OCUP": ("OCUPACAO",),
+    "QTDFILVIVO": ("FILHVIVOS",),
+    "QTDFILMORT": ("FILHMORT",),
+    "GRAVIDEZ": ("TIPOGRAV",),
+    "PARTO": ("TIPOPARTO",),
+    "PESO": ("PESONASC",),
+    "SEMAGESTAC": ("SEMANGEST",),
+}
+
+# O modo analytic e deliberadamente mais amplo que uma analise especifica.
+# Ele retem dimensoes demograficas, temporais, territoriais, assistenciais e
+# de causa/circunstancia que sao recorrentes em estudos epidemiologicos.
 ANALYTIC_COLUMNS = [
     "CONTADOR",
     "TIPOBITO",
@@ -54,6 +72,8 @@ ANALYTIC_COLUMNS = [
     "CODMUNRES",
     "LOCOCOR",
     "CODMUNOCOR",
+    "CODESTAB",
+    "ESTABDESCR",
     "IDADEMAE",
     "ESCMAE",
     "ESCMAE2010",
@@ -63,6 +83,7 @@ ANALYTIC_COLUMNS = [
     "QTDFILMORT",
     "GRAVIDEZ",
     "GESTACAO",
+    "SEMAGESTAC",
     "PARTO",
     "OBITOPARTO",
     "PESO",
@@ -73,6 +94,7 @@ ANALYTIC_COLUMNS = [
     "CIRURGIA",
     "NECROPSIA",
     "CAUSABAS",
+    "CAUSAMAT",
     "LINHAA",
     "LINHAB",
     "LINHAC",
@@ -81,6 +103,16 @@ ANALYTIC_COLUMNS = [
     "CIRCOBITO",
     "ACIDTRAB",
     "FONTE",
+    "TPMORTEOCO",
+    "MORTEPARTO",
+    "TPOBITOCOR",
+    "NUDIASOBIN",
+    "NUDIASOBCO",
+    "MAT_CLAS",
+    "ETNIA",
+    "AREARES",
+    "CRSRES",
+    "CRSOCOR",
     "DTOBITO_BRUTO",
     "DTNASC_BRUTO",
     "SEXO_COD",
@@ -185,19 +217,28 @@ def build_output_fieldnames(input_fieldnames: list[str], *, keep_legacy_columns:
             fieldnames.append(field)
             seen.add(field)
 
-    for field in ADDITIONAL_COLUMNS:
+    for field in (*ADDITIONAL_COLUMNS, *CANONICAL_ALIASES):
         if field not in seen:
             fieldnames.append(field)
             seen.add(field)
 
     if mode == "analytic":
-        return [field for field in ANALYTIC_COLUMNS if field in seen]
+        # O schema analitico deve ser estavel mesmo se um campo nao existir em
+        # determinado ano/layout. Nesse caso a coluna e mantida vazia, em vez
+        # de desaparecer e quebrar consultas que combinam varios anos.
+        return list(ANALYTIC_COLUMNS)
 
     return fieldnames
 
 
 def postprocess_row(row: dict[str, Any], *, keep_legacy_columns: bool) -> dict[str, Any]:
     processed = dict(row)
+
+    for canonical_name, aliases in CANONICAL_ALIASES.items():
+        processed[canonical_name] = resolve_value(
+            processed, canonical_name, *aliases
+        )
+
     municipality_residence = resolve_value(processed, "CODMUNRES", "MUNIRES")
     municipality_occurrence = resolve_value(processed, "CODMUNOCOR", "MUNIOCOR")
     date_of_death_raw = resolve_value(processed, "DTOBITO_BRUTO", "DTOBITO", "DATAOBITO")
