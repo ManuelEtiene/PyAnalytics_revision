@@ -7,6 +7,7 @@ import streamlit as st
 
 from data.constants import FAIXAS, ROTULOS_FAIXAS
 from data.decode import (
+    aplica_assistmed,
     aplica_esc,
     aplica_local,
     aplica_raca,
@@ -33,6 +34,8 @@ def _preenche_categorias(df: pd.DataFrame, cid: dict) -> pd.DataFrame:
     df["RACACOR"] = aplica_raca(df["RACACOR"])
     df["ESC2010"] = aplica_esc(df["ESC2010"]) if "ESC2010" in df else "Ignorado"
     df["LOCOCOR"] = aplica_local(df["LOCOCOR"])
+    if "ASSISTMED" in df.columns:
+        df["ASSISTMED"] = aplica_assistmed(df["ASSISTMED"])
     df["CAUSABAS_DESC"] = df["CAUSABAS"].map(lambda c: decodifica_causa(c, cid))
     return df
 

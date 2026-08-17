@@ -12,3 +12,10 @@ def register(mapping: dict) -> None:
 def page(page_id: str):
     """Retorna a página registrada para navegação."""
     return PAGES[page_id]
+
+
+def href(page_id: str) -> str:
+    """Caminho da página (ex.: /sim, /retrato)."""
+    pag = page(page_id)
+    path = getattr(pag, "url_path", None) or page_id.replace("_", "-")
+    return f"/{str(path).lstrip('/')}"

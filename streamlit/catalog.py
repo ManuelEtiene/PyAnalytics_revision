@@ -45,6 +45,23 @@ SIM_HUB = NavItem(
     group="SIM",
 )
 
+MEDICAMENTOS = NavItem(
+    id="medicamentos",
+    title="Medicamentos",
+    short="Medicamentos",
+    description="Dispensação e acesso a medicamentos em Araranguá.",
+    keywords=("medicamentos", "farmacia", "farmácia", "dispensacao"),
+    ready=False,
+    icon="medication",
+    group="Medicamentos",
+)
+
+
+def bases() -> tuple[NavItem, ...]:
+    """Bases da Home: uma carta por dataset."""
+    return (SIM_HUB, MEDICAMENTOS)
+
+
 TOPICS = (
     NavItem(
         id="retrato",
@@ -52,14 +69,13 @@ TOPICS = (
         short="Retrato",
         description="Perfil geral dos óbitos de residentes em Araranguá.",
         keywords=("retrato", "perfil", "municipio", "município", "geral", "sim"),
-        ready=True,
         icon="analytics",
         group="SIM",
     ),
     NavItem(
         id="evitavel",
         title="Mortalidade evitável e desigualdades sociais",
-        short="Evitável",
+        short="Mortes evitáveis",
         description="Óbitos evitáveis e diferenças sociais na mortalidade.",
         keywords=("evitavel", "evitável", "desigualdade", "escolaridade", "sim"),
         ready=False,
@@ -67,22 +83,11 @@ TOPICS = (
         group="SIM",
     ),
     NavItem(
-        id="materna",
-        title="Saúde materna e infantil",
-        short="Materna e infantil",
-        description="Óbitos maternos, fetais e de crianças.",
-        keywords=("materna", "infantil", "gestante", "bebe", "bebê", "sim"),
-        ready=False,
-        icon="child_care",
-        group="SIM",
-    ),
-    NavItem(
         id="onde_morrem",
-        title="Onde as pessoas morrem?",
+        title="Óbitos por local de ocorrência",
         short="Local de óbito",
-        description="Hospital, domicílio, via pública e deslocamento.",
+        description="Hospital, domicílio, via pública e comparação regional.",
         keywords=("onde", "local", "hospital", "domicilio", "domicílio", "sim"),
-        ready=False,
         icon="location_on",
         group="SIM",
     ),
@@ -92,8 +97,16 @@ TOPICS = (
         short="Mortes violentas",
         description="Causas externas: acidentes, agressões e suicídios.",
         keywords=("violentas", "agressao", "acidente", "sim"),
-        ready=False,
         icon="report",
+        group="SIM",
+    ),
+    NavItem(
+        id="materna",
+        title="Saúde materna e infantil",
+        short="Materna e infantil",
+        description="Óbitos maternos, fetais e de crianças.",
+        keywords=("materna", "infantil", "gestante", "bebe", "bebê", "sim"),
+        icon="child_care",
         group="SIM",
     ),
 )

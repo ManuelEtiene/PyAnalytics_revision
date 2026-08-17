@@ -81,6 +81,19 @@ def mapa_populacao() -> dict:
         return {}
 
 
+@st.cache_data(show_spinner="Carregando coordenadas municipais...")
+def coords_municipios() -> pd.DataFrame:
+    """Código IBGE 6 dígitos, nome, latitude e longitude."""
+    path = _baixa(MUN_URL, cache_dir() / "municipios.csv")
+    if path is None:
+        return pd.DataFrame(columns=["COD6", "nome", "lat", "lon"])
+    mun = pd.read_csv(path)
+    mun["COD6"] = mun["codigo_ibge"].astype(str).str[:6]
+    return mun.rename(columns={"latitude": "lat", "longitude": "lon"})[
+        ["COD6", "nome", "lat", "lon"]
+    ]
+
+
 @st.cache_data(show_spinner="Carregando ocupações CBO...")
 def mapa_cbo() -> dict:
     """Código CBO-2002 → nome da ocupação."""

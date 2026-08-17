@@ -23,17 +23,32 @@ def alert_card(kicker: str, titulo: str, texto: str, valor: str, detalhe: str) -
       <h2 style="font-family:'Hanken Grotesk',sans-serif;margin:0.2rem 0 0.5rem 0;">{titulo}</h2>
       <p class="muted">{texto}</p>
       <div class="alert-value">{valor}</div>
-      <p class="kpi-label">{detalhe}</p>
+      <div class="alert-footer">
+        <p class="kpi-label">{detalhe}</p>
+        <span class="alert-dataset-slot"></span>
+      </div>
     </div>
     """
 
 
-def topic_card(fonte: str, titulo: str, texto: str, status: str) -> str:
-    """Card de atalho para um tópico da SIM."""
+def base_card(titulo: str, texto: str, status: str) -> str:
+    """Card quadrado de uma base (SIM, Medicamentos…)."""
     return f"""
-    <div class="glass-card" style="min-height:160px;">
-      <p class="topic-kicker">{fonte}</p>
-      <h3 style="font-family:'Hanken Grotesk',sans-serif;margin:0.3rem 0;">{titulo}</h3>
+    <div class="glass-card base-card">
+      <p class="topic-kicker">Base</p>
+      <p class="base-card-title">{titulo}</p>
+      <p class="muted">{texto}</p>
+      <p class="topic-kicker">{status}</p>
+    </div>
+    """
+
+
+def analise_card(titulo: str, texto: str, status: str) -> str:
+    """Card de um tema da SIM (carrossel)."""
+    return f"""
+    <div class="glass-card analise-card">
+      <p class="topic-kicker">Análise</p>
+      <p class="base-card-title">{titulo}</p>
       <p class="muted">{texto}</p>
       <p class="topic-kicker">{status}</p>
     </div>

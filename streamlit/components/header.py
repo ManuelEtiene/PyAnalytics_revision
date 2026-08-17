@@ -16,17 +16,22 @@ LOGO = _REPO_LOGO if _REPO_LOGO.exists() else _LOCAL_LOGO
 
 def render_header() -> None:
     """Faixa do topo (CSS deixa fixa na tela)."""
-    nav, marca, busca, icones = st.columns(
-        [1.0, 3.2, 4.5, 0.55], vertical_alignment="center"
-    )
-    with nav:
-        _botoes_nav()
-    with marca:
-        _marca()
-    with busca:
-        _busca_combobox()
-    with icones:
-        _botao_tema()
+    aberto = st.session_state.get("busca_aberta", False)
+    marcador = "busca_aberta" if aberto else "busca_fechada"
+    with st.container(key=marcador):
+        nav, marca, busca, lupa, icones = st.columns(
+            [1.0, 3.2, 4.5, 0.55, 0.55], vertical_alignment="center"
+        )
+        with nav:
+            _botoes_nav()
+        with marca:
+            _marca()
+        with busca:
+            _busca_combobox()
+        with lupa:
+            _botao_busca()
+        with icones:
+            _botao_tema()
 
 
 def _busca_combobox() -> None:
@@ -48,6 +53,20 @@ def _busca_combobox() -> None:
         st.switch_page(page(por_titulo[escolha].id))
 
 
+def _botao_busca() -> None:
+    """Abre ou fecha a barra de pesquisa no mobile."""
+    aberto = st.session_state.get("busca_aberta", False)
+    with st.container(key="btn_busca"):
+        if st.button(
+            "Buscar",
+            key="btn_lupa",
+            icon=":material/search:",
+            type="tertiary",
+        ):
+            st.session_state.busca_aberta = not aberto
+            st.rerun()
+
+
 def _botao_tema() -> None:
     """Alterna entre tema claro e escuro."""
     escuro = st.session_state.get("tema_escuro", False)
@@ -64,21 +83,18 @@ def _botao_tema() -> None:
 
 
 def _botoes_nav() -> None:
-    """Hambúrguer, info e início na mesma faixa, bem juntos."""
+    """Hambúrguer e início na mesma faixa."""
     with st.container(key="header_nav"):
-        menu, sobre, inicio = st.columns(3, gap="small")
+        menu, inicio = st.columns(2, gap="small")
         with menu:
             _botao_menu()
-        with sobre:
-            with st.container(key="header_sobre"):
-                st.page_link(page("sobre"), label="Sobre", icon=":material/info:")
         with inicio:
             with st.container(key="header_home"):
                 st.page_link(page("home"), label="Início", icon=":material/home:")
 
 
 def _marca() -> None:
-    """Logo e nome do PyAnalytics (sem fullscreen ao clicar)."""
+    """Logo e título no mesmo lugar de antes; o nome abre Sobre."""
     imagem = base64.b64encode(LOGO.read_bytes()).decode()
     with st.container(key="pya_brand"):
         st.html(
@@ -86,7 +102,7 @@ def _marca() -> None:
             <div class="pya-brand-row">
               <img class="pya-logo" src="data:image/png;base64,{imagem}"
                    alt="PyAnalytics" width="200" height="200">
-              <span class="pya-title">PyAnalytics</span>
+              <a class="pya-title" href="/sobre" target="_self">PyAnalytics</a>
             </div>
             """
         )

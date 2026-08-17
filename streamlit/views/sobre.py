@@ -5,11 +5,24 @@ from pathlib import Path
 
 import streamlit as st
 
-from navigation import page
-
 _REPO_LOGO = Path(__file__).resolve().parents[2] / "assets" / "IconPyAnalytics.png"
 _LOCAL_LOGO = Path(__file__).resolve().parents[1] / "assets" / "pyanalytics.png"
 LOGO = _REPO_LOGO if _REPO_LOGO.exists() else _LOCAL_LOGO
+
+INTEGRANTES = (
+    "Andréa Sabedra Bordin",
+    "André Gaspar",
+    "Nathália Geraldino Ribas",
+    "Igor de Matos da Rosa",
+    "João Vitor Caetano da Rosa",
+    "Mirela Pedro Tereza",
+    "Mamadjam Jalo",
+    "João Pinto Ferreira",
+    "Lucas Teixeira Belli",
+    "Manuel Etiene da Silva João",
+    "Esther de Olivera",
+    "Beatriz Pereira Goulart",
+)
 
 
 def render() -> None:
@@ -23,7 +36,7 @@ def render() -> None:
     )
     _objetivos()
     _como_usar()
-    st.page_link(page("home"), label="Voltar ao início", icon=":material/dashboard:")
+    _integrantes()
 
 
 def _titulo() -> None:
@@ -71,3 +84,9 @@ def _como_usar() -> None:
         "(https://apidadosabertos.saude.gov.br/vigilancia-e-meio-ambiente/"
         "sistema-de-informacao-sobre-mortalidade)."
     )
+
+
+def _integrantes() -> None:
+    """Equipe do projeto de extensão."""
+    st.markdown("### Integrantes")
+    st.markdown("\n".join(f"- {nome}" for nome in INTEGRANTES))

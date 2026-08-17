@@ -1,16 +1,12 @@
-"""Página inicial: KPIs, atalhos e preview da série histórica."""
+"""Página inicial: KPIs e atalhos para as bases do portal."""
 
 import streamlit as st
 
-from catalog import TOPICS
-from charts.perfil import obitos_por_ano
-from components.cards import alert_card, kpi_card, topic_card
-from components.plot import plot
+from catalog import NavItem, bases
+from components.cards import alert_card, base_card, kpi_card
 from data.kpis import resumo_home
 from navigation import page
-from views.common import load_or_stop, periodo
-
-DESTAQUES = ("retrato", "onde_morrem", "violentas")
+from views.common import load_or_stop
 
 
 def render() -> None:
@@ -22,8 +18,6 @@ def render() -> None:
     _alerta(kpis)
     st.write("")
     _atalhos()
-    st.write("")
-    _preview(df, periodo(df))
 
 
 def _kpis(kpis: dict) -> None:
@@ -58,42 +52,51 @@ def _card_hospital(kpis: dict) -> str:
 
 
 def _alerta(kpis: dict) -> None:
-    """Card da causa principal, com atalho para o Retrato."""
-    st.markdown(
-        alert_card(
-            "Causa mais frequente",
-            kpis["causa"],
-            "Principal causa básica de óbito entre residentes de Araranguá.",
-            _br(kpis["n_causa"]),
-            f"{kpis['pct_causa']:.1f}% do total no período",
-        ),
-        unsafe_allow_html=True,
+    """Card da causa principal, com atalho para a Visão da Base."""
+    with st.container(key="alerta_causa"):
+        st.markdown(_html_alerta(kpis), unsafe_allow_html=True)
+        _botao_acessar_dataset()
+
+
+def _html_alerta(kpis: dict) -> str:
+    """HTML do card de causa mais frequente."""
+    return alert_card(
+        "Causa mais frequente",
+        kpis["causa"],
+        "Principal causa básica de óbito entre residentes de Araranguá.",
+        _br(kpis["n_causa"]),
+        f"{kpis['pct_causa']:.1f}% do total no período",
     )
-    st.page_link(page("retrato"), label="Ver retrato da mortalidade", icon=":material/analytics:")
+
+
+def _botao_acessar_dataset() -> None:
+    """Abre a Visão da Base SIM na mesma guia."""
+    with st.container(key="alerta_causa_acoes"):
+        st.page_link(page("sim"), label="Acessar dataset")
 
 
 def _atalhos() -> None:
-    """Três cards clicáveis para tópicos da SIM."""
-    st.markdown('<p class="section-title">Explore os temas</p>', unsafe_allow_html=True)
-    colunas = st.columns(3)
-    por_id = {item.id: item for item in TOPICS}
-    for coluna, item_id in zip(colunas, DESTAQUES):
-        item = por_id[item_id]
-        status = "Disponível" if item.ready else "Em breve"
-        with coluna:
-            st.markdown(
-                topic_card("SIM", item.short, item.description, status),
-                unsafe_allow_html=True,
-            )
-            st.page_link(page(item.id), label="Abrir", icon=f":material/{item.icon}:")
+    """Cards quadrados: uma base cada (clique vai à visão geral)."""
+    st.markdown('<p class="section-title">Explore as bases</p>', unsafe_allow_html=True)
+    with st.container(key="explore_bases"):
+        colunas = st.columns(len(bases()))
+        for coluna, item in zip(colunas, bases()):
+            with coluna:
+                _card_base(item)
 
 
-def _preview(df, periodo_txt: str) -> None:
-    """Gráfico de óbitos por ano levando ao Retrato."""
-    st.markdown('<p class="section-title">Visão geral da mortalidade</p>', unsafe_allow_html=True)
-    fig, insight = obitos_por_ano(df, periodo_txt)
-    plot(fig, insight)
-    st.page_link(page("retrato"), label="Ver todos os gráficos", icon=":material/show_chart:")
+def _card_base(item: NavItem) -> None:
+    """Card da base; clique na disponível abre a visão geral."""
+    status = "Disponível" if item.ready else "Em breve"
+    with st.container(key=f"base_{item.id}"):
+        st.html(base_card(item.short, item.description, status))
+        if item.ready:
+            _abrir_base(item.id)
+
+
+def _abrir_base(page_id: str) -> None:
+    """Mesmo st.page_link de Acessar dataset, cobrindo o card."""
+    st.page_link(page(page_id), label="Abrir")
 
 
 def _br(numero: int) -> str:

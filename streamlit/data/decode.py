@@ -4,7 +4,22 @@ from __future__ import annotations
 
 import pandas as pd
 
-from data.constants import MAPA_ESC2010, MAPA_LOCOCOR, MAPA_RACACOR, MAPA_SEXO
+from data.constants import (
+    MAPA_ASSISTMED,
+    MAPA_ESC2010,
+    MAPA_ESCMAE,
+    MAPA_GESTACAO,
+    MAPA_GRAVIDEZ,
+    MAPA_LOCOCOR,
+    MAPA_OBITOGRAV,
+    MAPA_OBITOPARTO,
+    MAPA_OBITOPUERP,
+    MAPA_PARTO,
+    MAPA_RACACOR,
+    MAPA_SEXO,
+    MAPA_TIPOBITO,
+    MAPA_TPMORTEOCO,
+)
 
 
 def map_label(valor, mapa: dict) -> str:
@@ -63,3 +78,42 @@ def aplica_esc(serie: pd.Series) -> pd.Series:
 def aplica_local(serie: pd.Series) -> pd.Series:
     """Decodifica local de ocorrência."""
     return serie.map(lambda v: map_label(v, MAPA_LOCOCOR))
+
+
+def aplica_assistmed(serie: pd.Series) -> pd.Series:
+    """Decodifica assistência médica; vazio vira 'Não informado'."""
+    return serie.map(_rotulo_assistmed)
+
+
+def _rotulo_assistmed(valor) -> str:
+    """Um valor de ASSISTMED em texto."""
+    if valor is None or (isinstance(valor, float) and pd.isna(valor)):
+        return "Não informado"
+    chave = str(valor).strip().replace(".0", "")
+    if chave == "" or chave.lower() in {"nan", "none", "null"}:
+        return "Não informado"
+    return MAPA_ASSISTMED.get(chave, chave)
+
+
+def aplica_mapa(serie: pd.Series, mapa: dict) -> pd.Series:
+    """Aplica um mapa SIM à série, preservando texto já decodificado."""
+    return serie.map(lambda v: map_label(v, mapa))
+
+
+def aplica_campos_materna(df: pd.DataFrame) -> pd.DataFrame:
+    """Decodifica colunas usadas na análise materna e infantil."""
+    pares = (
+        ("TIPOBITO", MAPA_TIPOBITO),
+        ("GRAVIDEZ", MAPA_GRAVIDEZ),
+        ("PARTO", MAPA_PARTO),
+        ("OBITOPARTO", MAPA_OBITOPARTO),
+        ("GESTACAO", MAPA_GESTACAO),
+        ("OBITOPUERP", MAPA_OBITOPUERP),
+        ("OBITOGRAV", MAPA_OBITOGRAV),
+        ("TPMORTEOCO", MAPA_TPMORTEOCO),
+        ("ESCMAE2010", MAPA_ESCMAE),
+    )
+    for coluna, mapa in pares:
+        if coluna in df.columns:
+            df[coluna] = aplica_mapa(df[coluna], mapa)
+    return df

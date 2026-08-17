@@ -105,6 +105,124 @@ def bar_horizontal(serie, title: str, mostrar_pct: bool = True, cores=None):
     return apply_layout(fig, title)
 
 
+def barras_empilhadas(tabela, title: str, horizontal: bool = False, cores=None):
+    """Barras empilhadas a partir de uma tabela (index × colunas)."""
+    fig = go.Figure()
+    paleta = cores or PALETTE
+    for i, col in enumerate(tabela.columns):
+        kwargs = _barra_empilhada(tabela, col, paleta[i % len(paleta)], horizontal)
+        fig.add_bar(**kwargs)
+    fig.update_layout(barmode="stack")
+    if horizontal:
+        fig.update_yaxes(autorange="reversed")
+    return apply_layout(fig, title)
+
+
+def _barra_empilhada(tabela, col, cor: str, horizontal: bool) -> dict:
+    """Uma camada do empilhamento."""
+    eixo = [str(i) for i in tabela.index]
+    valores = list(tabela[col])
+    if horizontal:
+        return dict(y=eixo, x=valores, orientation="h", name=str(col), marker_color=cor)
+    return dict(x=eixo, y=valores, name=str(col), marker_color=cor)
+
+
+def barras_agrupadas(tabela, title: str, horizontal: bool = False):
+    """Barras lado a lado (ex.: Araranguá × Tubarão × SC)."""
+    fig = go.Figure()
+    for i, col in enumerate(tabela.columns):
+        kwargs = _barra_empilhada(tabela, col, PALETTE[i % len(PALETTE)], horizontal)
+        fig.add_bar(**kwargs)
+    fig.update_layout(barmode="group")
+    if horizontal:
+        fig.update_yaxes(autorange="reversed")
+    return apply_layout(fig, title)
+
+
+def boxplot(grupos: dict, title: str) -> go.Figure:
+    """Caixas sem outliers, uma por categoria."""
+    fig = go.Figure()
+    for i, (nome, valores) in enumerate(grupos.items()):
+        fig.add_box(
+            y=list(valores),
+            name=str(nome),
+            marker_color=PALETTE[i % len(PALETTE)],
+            boxpoints=False,
+        )
+    return apply_layout(fig, title)
+
+
+def histograma(valores, title: str, nbins: int = 10, color: str = PRIMARY) -> go.Figure:
+    """Histograma simples."""
+    fig = go.Figure(go.Histogram(x=list(valores), nbinsx=nbins, marker_color=color))
+    return apply_layout(fig, title)
+
+
+def histograma_hue(df, x: str, hue: str, title: str, nbins: int = 10) -> go.Figure:
+    """Histograma colorido por categoria."""
+    fig = px.histogram(
+        df, x=x, color=hue, nbins=nbins, barmode="group",
+        color_discrete_sequence=PALETTE,
+    )
+    return apply_layout(fig, title)
+
+
+def linha(serie, title: str) -> go.Figure:
+    """Série em linha com marcadores."""
+    fig = go.Figure(
+        go.Scatter(
+            x=[str(i) for i in serie.index],
+            y=list(serie.values),
+            mode="lines+markers",
+            line=dict(color=PRIMARY),
+        )
+    )
+    return apply_layout(fig, title)
+
+
+def dispersao(x, y, title: str, xlabel: str = "", ylabel: str = "") -> go.Figure:
+    """Nuvem de pontos."""
+    fig = go.Figure(
+        go.Scatter(
+            x=list(x),
+            y=list(y),
+            mode="markers",
+            marker=dict(color=PRIMARY, opacity=0.55, size=8),
+        )
+    )
+    fig.update_xaxes(title=xlabel)
+    fig.update_yaxes(title=ylabel)
+    return apply_layout(fig, title)
+
+
+def bolhas_geo(geo, title: str) -> go.Figure:
+    """Mapa de bolhas (longitude × latitude)."""
+    fig = go.Figure(
+        go.Scatter(
+            x=geo["lon"], y=geo["lat"], mode="markers+text",
+            text=_rotulos_geo(geo), textposition="top center",
+            marker=_marcador_bolha(geo),
+            hovertext=geo["nome"] + "<br>" + geo["obitos"].astype(int).astype(str),
+            hoverinfo="text",
+        )
+    )
+    fig.update_yaxes(scaleanchor="x", scaleratio=1, title="Latitude")
+    fig.update_xaxes(title="Longitude")
+    return apply_layout(fig, title)
+
+
+def _marcador_bolha(geo) -> dict:
+    """Tamanho proporcional à raiz do volume de óbitos."""
+    tamanho = (geo["obitos"] ** 0.5) / (geo["obitos"].max() ** 0.5) * 40 + 6
+    return dict(size=tamanho, color=geo["obitos"], colorscale="YlOrRd", showscale=True, opacity=0.75)
+
+
+def _rotulos_geo(geo) -> list[str]:
+    """Nome só nos 10 municípios com mais óbitos."""
+    top = set(geo.head(10)["nome"])
+    return [n if n in top else "" for n in geo["nome"]]
+
+
 def heatmap(tabela, title: str, escala: str = "Blues") -> go.Figure:
     """Heatmap com valores nas células."""
     fig = px.imshow(

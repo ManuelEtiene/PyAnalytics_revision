@@ -21,7 +21,7 @@ from components.footer import render_footer
 from components.header import render_header
 from components.drawer import render_drawer
 from navigation import register
-from views import home, placeholder, retrato, sim_hub, sobre
+from views import evitavel, home, local, materna, retrato, sim_hub, sobre, violentas
 
 inject_theme()
 
@@ -33,10 +33,10 @@ def _paginas() -> dict:
         "sobre": st.Page(sobre.render, title="Sobre o projeto PyAnalytics", url_path="sobre"),
         "sim": st.Page(sim_hub.render, title="SIM (Mortalidade)", url_path="sim"),
         "retrato": st.Page(retrato.render, title="Retrato da mortalidade", url_path="retrato"),
-        "evitavel": st.Page(placeholder.pagina_evitavel, title="Mortalidade evitável", url_path="evitavel"),
-        "materna": st.Page(placeholder.pagina_materna, title="Saúde materna e infantil", url_path="materna"),
-        "onde_morrem": st.Page(placeholder.pagina_onde_morrem, title="Onde as pessoas morrem", url_path="onde-morrem"),
-        "violentas": st.Page(placeholder.pagina_violentas, title="Mortes violentas", url_path="violentas"),
+        "evitavel": st.Page(evitavel.render, title="Mortalidade evitável", url_path="evitavel"),
+        "onde_morrem": st.Page(local.render, title="Óbitos por local de ocorrência", url_path="onde-morrem"),
+        "violentas": st.Page(violentas.render, title="Mortes violentas", url_path="violentas"),
+        "materna": st.Page(materna.render, title="Saúde materna e infantil", url_path="materna"),
     }
 
 

@@ -45,14 +45,16 @@ div[data-testid="stVerticalBlock"] > div {
 .st-key-header_home a,
 .st-key-header_sobre a,
 .st-key-header_nav a[href],
-.st-key-btn_tema button {
+.st-key-btn_tema button,
+.st-key-btn_busca button {
   color: #e8eaed !important;
 }
 
 .st-key-abrir_menu button:hover,
 .st-key-header_home a:hover,
 .st-key-header_sobre a:hover,
-.st-key-btn_tema button:hover {
+.st-key-btn_tema button:hover,
+.st-key-btn_busca button:hover {
   color: #6ba6ff !important;
 }
 
@@ -181,6 +183,24 @@ ul[role="listbox"] li:hover,
   color: #ff7a8a !important;
 }
 
+.st-key-alerta_causa_acoes a[href] {
+  background: #ff7a8a !important;
+  color: #ffffff !important;
+}
+
+.st-key-alerta_causa_acoes a[href]:hover {
+  background: #ff93a0 !important;
+}
+
+.st-key-base_sim:hover .base-card,
+.st-key-base_medicamentos:hover .base-card {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.st-key-dataset_desabilitado {
+  opacity: 0.55;
+}
+
 .section-title {
   color: #c5cad3 !important;
 }
@@ -203,6 +223,16 @@ a,
 .stPageLink a,
 [data-testid="stPageLink-NavLink"] {
   color: #8bb6ff !important;
+}
+
+.sim-analise-link,
+.sim-analise-link * {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.sim-analise-link:hover .analise-card {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
 /* Expanders e detalhes Streamlit */

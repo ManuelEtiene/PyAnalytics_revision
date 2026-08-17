@@ -28,15 +28,27 @@ def _secao_geral() -> None:
 
 
 def _secao_datasets() -> None:
-    """Pasta SIM; a seta abre os subtópicos."""
+    """Pastas das bases; Medicamentos ainda não é navegável."""
     st.markdown("**Datasets**")
+    _pasta_sim()
+    _item_desabilitado("Medicamentos")
+
+
+def _pasta_sim() -> None:
+    """SIM com visão da base e subtópicos."""
     with st.expander("SIM (Mortalidade)", expanded=False):
         _item("sim", "Visão da base", ":material/folder_open:")
         for topico in TOPICS:
-            sufixo = "" if topico.ready else " · em breve"
-            _item(topico.id, f"{topico.title}{sufixo}", f":material/{topico.icon}:")
+            _item(topico.id, topico.title, f":material/{topico.icon}:")
 
 
 def _item(page_id: str, label: str, icon: str) -> None:
     """Um atalho do menu."""
     st.page_link(page(page_id), label=label, icon=icon)
+
+
+def _item_desabilitado(label: str) -> None:
+    """Mesmo visual do expander SIM, sem abrir nem navegar."""
+    with st.container(key="dataset_desabilitado"):
+        with st.expander(f"{label} (em breve)", expanded=False):
+            pass
