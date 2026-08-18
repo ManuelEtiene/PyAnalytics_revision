@@ -8,6 +8,9 @@ Projeto de extensão da **UFSC — Campus Araranguá** que desenvolve análises 
 
 O objetivo é apoiar membros da comunidade na exploração de informações relevantes e viabilizar **visualizações acessíveis ao público**, facilitando a compreensão de indicadores locais.
 
+### Link do site em streamlit
+* https://pyanalytics.streamlit.app
+
 ## Objetivos
 
 - Coletar e organizar dados públicos de interesse regional
