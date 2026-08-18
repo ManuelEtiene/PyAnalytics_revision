@@ -12,9 +12,9 @@ dir_script() {
   pwd
 }
 
-# Raiz do repositório (contém requirements.txt e data/).
+# Raiz do repositório (contém requirements.txt e data/processed/).
 raiz_repo() {
-  cd "$(dir_script)/.."
+  cd "$(dir_script)"
   pwd
 }
 
@@ -43,7 +43,7 @@ subir_portal() {
   local raiz="$1"
   cd "$raiz"
   echo "Portal: ${URL}"
-  exec "$raiz/.venv/bin/streamlit" run streamlit/app.py \
+  exec "$raiz/.venv/bin/streamlit" run app.py \
     --server.headless true \
     --browser.gatherUsageStats false \
     --server.port "$PORTA"

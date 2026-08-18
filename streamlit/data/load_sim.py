@@ -6,7 +6,7 @@ import pandas as pd
 import streamlit as st
 
 from data.constants import CHUNK_SIZE, COD_ARARANGUA, COLS_SC, COLS_SIM
-from data.paths import csv_sim
+from data.paths import csv_sim, csv_sim_parts
 
 
 def _colunas_existentes(pedidas: tuple[str, ...]) -> list[str]:
@@ -16,11 +16,11 @@ def _colunas_existentes(pedidas: tuple[str, ...]) -> list[str]:
 
 
 def _exige_csv() -> None:
-    """Interrompe se o arquivo analítico não estiver no repositório."""
-    if not csv_sim().exists():
+    """Interrompe se nenhum pedaço do CSV analítico existir."""
+    if not csv_sim_parts():
         raise FileNotFoundError(
-            f"CSV do SIM não encontrado em {csv_sim()}. "
-            "Coloque sim_sc_processado_analitico.csv em data/processed/."
+            f"CSV do SIM não encontrado em data/processed/. "
+            "Coloque sim_sc_processado_analitico.csv ou suas partes (.part001.csv, …)."
         )
 
 
@@ -38,10 +38,11 @@ def _concatena(partes: list, colunas: list[str]) -> pd.DataFrame:
 
 
 def _lotes(colunas: list[str]):
-    """Itera o CSV em chunks só com as colunas pedidas."""
-    return pd.read_csv(
-        csv_sim(), usecols=colunas, dtype=str, chunksize=CHUNK_SIZE
-    )
+    """Itera todos os pedaços do CSV em chunks."""
+    for caminho in csv_sim_parts():
+        yield from pd.read_csv(
+            caminho, usecols=colunas, dtype=str, chunksize=CHUNK_SIZE
+        )
 
 
 @st.cache_data(show_spinner="Carregando óbitos de Araranguá...")
@@ -75,11 +76,11 @@ def load_sc() -> pd.DataFrame:
 @st.cache_data(show_spinner="Contando óbitos por município de SC...")
 def load_contagem_municipios(ano_min: int, ano_max: int) -> dict:
     """Contagem de óbitos por CODMUNRES no período (toda SC)."""
-    caminho = csv_sim()
-    colunas = [c for c in ("DTOBITO", "CODMUNRES") if c in pd.read_csv(caminho, nrows=0).columns]
+    colunas = [c for c in ("DTOBITO", "CODMUNRES") if c in pd.read_csv(csv_sim(), nrows=0).columns]
     totais: dict[str, int] = {}
-    for bloco in pd.read_csv(caminho, usecols=colunas, dtype=str, chunksize=CHUNK_SIZE):
-        _acumula_contagem(bloco, ano_min, ano_max, totais)
+    for caminho in csv_sim_parts():
+        for bloco in pd.read_csv(caminho, usecols=colunas, dtype=str, chunksize=CHUNK_SIZE):
+            _acumula_contagem(bloco, ano_min, ano_max, totais)
     return totais
 
 
