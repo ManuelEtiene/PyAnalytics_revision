@@ -5,7 +5,7 @@ import streamlit as st
 from catalog import NavItem, bases
 from components.cards import alert_card, base_card, kpi_card
 from data.kpis import resumo_home
-from navigation import page
+from navigation import link_pagina
 from views.common import load_or_stop
 
 
@@ -72,7 +72,7 @@ def _html_alerta(kpis: dict) -> str:
 def _botao_acessar_dataset() -> None:
     """Abre a Visão da Base SIM na mesma guia."""
     with st.container(key="alerta_causa_acoes"):
-        st.page_link(page("sim"), label="Acessar dataset")
+        link_pagina("sim", "Acessar dataset")
 
 
 def _atalhos() -> None:
@@ -96,7 +96,7 @@ def _card_base(item: NavItem) -> None:
 
 def _abrir_base(page_id: str) -> None:
     """Mesmo st.page_link de Acessar dataset, cobrindo o card."""
-    st.page_link(page(page_id), label="Abrir")
+    link_pagina(page_id, "Abrir")
 
 
 def _br(numero: int) -> str:

@@ -67,7 +67,7 @@ def ocorrencia_por_municipio(df: pd.DataFrame, periodo: str):
     """Onde morreram os residentes de Araranguá."""
     serie = df["CODMUNOCOR_NOME"].value_counts().head(10)
     fig = bar_horizontal(
-        serie, f"Óbitos de residentes por município de ocorrência — {periodo}"
+        serie, f"Óbitos de residentes de Araranguá por município de ocorrência — {periodo}"
     )
     n_fora = int(df["OCORREU_FORA_RESIDENCIA"].sum())
     pct = 100 * n_fora / len(df) if len(df) else 0

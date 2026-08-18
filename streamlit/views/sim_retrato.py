@@ -2,17 +2,22 @@
 
 import streamlit as st
 
-from charts import cruzamentos, perfil, territorio
+from charts import sim_cruzamentos as cruzamentos
+from charts import sim_perfil as perfil
+from charts import sim_territorio as territorio
 from components.plot import plot, plot_or_caption
 from views.common import load_or_stop, periodo
+from views.sim_tema import cabecalho
 
 
 def render() -> None:
     """Página completa do Retrato, em seções curtas."""
     df = load_or_stop()
     periodo_txt = periodo(df)
-    st.markdown("## Retrato da mortalidade no município")
-    st.caption(f"Residentes de Araranguá · {periodo_txt} · {len(df)} óbitos")
+    cabecalho(
+        "Retrato da mortalidade no município",
+        f"Residentes de Araranguá · {periodo_txt} · {len(df)} óbitos",
+    )
     _perfil(df, periodo_txt)
     _cruzamentos(df, periodo_txt)
     _territorio(df, periodo_txt)
@@ -35,16 +40,16 @@ def _perfil(df, periodo_txt: str) -> None:
 
 
 def _cruzamentos(df, periodo_txt: str) -> None:
-    """Heatmaps e ocupação."""
+    """Heatmaps e ocupação — mesma ordem do notebook."""
     st.markdown("### Cruzamentos")
-    plot_or_caption(*cruzamentos.sexo_por_local(df, periodo_txt))
-    plot_or_caption(*cruzamentos.causas_por_faixa(df, periodo_txt))
     plot_or_caption(*cruzamentos.escolaridade_por_faixa(df, periodo_txt))
     plot_or_caption(*cruzamentos.top_ocupacoes(df, periodo_txt))
     st.caption(
         "Renda não entra neste retrato: a Declaração de Óbito (SIM) não coleta "
         "remuneração. Escolaridade e ocupação são a aproximação socioeconômica."
     )
+    plot_or_caption(*cruzamentos.sexo_por_local(df, periodo_txt))
+    plot_or_caption(*cruzamentos.causas_por_faixa(df, periodo_txt))
 
 
 def _territorio(df, periodo_txt: str) -> None:

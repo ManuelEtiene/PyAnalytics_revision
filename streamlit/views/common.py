@@ -2,7 +2,7 @@
 
 import streamlit as st
 
-from data.prepare_retrato import load_retrato, periodo_titulo
+from data.prepare_sim_retrato import load_retrato, periodo_titulo
 
 
 def load_or_stop():

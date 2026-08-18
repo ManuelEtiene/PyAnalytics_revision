@@ -20,7 +20,7 @@ def alert_card(kicker: str, titulo: str, texto: str, valor: str, detalhe: str) -
     return f"""
     <div class="alert-card">
       <p class="alert-kicker">{kicker}</p>
-      <h2 style="font-family:'Hanken Grotesk',sans-serif;margin:0.2rem 0 0.5rem 0;">{titulo}</h2>
+      <p class="alert-title">{titulo}</p>
       <p class="muted">{texto}</p>
       <div class="alert-value">{valor}</div>
       <div class="alert-footer">

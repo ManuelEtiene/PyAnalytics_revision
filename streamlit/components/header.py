@@ -6,7 +6,8 @@ from pathlib import Path
 import streamlit as st
 
 from catalog import all_items
-from navigation import page
+from components.tema import ativo, alternar
+from navigation import abrir, href, link_pagina
 
 # Preferência: assets/ do repositório; fallback: streamlit/assets/
 _REPO_LOGO = Path(__file__).resolve().parents[2] / "assets" / "IconPyAnalytics.png"
@@ -50,7 +51,7 @@ def _busca_combobox() -> None:
     ultima = st.session_state.get("_busca_aplicada")
     if escolha and escolha != ultima and escolha in por_titulo:
         st.session_state._busca_aplicada = escolha
-        st.switch_page(page(por_titulo[escolha].id))
+        abrir(por_titulo[escolha].id)
 
 
 def _botao_busca() -> None:
@@ -69,8 +70,7 @@ def _botao_busca() -> None:
 
 def _botao_tema() -> None:
     """Alterna entre tema claro e escuro."""
-    escuro = st.session_state.get("tema_escuro", False)
-    icone = ":material/light_mode:" if escuro else ":material/dark_mode:"
+    icone = ":material/light_mode:" if ativo() else ":material/dark_mode:"
     with st.container(key="tema_modo"):
         if st.button(
             "Tema",
@@ -78,8 +78,7 @@ def _botao_tema() -> None:
             icon=icone,
             type="tertiary",
         ):
-            st.session_state.tema_escuro = not escuro
-            st.rerun()
+            alternar()
 
 
 def _botoes_nav() -> None:
@@ -90,7 +89,7 @@ def _botoes_nav() -> None:
             _botao_menu()
         with inicio:
             with st.container(key="header_home"):
-                st.page_link(page("home"), label="Início", icon=":material/home:")
+                link_pagina("home", "Início", ":material/home:")
 
 
 def _marca() -> None:
@@ -102,7 +101,7 @@ def _marca() -> None:
             <div class="pya-brand-row">
               <img class="pya-logo" src="data:image/png;base64,{imagem}"
                    alt="PyAnalytics" width="200" height="200">
-              <a class="pya-title" href="/sobre" target="_self">PyAnalytics</a>
+              <a class="pya-title" href="{href('sobre')}" target="_self">PyAnalytics</a>
             </div>
             """
         )

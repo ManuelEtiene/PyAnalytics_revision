@@ -3,11 +3,12 @@
 import streamlit as st
 
 from components.plot import plot_or_caption
+from components.voltar import faixa_titulo
 
 
-def cabecalho(titulo: str, detalhe: str) -> None:
-    """Título H2 + linha de recorte/período."""
-    st.markdown(f"## {titulo}")
+def cabecalho(titulo: str, detalhe: str, voltar_id: str = "sim") -> None:
+    """Título H2 com Voltar à direita + linha de recorte/período."""
+    faixa_titulo(titulo, voltar_id)
     st.caption(detalhe)
 
 

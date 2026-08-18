@@ -6,8 +6,6 @@ import pandas as pd
 
 from charts.texto import insight_top, vazio
 from charts.theme import (
-    abrevia,
-    bar_horizontal,
     bar_vertical,
     barras_agrupadas,
     dispersao,
@@ -130,8 +128,8 @@ def momento_obito(df: pd.DataFrame):
 
 
 def gravidez_vs_gestacao(df: pd.DataFrame):
-    """Tipo de gravidez (contagem)."""
-    return _contagem(df, "GRAVIDEZ", "Tipo de gravidez")
+    """Tipo de gravidez × tempo de gestação (notebook)."""
+    return _cruzado(df, "GRAVIDEZ", "GESTACAO", "Tipo de gravidez vs. tempo de gestação")
 
 
 def tempo_gestacao(df: pd.DataFrame):
@@ -152,16 +150,6 @@ def mae_vs_semanas(df: pd.DataFrame):
 def escolaridade_mae(df: pd.DataFrame):
     """Escolaridade da mãe × faixa de peso."""
     return _cruzado(df, "ESCMAE2010", "FAIXA_PESO", "Escolaridade da mãe × faixa de peso")
-
-
-def ocupacao_mae(df: pd.DataFrame):
-    """Top 10 ocupações da mãe."""
-    serie = df["OCUPMAE"].value_counts()
-    serie = serie[~serie.index.isin({"Ignorado"})].head(10)
-    if serie.empty:
-        return vazio("Sem ocupação da mãe para exibir.")
-    rotulos = serie.rename(index=lambda c: abrevia(str(c), 40))
-    return bar_horizontal(rotulos, "Top 10 ocupações da mãe"), insight_top(serie)
 
 
 def heatmap_tipo_assist(df: pd.DataFrame):
@@ -191,16 +179,6 @@ def idade_materna_linha(df: pd.DataFrame):
     if serie.empty:
         return vazio()
     return linha(serie, "Idade (óbitos maternos)"), insight_top(serie)
-
-
-def peso_vs_gestacao_mat(df: pd.DataFrame):
-    """Peso × semanas no recorte materno."""
-    return _dispersao(df, "SEMAGESTAC", "PESO", "Semanas × peso", "Semana de gestação", "Peso (g)")
-
-
-def idade_vs_gestacao_mat(df: pd.DataFrame):
-    """Idade × semanas no recorte materno."""
-    return _dispersao(df, "SEMAGESTAC", "IDADE_ANOS", "Semanas × idade", "Semana de gestação", "Idade")
 
 
 def _dispersao_menor_um(df, y: str, ylabel: str, title: str):

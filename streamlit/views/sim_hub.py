@@ -4,6 +4,12 @@ import streamlit as st
 
 from catalog import TOPICS
 from components.carousel import html_analises
+from components.voltar import faixa_titulo
+from views.sim_evitavel import render as render_evitavel
+from views.sim_local import render as render_local
+from views.sim_materna import render as render_materna
+from views.sim_retrato import render as render_retrato
+from views.sim_violentas import render as render_violentas
 
 API_SIM = (
     "https://apidadosabertos.saude.gov.br/vigilancia-e-meio-ambiente/"
@@ -12,9 +18,28 @@ API_SIM = (
 DOC_SIM = "https://datasus.saude.gov.br/mortalidade-desde-1996-pela-cid-10"
 
 
+# Temas da SIM: /sim?tema=<slug> (Streamlit não aceita /sim/retrato).
+_TEMAS = {
+    "retrato": render_retrato,
+    "evitavel": render_evitavel,
+    "onde-morrem": render_local,
+    "violentas": render_violentas,
+    "materna": render_materna,
+}
+
+
 def render() -> None:
+    """Visão geral (/sim) ou um tema (/sim?tema=retrato)."""
+    visao = _TEMAS.get(st.query_params.get("tema", ""))
+    if visao:
+        visao()
+        return
+    _visao_geral()
+
+
+def _visao_geral() -> None:
     """Página central da SIM, de onde saem os temas."""
-    st.markdown("## SIM — Sistema de Informações sobre Mortalidade")
+    faixa_titulo("SIM — Sistema de Informações sobre Mortalidade", "home")
     _grade()
     _sobre_a_base()
 

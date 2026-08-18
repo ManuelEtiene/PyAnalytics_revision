@@ -125,6 +125,16 @@ def get_item(item_id: str) -> NavItem:
     raise KeyError(item_id)
 
 
+def eh_tema_sim(item_id: str) -> bool:
+    """True se o item é um tópico da base SIM (não a visão geral)."""
+    return any(item.id == item_id for item in TOPICS)
+
+
+def slug_sim(item_id: str) -> str:
+    """Slug do tema na URL (/sim?tema=onde-morrem)."""
+    return item_id.replace("_", "-")
+
+
 def search_items(query: str) -> list[NavItem]:
     """Filtra páginas por título, descrição ou palavras-chave."""
     termo = query.strip().lower()

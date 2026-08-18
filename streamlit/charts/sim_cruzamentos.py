@@ -10,8 +10,9 @@ from data.constants import MAPA_ESC_CURTO, MAPA_LOCAL_CURTO, ORDEM_ESC, ROTULOS_
 
 
 def sexo_por_local(df: pd.DataFrame, periodo: str):
-    """Barras empilhadas de local de ocorrência por sexo."""
-    tabela = pd.crosstab(df["SEXO"], df["LOCOCOR"])
+    """Barras empilhadas de local de ocorrência por sexo (exclui Ignorado)."""
+    base = df[~df["SEXO"].isin({"Ignorado"}) & ~df["LOCOCOR"].isin({"Ignorado"})]
+    tabela = pd.crosstab(base["SEXO"], base["LOCOCOR"])
     fig = go.Figure()
     for i, col in enumerate(tabela.columns):
         fig.add_bar(
@@ -21,7 +22,7 @@ def sexo_por_local(df: pd.DataFrame, periodo: str):
             marker_color=PALETTE[i % len(PALETTE)],
         )
     fig.update_layout(barmode="stack", yaxis_title="Número de óbitos")
-    fig = apply_layout(fig, f"Óbitos por sexo e local — Araranguá, {periodo}")
+    fig = apply_layout(fig, f"Óbitos por sexo e local de ocorrência — Araranguá, {periodo}")
     insight = (
         "Compare a composição das barras: peso hospitalar semelhante entre sexos "
         "sugere acesso parecido; diferenças grandes podem indicar causas distintas "
@@ -31,11 +32,11 @@ def sexo_por_local(df: pd.DataFrame, periodo: str):
 
 
 def causas_por_faixa(df: pd.DataFrame, periodo: str):
-    """Heatmap das 5 principais causas × faixa etária."""
+    """Heatmap das 5 principais causas × faixa etária (sem 'Outras')."""
     top5 = df["CAUSABAS_DESC"].value_counts().head(5).index
-    agrupada = df["CAUSABAS_DESC"].where(df["CAUSABAS_DESC"].isin(top5), "Outras causas")
-    tabela = pd.crosstab(agrupada, df["FAIXA_ETARIA"])
-    tabela = tabela.reindex(columns=list(ROTULOS_FAIXAS), fill_value=0)
+    base = df[df["CAUSABAS_DESC"].isin(top5)]
+    tabela = pd.crosstab(base["CAUSABAS_DESC"], base["FAIXA_ETARIA"])
+    tabela = tabela.reindex(index=list(top5), columns=list(ROTULOS_FAIXAS), fill_value=0)
     if tabela.empty:
         return None, "Sem causas para o cruzamento com faixa etária."
     tabela.index = [abrevia(i, 40) for i in tabela.index]

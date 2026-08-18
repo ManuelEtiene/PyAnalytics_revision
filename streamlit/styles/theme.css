@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&display=swap");
-
 :root {
   --pya-header-height: 3.75rem; /* ~3/4 de 5rem */
   --pya-header-icon: 1.8rem;
@@ -13,6 +11,15 @@ html, body, [class*="css"] {
 
 h1, h2, h3 {
   font-family: "Hanken Grotesk", sans-serif !important;
+  color: #191c1d !important;
+}
+
+.stApp,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"],
+[data-testid="stMainBlockContainer"] {
+  background: #f4f5f7 !important;
+  color: #191c1d !important;
 }
 
 #MainMenu, footer, .stDeployButton {
@@ -25,6 +32,59 @@ div[data-testid="stDecoration"] {
 
 .stMarkdown:has(style) {
   display: none !important;
+}
+
+.st-key-pya_cookie,
+div[class*="st-key-pya_cookie"] {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.st-key-pya_titulo_faixa {
+  margin: 0 0 0.35rem 0 !important;
+}
+
+.pya-titulo-faixa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.pya-titulo-faixa h2 {
+  margin: 0 !important;
+  flex: 1;
+}
+
+.pya-voltar {
+  flex-shrink: 0;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.35rem 0.7rem !important;
+  border-radius: 0.5rem;
+  background: transparent !important;
+  color: #0059bb !important;
+  font-family: Inter, sans-serif;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+.pya-voltar:hover {
+  color: #004493 !important;
+  background: #e8f0fe !important;
+}
+
+html:has(.pya-flag-claro) .pya-voltar,
+html:has(.pya-flag-claro) .pya-voltar:link,
+html:has(.pya-flag-claro) .pya-voltar:visited {
+  color: #0059bb !important;
+  background: transparent !important;
 }
 
 .block-container,
@@ -208,6 +268,95 @@ div[class*="st-key-pya_drawer"] {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+/* Light mode: nav, drawer e links (evita herdar paleta escura do Streamlit) */
+html:has(.pya-flag-claro) {
+  color-scheme: light;
+}
+
+/* Plotly no claro: títulos de eixo escuros (Streamlit deixa claro demais) */
+html:has(.pya-flag-claro) .js-plotly-plot .gtitle,
+html:has(.pya-flag-claro) .js-plotly-plot .xtick text,
+html:has(.pya-flag-claro) .js-plotly-plot .ytick text,
+html:has(.pya-flag-claro) .js-plotly-plot .xtitle,
+html:has(.pya-flag-claro) .js-plotly-plot .ytitle,
+html:has(.pya-flag-claro) .js-plotly-plot .g-xtitle text,
+html:has(.pya-flag-claro) .js-plotly-plot .g-ytitle text,
+html:has(.pya-flag-claro) .js-plotly-plot .legendtext,
+html:has(.pya-flag-claro) .js-plotly-plot .cbaxis text,
+html:has(.pya-flag-claro) .js-plotly-plot .cbtitle {
+  fill: #191c1d !important;
+}
+
+html:has(.pya-flag-claro) .st-key-abrir_menu button,
+html:has(.pya-flag-claro) .st-key-header_home a,
+html:has(.pya-flag-claro) .st-key-header_nav a[href],
+html:has(.pya-flag-claro) .st-key-btn_tema button,
+html:has(.pya-flag-claro) .st-key-btn_busca button {
+  color: #191c1d !important;
+  -webkit-text-fill-color: #191c1d !important;
+}
+
+html:has(.pya-flag-claro) .st-key-abrir_menu button [data-testid="stIconMaterial"],
+html:has(.pya-flag-claro) .st-key-header_home a [data-testid="stIconMaterial"],
+html:has(.pya-flag-claro) .st-key-header_nav a [data-testid="stIconMaterial"],
+html:has(.pya-flag-claro) .st-key-btn_tema button [data-testid="stIconMaterial"],
+html:has(.pya-flag-claro) .st-key-btn_busca button [data-testid="stIconMaterial"] {
+  color: #191c1d !important;
+  fill: currentColor !important;
+}
+
+html:has(.pya-flag-claro) .st-key-pya_drawer,
+html:has(.pya-flag-claro) div[class*="st-key-pya_drawer"] {
+  color: #191c1d !important;
+}
+
+html:has(.pya-flag-claro) .st-key-pya_drawer strong,
+html:has(.pya-flag-claro) .st-key-pya_drawer p,
+html:has(.pya-flag-claro) .st-key-pya_drawer span,
+html:has(.pya-flag-claro) .st-key-pya_drawer [data-testid="stMarkdownContainer"],
+html:has(.pya-flag-claro) .st-key-pya_drawer [data-testid="stMarkdownContainer"] * {
+  color: #191c1d !important;
+}
+
+html:has(.pya-flag-claro) .st-key-pya_drawer a,
+html:has(.pya-flag-claro) .st-key-pya_drawer [data-testid="stPageLink-NavLink"] {
+  color: #191c1d !important;
+  background: transparent !important;
+}
+
+html:has(.pya-flag-claro) .st-key-pya_drawer [data-testid="stIconMaterial"] {
+  color: #191c1d !important;
+  fill: currentColor !important;
+}
+
+html:has(.pya-flag-claro) .st-key-pya_drawer [data-testid="stPageLink-NavLink"]:hover {
+  color: #0059bb !important;
+  background: #eef3fb !important;
+}
+
+html:has(.pya-flag-claro) .st-key-pya_drawer [data-testid="stPageLink-NavLink"][aria-current="page"] {
+  color: #0059bb !important;
+  background: #eef3fb !important;
+}
+
+html:has(.pya-flag-claro) .st-key-pya_drawer [data-testid="stExpander"] details,
+html:has(.pya-flag-claro) .st-key-pya_drawer [data-testid="stExpander"] summary {
+  background: #f7f8f9 !important;
+  color: #191c1d !important;
+  border-color: #e1e3e4 !important;
+}
+
+html:has(.pya-flag-claro) .st-key-pya_drawer [data-testid="stExpanderDetails"],
+html:has(.pya-flag-claro) .st-key-pya_drawer [data-testid="stExpanderDetails"] * {
+  color: #191c1d !important;
+}
+
+html:has(.pya-flag-claro) .st-key-dataset_desabilitado [data-testid="stExpander"] summary {
+  background: #f7f8f9 !important;
+  color: #717786 !important;
+  border-color: #e1e3e4 !important;
 }
 
 /* Só a linha do header (é a única com a busca nav_search) */
@@ -745,11 +894,20 @@ section[data-testid="stSidebar"] > div:first-child {
 }
 
 .alert-kicker {
-  color: #ba1a1a;
+  color: #ba1a1a !important;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+.alert-title {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0.2rem 0 0.5rem 0;
+  color: #191c1d !important;
 }
 
 .alert-value {
@@ -777,7 +935,7 @@ section[data-testid="stSidebar"] > div:first-child {
 }
 
 .muted {
-  color: #414754;
+  color: #414754 !important;
   font-size: 16px;
   line-height: 1.5;
 }

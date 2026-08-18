@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import pandas as pd
 
-from data.prepare_retrato import periodo_titulo
+from data.prepare_sim_retrato import periodo_titulo
 
 
 def total_obitos(df: pd.DataFrame) -> int:

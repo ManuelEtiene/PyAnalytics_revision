@@ -5,7 +5,7 @@ from __future__ import annotations
 import pandas as pd
 import streamlit as st
 
-from data.cid_violentas import tipo_violencia, traduz_cid_violenta
+from data.cid_sim_violentas import tipo_violencia, traduz_cid_violenta
 from data.decode import aplica_assistmed, aplica_local
 from data.load_sim import load_ocorrencia_ararangua, load_sc
 from data.lookups import mapa_municipios, mapa_populacao

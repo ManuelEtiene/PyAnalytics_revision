@@ -2,14 +2,16 @@
 
 import streamlit as st
 
-from charts.theme import adaptar_tema
+from charts.theme import adaptar_tema, tema_plotly
 
 
 def plot(fig, insight: str | None = None) -> None:
     """Renderiza o gráfico em largura total, sem barra de ferramentas."""
+    fig = adaptar_tema(fig)
     st.plotly_chart(
-        adaptar_tema(fig),
+        fig,
         width="stretch",
+        theme=tema_plotly(fig),
         config={"displayModeBar": False},
     )
     if insight:

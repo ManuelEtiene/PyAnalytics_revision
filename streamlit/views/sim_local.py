@@ -1,9 +1,9 @@
 """Óbitos por local de ocorrência — gráficos na ordem do notebook."""
 
-from charts import local as graficos
-from data.prepare_local import load_local
+from charts import sim_local as graficos
+from data.prepare_sim_local import load_local
 from views.common import exige, periodo
-from views.tema import cabecalho, secao
+from views.sim_tema import cabecalho, secao
 
 
 def render() -> None:

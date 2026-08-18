@@ -135,12 +135,14 @@ MAPA_OBITOPARTO = {
 }
 
 MAPA_GESTACAO = {
+    "0": "Ignorado",
     "1": "Menos de 22 semanas",
     "2": "22 a 27 semanas",
     "3": "28 a 31 semanas",
     "4": "32 a 36 semanas",
     "5": "37 a 41 semanas",
     "6": "42 semanas e mais",
+    "8": "Não classificado",
     "9": "Ignorado",
 }
 
@@ -209,6 +211,49 @@ POP_CENSO_2022 = {
 }
 
 POP_ARARANGUA_VIOLENTAS = 107_089
+
+# Nomes de coluna SIM → rótulo de eixo/legenda (evita FAIXA_ETARIA cru)
+ROTULO_COLUNA = {
+    "FAIXA_ETARIA": "Faixa etária",
+    "FAIXA_PESO": "Faixa de peso",
+    "FAIXA_IDADEMAE": "Idade da mãe",
+    "FAIXA_SEMAGESTAC": "Semanas de gestação",
+    "ESC2010": "Escolaridade",
+    "ESCMAE2010": "Escolaridade da mãe",
+    "CAUSABAS_DESC": "Causa básica",
+    "CAUSA_DESC": "Causa",
+    "CAUSA_GRUPO": "Grupo de causa",
+    "PARTO": "Tipo de parto",
+    "GRAVIDEZ": "Tipo de gravidez",
+    "GESTACAO": "Tempo de gestação",
+    "SEMAGESTAC": "Semanas de gestação",
+    "TIPOBITO": "Tipo de óbito",
+    "ASSISTMED": "Assistência médica",
+    "OBITOPARTO": "Momento do óbito",
+    "LOCOCOR": "Local de ocorrência",
+    "IDADE_ANOS": "Idade (anos)",
+    "IDADEMAE": "Idade da mãe",
+    "PESO": "Peso (g)",
+    "SEXO": "Sexo",
+    "RACACOR": "Raça/cor",
+    "OCUP": "Ocupação",
+    "OCUPMAE": "Ocupação da mãe",
+    "ANO_OBITO": "Ano do óbito",
+    "TIPO_VIOLENCIA": "Tipo de violência",
+}
+
+
+def rotulo_coluna(nome) -> str:
+    """Troca NOME_TECNICO por rótulo em português."""
+    chave = "" if nome is None else str(nome).strip()
+    if not chave or chave == "None":
+        return ""
+    if chave in ROTULO_COLUNA:
+        return ROTULO_COLUNA[chave]
+    if chave.isupper() and any(c.isalpha() for c in chave):
+        return chave.replace("_", " ").capitalize()
+    return chave
+
 
 ORDEM_ASSIST = ("Sim", "Não", "Ignorado", "Não informado")
 ORDEM_LOCAIS_BOX = (

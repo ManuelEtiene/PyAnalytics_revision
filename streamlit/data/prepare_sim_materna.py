@@ -7,7 +7,7 @@ import streamlit as st
 
 from data.decode import aplica_campos_materna
 from data.lookups import mapa_cbo
-from data.prepare_retrato import load_retrato
+from data.prepare_sim_retrato import load_retrato
 
 
 @st.cache_data(show_spinner="Preparando saúde materna e infantil...")

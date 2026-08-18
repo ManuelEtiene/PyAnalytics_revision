@@ -1,9 +1,9 @@
 """Mortes violentas na comunidade — gráficos na ordem do notebook."""
 
-from charts import violentas as graficos
-from data.prepare_violentas import load_violentas
+from charts import sim_violentas as graficos
+from data.prepare_sim_violentas import load_violentas
 from views.common import exige, periodo
-from views.tema import cabecalho, secao
+from views.sim_tema import cabecalho, secao
 
 
 def render() -> None:

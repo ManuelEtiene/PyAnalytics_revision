@@ -22,12 +22,21 @@ def load_local() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
 
 def _prepara(df: pd.DataFrame) -> pd.DataFrame:
     """Datas, local, assistência, capítulo CID e coordenadas."""
+    df = _so_ocorrencia_sc(df)
     df = _datas(df)
     df["LOCOCOR"] = aplica_local(df["LOCOCOR"])
     df["ASSISTMED"] = aplica_assistmed(df["ASSISTMED"]) if "ASSISTMED" in df else "Não informado"
     df["CAUSA_GRUPO"] = df["CAUSABAS"].map(_capitulo)
     df["IDADE_ANOS"] = pd.to_numeric(df["IDADE_ANOS"], errors="coerce")
     return _junta_coords(df)
+
+
+def _so_ocorrencia_sc(df: pd.DataFrame) -> pd.DataFrame:
+    """Mantém só óbitos ocorridos em Santa Catarina (notebook)."""
+    if "SC_OCORRENCIA" not in df.columns:
+        return df
+    flag = df["SC_OCORRENCIA"].astype(str).str.lower().isin({"true", "1"})
+    return df.loc[flag].copy()
 
 
 def _datas(df: pd.DataFrame) -> pd.DataFrame:

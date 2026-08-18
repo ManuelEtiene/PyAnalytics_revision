@@ -3,7 +3,7 @@
 import streamlit as st
 
 from catalog import TOPICS
-from navigation import page
+from navigation import link_pagina
 
 
 def render_drawer() -> None:
@@ -43,8 +43,8 @@ def _pasta_sim() -> None:
 
 
 def _item(page_id: str, label: str, icon: str) -> None:
-    """Um atalho do menu."""
-    st.page_link(page(page_id), label=label, icon=icon)
+    """Um atalho do menu (temas SIM abrem /sim?tema=)."""
+    link_pagina(page_id, label, icon)
 
 
 def _item_desabilitado(label: str) -> None:

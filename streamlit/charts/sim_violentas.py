@@ -7,7 +7,7 @@ import pandas as pd
 from charts.texto import insight_top, vazio
 from charts.theme import PRIMARY, TERTIARY, bar_horizontal, bar_vertical, barras_empilhadas, boxplot
 from data.constants import MAPA_LOCAL_CURTO, ORDEM_ASSIST, POP_ARARANGUA_VIOLENTAS
-from data.prepare_violentas import ranking_taxa_sc
+from data.prepare_sim_violentas import ranking_taxa_sc
 
 
 def volume_por_local(df: pd.DataFrame, periodo: str):

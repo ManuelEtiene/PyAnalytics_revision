@@ -30,7 +30,7 @@ def media_por_mes(df: pd.DataFrame, periodo: str):
     tabela = validos.groupby(["ANO_OBITO", "MES_OBITO"]).size().unstack("MES_OBITO")
     media = tabela.mean(axis=0, skipna=True).reindex(range(1, 13))
     media.index = list(NOMES_MESES)
-    fig = bar_vertical(media.fillna(0), f"Média de óbitos por mês — Araranguá, {periodo}", False)
+    fig = bar_vertical(media.fillna(0), f"Média de óbitos por mês do ano — Araranguá, {periodo}", False)
     pico, baixo = media.idxmax(), media.idxmin()
     insight = (
         f"Em média, {pico} concentra o maior número ({media.max():.1f}/ano) e "
@@ -54,8 +54,8 @@ def obitos_por_faixa(df: pd.DataFrame, periodo: str):
 
 
 def obitos_por_sexo(df: pd.DataFrame, periodo: str):
-    """Óbitos por sexo."""
-    serie = df["SEXO"].value_counts()
+    """Óbitos por sexo (exclui Ignorado, como no notebook)."""
+    serie = _sem_ignorado(df, "SEXO").value_counts()
     fig = bar_vertical(serie, f"Óbitos por sexo — Araranguá, {periodo}")
     top = serie.idxmax()
     insight = (
@@ -67,8 +67,8 @@ def obitos_por_sexo(df: pd.DataFrame, periodo: str):
 
 
 def obitos_por_raca(df: pd.DataFrame, periodo: str):
-    """Óbitos por raça/cor."""
-    serie = df["RACACOR"].value_counts()
+    """Óbitos por raça/cor (exclui Ignorado)."""
+    serie = _sem_ignorado(df, "RACACOR").value_counts()
     fig = bar_vertical(serie, f"Óbitos por raça/cor — Araranguá, {periodo}")
     top = serie.idxmax()
     insight = (
@@ -79,8 +79,8 @@ def obitos_por_raca(df: pd.DataFrame, periodo: str):
 
 
 def obitos_por_escolaridade(df: pd.DataFrame, periodo: str):
-    """Óbitos por escolaridade, com rótulos curtos."""
-    serie = df["ESC2010"].value_counts()
+    """Óbitos por escolaridade, com rótulos curtos (exclui Ignorado)."""
+    serie = _sem_ignorado(df, "ESC2010").value_counts()
     curtos = serie.rename(index=lambda c: MAPA_ESC_CURTO.get(c, c))
     fig = bar_vertical(curtos, f"Óbitos por escolaridade — Araranguá, {periodo}")
     top = serie.idxmax()
@@ -93,8 +93,8 @@ def obitos_por_escolaridade(df: pd.DataFrame, periodo: str):
 
 
 def obitos_por_local(df: pd.DataFrame, periodo: str):
-    """Óbitos por local de ocorrência."""
-    serie = df["LOCOCOR"].value_counts()
+    """Óbitos por local de ocorrência (exclui Ignorado)."""
+    serie = _sem_ignorado(df, "LOCOCOR").value_counts()
     curtos = serie.rename(index=lambda c: MAPA_LOCAL_CURTO.get(c, c))
     fig = bar_horizontal(curtos, f"Óbitos por local de ocorrência — Araranguá, {periodo}")
     top = serie.idxmax()
@@ -118,3 +118,8 @@ def top_causas(df: pd.DataFrame, periodo: str):
         "da transição epidemiológica brasileira."
     )
     return fig, insight
+
+
+def _sem_ignorado(df: pd.DataFrame, col: str) -> pd.Series:
+    """Série sem Ignorado, como no notebook."""
+    return df.loc[~df[col].isin({"Ignorado"}), col]

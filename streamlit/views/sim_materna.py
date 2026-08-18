@@ -1,9 +1,11 @@
 """Saúde materna e infantil — gráficos na ordem do notebook."""
 
-from charts import materna as graficos
-from data.prepare_materna import load_materna
+import streamlit as st
+
+from charts import sim_materna as graficos
+from data.prepare_sim_materna import load_materna
 from views.common import exige, periodo
-from views.tema import cabecalho, secao
+from views.sim_tema import cabecalho, secao
 
 
 def render() -> None:
@@ -22,6 +24,7 @@ def render() -> None:
 def _infantil(df) -> None:
     """Blocos do notebook: prematuridade, parto, perfil e assistência."""
     _prematuridade(df)
+    _nota_fetais(df)
     _historico(df)
     _parto(df)
     _perfil(df)
@@ -37,6 +40,15 @@ def _prematuridade(df) -> None:
         graficos.peso_vs_gestacao_inf(df),
         graficos.idade_vs_gestacao_inf(df),
     )
+
+
+def _nota_fetais(df) -> None:
+    """Mesma nota do notebook quando não há óbito fetal."""
+    if "TIPOBITO" not in df.columns:
+        return
+    n = int((df["TIPOBITO"] == "Óbito Fetal").sum())
+    if n == 0:
+        st.caption("Não há registros de óbitos fetais neste recorte.")
 
 
 def _historico(df) -> None:
@@ -70,13 +82,12 @@ def _parto(df) -> None:
 
 
 def _perfil(df) -> None:
-    """Escolaridade, ocupação e idade da mãe."""
+    """Escolaridade e idade da mãe."""
     secao(
         "Perfil socioeconômico",
         graficos.mae_vs_peso(df),
         graficos.mae_vs_semanas(df),
         graficos.escolaridade_mae(df),
-        graficos.ocupacao_mae(df),
     )
 
 
@@ -91,11 +102,9 @@ def _circunstancias(df) -> None:
 
 
 def _materno(df) -> None:
-    """Gráficos de óbitos maternos (ciclo gravídico-puerperal)."""
+    """Histograma e série de idade — sem dispersões (peso/semana não se aplicam)."""
     secao(
         "Óbitos maternos",
         graficos.idade_materna(df),
         graficos.idade_materna_linha(df),
-        graficos.peso_vs_gestacao_mat(df),
-        graficos.idade_vs_gestacao_mat(df),
     )

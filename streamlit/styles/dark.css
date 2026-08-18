@@ -1,4 +1,8 @@
-/* Tema escuro — injetado só quando tema_escuro=True */
+/* Tema escuro — regras prefixadas com html:has(.pya-flag-escuro) via chrome.py */
+
+html:has(.pya-flag-escuro) {
+  color-scheme: dark;
+}
 
 .stApp,
 [data-testid="stAppViewContainer"],
@@ -170,6 +174,10 @@ ul[role="listbox"] li:hover,
   color: #6ba6ff !important;
 }
 
+.alert-card .alert-title {
+  color: #e8eaed !important;
+}
+
 .glass-card .topic-kicker,
 .glass-card .kpi-label,
 .glass-card .muted,
@@ -225,6 +233,20 @@ a,
   color: #8bb6ff !important;
 }
 
+.pya-voltar {
+  color: #8bb6ff !important;
+  background: transparent !important;
+}
+
+.pya-voltar:hover {
+  color: #b8d0ff !important;
+  background: #243044 !important;
+}
+
+.pya-titulo-faixa h2 {
+  color: #e8eaed !important;
+}
+
 .sim-analise-link,
 .sim-analise-link * {
   color: inherit !important;
@@ -243,11 +265,17 @@ a,
   border-color: #2c333d !important;
 }
 
-/* Plotly: fundo transparente já vem do tema; reforça textos SVG */
+/* Plotly: eixos/título claros. Não pintar .text genérico — números do heatmap
+   precisam de preto nas células claras. */
 .js-plotly-plot .gtitle,
 .js-plotly-plot .xtick text,
 .js-plotly-plot .ytick text,
+.js-plotly-plot .xtitle,
+.js-plotly-plot .ytitle,
+.js-plotly-plot .g-xtitle text,
+.js-plotly-plot .g-ytitle text,
 .js-plotly-plot .legendtext,
-.js-plotly-plot text {
+.js-plotly-plot .cbaxis text,
+.js-plotly-plot .cbtitle {
   fill: #e8eaed !important;
 }

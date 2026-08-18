@@ -6,6 +6,8 @@ import plotly.graph_objects as go
 import plotly.express as px
 import streamlit as st
 
+from data.constants import rotulo_coluna
+
 PRIMARY = "#0059bb"
 SECONDARY = "#fdc003"
 TERTIARY = "#b6152e"
@@ -37,9 +39,42 @@ def apply_layout(fig: go.Figure, title: str) -> go.Figure:
         legend=dict(bgcolor="rgba(0,0,0,0)", font=dict(color=texto)),
         coloraxis_colorbar=dict(tickfont=dict(color=texto), title_font=dict(color=texto)),
     )
-    fig.update_xaxes(showgrid=False, color=texto, tickfont=dict(color=texto))
-    fig.update_yaxes(gridcolor=grade, zeroline=False, color=texto, tickfont=dict(color=texto))
+    fig.update_xaxes(
+        showgrid=False, color=texto,
+        tickfont=dict(color=texto), title_font=dict(color=texto),
+    )
+    fig.update_yaxes(
+        gridcolor=grade, zeroline=False, color=texto,
+        tickfont=dict(color=texto), title_font=dict(color=texto),
+    )
+    _titulos_eixo_legiveis(fig)
     return fig
+
+
+def _texto_eixo(eixo) -> str:
+    """Lê o título atual de um eixo ou da legenda Plotly."""
+    titulo = getattr(eixo, "title", None) if eixo is not None else None
+    texto = getattr(titulo, "text", None) if titulo is not None else None
+    return str(texto) if texto else ""
+
+
+def _titulos_eixo_legiveis(fig: go.Figure) -> None:
+    """Troca FAIXA_ETARIA e similares por rótulo em português."""
+    fig.update_xaxes(title=rotulo_coluna(_texto_eixo(fig.layout.xaxis)))
+    fig.update_yaxes(title=rotulo_coluna(_texto_eixo(fig.layout.yaxis)))
+    legenda = _texto_eixo(fig.layout.legend)
+    if legenda:
+        fig.update_layout(legend_title_text=rotulo_coluna(legenda))
+
+
+def tem_heatmap(fig: go.Figure) -> bool:
+    """Indica se a figura é um mapa de calor."""
+    return any(getattr(t, "type", "") == "heatmap" for t in fig.data)
+
+
+def tema_plotly(fig: go.Figure) -> str | None:
+    """Heatmap não usa o tema Streamlit (ele força letra branca nas células)."""
+    return None if tem_heatmap(fig) else "streamlit"
 
 
 def adaptar_tema(fig: go.Figure) -> go.Figure:
@@ -56,9 +91,9 @@ def adaptar_tema(fig: go.Figure) -> go.Figure:
     )
     fig.update_xaxes(color=texto, tickfont=dict(color=texto), title_font=dict(color=texto))
     fig.update_yaxes(color=texto, tickfont=dict(color=texto), gridcolor=grade, title_font=dict(color=texto))
-    fig.update_annotations(font=dict(color=texto))
+    if not tem_heatmap(fig):
+        fig.update_annotations(font=dict(color=texto))
     fig.update_traces(textfont=dict(color=texto), selector=dict(type="bar"))
-    fig.update_traces(textfont=dict(color=texto), selector=dict(type="heatmap"))
     return fig
 
 
@@ -224,15 +259,76 @@ def _rotulos_geo(geo) -> list[str]:
 
 
 def heatmap(tabela, title: str, escala: str = "Blues") -> go.Figure:
-    """Heatmap com valores nas células."""
+    """Heatmap com números contrastantes (escuro em célula clara)."""
+    eixo_x = rotulo_coluna(tabela.columns.name)
+    eixo_y = rotulo_coluna(tabela.index.name)
+    dados = _tabela_heatmap(tabela)
     fig = px.imshow(
-        tabela,
+        dados,
         color_continuous_scale=escala,
         aspect="auto",
-        text_auto=True,
+        text_auto=False,
+        template=None,
+        labels=dict(x=eixo_x, y=eixo_y, color="Óbitos"),
     )
-    fig.update_traces(texttemplate="%{z:.0f}")
-    return apply_layout(fig, title)
+    _rotulos_heatmap(fig, dados)
+    fig = apply_layout(fig, title)
+    _encaixar_heatmap(fig, eixo_x, eixo_y, len(dados.index))
+    return fig
+
+
+def _tabela_heatmap(tabela):
+    """Copia sem nome de coluna cru (FAIXA_ETARIA) nos eixos."""
+    dados = tabela.copy()
+    dados.index = dados.index.astype(str)
+    dados.columns = dados.columns.astype(str)
+    dados.index.name = None
+    dados.columns.name = None
+    return dados
+
+
+def _encaixar_heatmap(fig: go.Figure, eixo_x: str, eixo_y: str, n_linhas: int) -> None:
+    """Abre margem dos rótulos e trava o zoom."""
+    fig.update_layout(
+        margin=dict(l=96, r=72, t=56, b=72),
+        dragmode=False,
+        height=max(360, min(520, 56 * n_linhas + 140)),
+        coloraxis_colorbar=dict(title="Óbitos"),
+    )
+    fig.update_xaxes(
+        title=eixo_x, automargin=True, fixedrange=True, tickangle=0, ticks="outside",
+    )
+    fig.update_yaxes(
+        title=eixo_y, automargin=True, fixedrange=True, ticks="outside",
+    )
+
+
+def _cor_rotulo_celula(valor: float, vmax: float) -> str:
+    """Branco em célula escura; preto em célula clara."""
+    if vmax <= 0 or valor / vmax < 0.45:
+        return _TEXTO_CLARO
+    return "#ffffff"
+
+
+def _rotulos_heatmap(fig: go.Figure, tabela) -> None:
+    """Número em cada célula, com cor que contrasta o fundo."""
+    vmax = float(tabela.max().max()) if not tabela.empty else 0
+    rotulos = []
+    for y in tabela.index:
+        for x in tabela.columns:
+            valor = float(tabela.loc[y, x])
+            rotulos.append(
+                dict(
+                    x=str(x),
+                    y=str(y),
+                    text=f"{valor:.0f}",
+                    showarrow=False,
+                    xref="x",
+                    yref="y",
+                    font=dict(color=_cor_rotulo_celula(valor, vmax), size=12),
+                )
+            )
+    fig.update_layout(annotations=rotulos)
 
 
 def abrevia(texto: str, tamanho: int = 35) -> str:

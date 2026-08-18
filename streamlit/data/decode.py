@@ -26,10 +26,18 @@ def map_label(valor, mapa: dict) -> str:
     """Aplica o mapa; se já estiver decodificado, devolve o próprio texto."""
     if valor is None or (isinstance(valor, float) and pd.isna(valor)):
         return "Ignorado"
-    chave = str(valor).strip()
-    if chave == "" or chave.lower() in {"nan", "none", "null"}:
+    chave = _chave_codigo(valor)
+    if not chave or chave.lower() in {"nan", "none", "null"}:
         return "Ignorado"
     return mapa.get(chave, chave)
+
+
+def _chave_codigo(valor) -> str:
+    """Normaliza 8.0 → 8 para bater no dicionário SIM."""
+    chave = str(valor).strip()
+    if chave.endswith(".0"):
+        return chave[:-2]
+    return chave
 
 
 def decodifica_causa(codigo, mapa_cid: dict) -> str:
