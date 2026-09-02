@@ -22,6 +22,7 @@ TEXT_REPLACEMENTS = {
 }
 TEXT_FIELDS = {"ups_nome", "bairro_nome", "centro_custo_nome", "material_nome", "fabricante_nome"}
 FABRICANTE_RE = re.compile(r"^\s*(\d+)\s*-\s*(.+?)\s*$")
+CONTEXT_ARTIFACT_RE = re.compile(r"^(?P<base>.*?)(?:-+\s*(?:\(?[A-Z0-9/ ]+\)?)?)?$")
 MATCH_STOPWORDS = {
     "DE",
     "DA",
@@ -55,15 +56,28 @@ MATCH_STOPWORDS = {
 }
 TIPO_TRATAMENTO_RULES = [
     (("ANTICONVULS", "ANSIOLIT", "ANTIDEPRESS", "ANTIPSIC", "ANTIPARKINSON", "HIPNOT", "SEDAT", "NEURO"), "Saude mental e neurologia"),
-    (("ANTIULCER", "ANTIACID", "DIGEST", "INIBIDORES DA BOMBA DE PROTONS"), "Sistema digestivo"),
+    (("ANTIULCER", "ANTIACID", "DIGEST", "INIBIDORES DA BOMBA DE PROTONS", "ANTIEMET", "ANTINAUSE", "LAXANT", "SEROTONINA"), "Sistema digestivo"),
     (("ANTIDIABET", "INSULIN"), "Diabetes e endocrinologia"),
-    (("ANTIBIOT", "ANTIMICROBI", "ANTIVIRO", "ANTIMICOT", "ANTIPARASIT"), "Infeccoes"),
-    (("ANALGES", "ANTIINFLAM", "ANTIREUM", "RELAXANTES MUSCULARES", "ANTIESPASMOD"), "Dor e inflamacao"),
-    (("ANTIHIPERTEN", "ANTIANGIN", "ANTICOAGUL", "ANTIAGREGANTE", "CARDIOVASC", "DIURET"), "Cardiovascular"),
-    (("BRONCODILAT", "ANTIASMAT", "RESPIRAT"), "Respiratorio"),
-    (("VITAMIN", "SUPLEMENT", "MINERAL"), "Vitaminas e suplementacao"),
-    (("HORMON", "TIREOID", "CONTRACEPT"), "Hormonal e saude reprodutiva"),
+    (("ANTIBIOT", "ANTIMICROBI", "ANTIVIRO", "ANTIMICOT", "ANTIPARASIT", "PENICILIN", "CEFALOSPOR", "MACROLIDE", "SULFA", "NITROFURAN", "AMEBICID", "GIARDICID", "TRICOMONICID", "HELMINT"), "Infeccoes"),
+    (("ANALGES", "ANTIINFLAM", "ANTIREUM", "RELAXANTES MUSCULARES", "ANTIESPASMOD", "GLICOCORTICOID", "ANTIGOTOS"), "Dor e inflamacao"),
+    (("ANTI HIPERTEN", "ANTIANGIN", "ANTICOAGUL", "ANTIAGREGANTE", "CARDIOVASC", "DIURET", "ANTIARRITM", "BETABLOQUE", "NITRAT", "NITRIT", "GLICOSIDE", "ANTILIPEM"), "Cardiovascular"),
+    (("BRONCODILAT", "ANTIASMAT", "RESPIRAT", "ANTI HISTAMIN"), "Respiratorio"),
+    (("VITAMIN", "SUPLEMENT", "MINERAL", "CALCIO", "ANTIANEMIC", "REABSORCAO OSSEA"), "Vitaminas e suplementacao"),
+    (("TRATO URINARIO", "ALFA REDUTASE"), "Urologia e saude reprodutiva"),
+    (("HORMON", "TIREOID", "CONTRACEPT", "ANTICONCEPC", "ESTROGEN", "PROGESTAG"), "Hormonal e saude reprodutiva"),
 ]
+MATERIAL_KEYWORDS = (
+    "AGULHA",
+    "SERINGA",
+    "CANETA PARA INJECAO",
+    "LANCETA",
+    "CURATIVO",
+    "CATETER",
+    "EQUIPO",
+    "SONDA",
+    "GAZE",
+    "FITA REAGENTE",
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -117,6 +131,9 @@ def normalize_text_fields(row: dict[str, str]) -> None:
     for field in TEXT_FIELDS:
         if field in row:
             row[field] = normalize_text(row[field])
+    for field in ("bairro_nome", "centro_custo_nome"):
+        if field in row:
+            row[field] = clean_context_name(row[field])
 
 
 def normalize_text(value: str) -> str:
@@ -129,6 +146,25 @@ def normalize_text(value: str) -> str:
     return text.strip()
 
 
+def clean_context_name(value: str) -> str:
+    text = normalize_text(value)
+    if not text:
+        return ""
+    text = re.sub(r"-+\s*$", "", text).strip()
+    if "-" not in text:
+        return text
+    match = CONTEXT_ARTIFACT_RE.match(text)
+    if not match:
+        return text
+    base = (match.group("base") or "").strip()
+    if not base:
+        return text
+    suffix = text[len(base) :].strip()
+    if suffix.startswith("-"):
+        return base
+    return text
+
+
 def normalize_match_text(value: str) -> str:
     text = normalize_text(value).upper()
     text = "".join(char for char in unicodedata.normalize("NFKD", text) if not unicodedata.combining(char))
@@ -138,12 +174,20 @@ def normalize_match_text(value: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+def compact_match_text(value: str) -> str:
+    return normalize_match_text(value).replace(" ", "")
+
+
 def tokenize_match_text(value: str) -> set[str]:
     tokens = set()
     for token in normalize_match_text(value).split():
         if token not in MATCH_STOPWORDS and not token.isdigit():
             tokens.add(token)
     return tokens
+
+
+def contains_match_keyword(normalized_text: str, keyword: str) -> bool:
+    return compact_match_text(keyword) in normalized_text.replace(" ", "")
 
 
 def split_fabricante(value: str) -> tuple[str, str]:
@@ -169,12 +213,15 @@ def split_material(value: str) -> tuple[str, str, str]:
     return text, "", ""
 
 
-def infer_tipo_tratamento(classe_terapeutica: str) -> str:
+def infer_tipo_tratamento(material_nome_base: str, classe_terapeutica: str) -> str:
+    material_normalized = normalize_match_text(material_nome_base)
     normalized = normalize_match_text(classe_terapeutica)
     if not normalized:
+        if any(contains_match_keyword(material_normalized, keyword) for keyword in MATERIAL_KEYWORDS):
+            return "Material"
         return ""
     for keywords, tipo in TIPO_TRATAMENTO_RULES:
-        if any(keyword in normalized for keyword in keywords):
+        if any(contains_match_keyword(normalized, keyword) for keyword in keywords):
             return tipo
     return "Outros"
 
@@ -265,7 +312,7 @@ def clean_row(
     cleaned["material_descricao_complementar"] = material_descricao_complementar
     cleaned["material_tipo"] = material_tipo
     cleaned["classe_terapeutica"] = match_classe_terapeutica(material_nome_base, exact_lookup, fuzzy_entries)
-    cleaned["tipo_tratamento"] = infer_tipo_tratamento(cleaned["classe_terapeutica"])
+    cleaned["tipo_tratamento"] = infer_tipo_tratamento(material_nome_base, cleaned["classe_terapeutica"])
     return cleaned
 
 

@@ -12,6 +12,7 @@ PAREN_SUFFIX_RE = re.compile(r"^(?P<nome>.*?)(?:\s*\((?P<codigo>[^()]*)\))?$")
 COMPETENCIA_RE = re.compile(r"Compet[êe]ncia Inicial:\s*(\d+)")
 COMPETENCIA_FINAL_RE = re.compile(r"Compet[êe]ncia Final:\s*(\d+)")
 UPS_FILTRO_RE = re.compile(r"UPS:\s*(.*?)\s+Ordena")
+CONTEXT_ARTIFACT_RE = re.compile(r"^(?P<base>.*?)(?:-+\s*(?:\(?[A-Z0-9/ ]+\)?)?)?$")
 
 
 OUTPUT_FIELDS = [
@@ -65,11 +66,31 @@ def split_name_code(text: str) -> tuple[str, str]:
     return nome, codigo
 
 
+def clean_context_name(value: str) -> str:
+    text = " ".join(value.replace("\xa0", " ").split()).rstrip(",").strip()
+    if not text:
+        return ""
+    text = re.sub(r"-+\s*$", "", text).strip()
+    if "-" not in text:
+        return text
+    match = CONTEXT_ARTIFACT_RE.match(text)
+    if not match:
+        return text
+    base = (match.group("base") or "").strip()
+    if not base:
+        return text
+    suffix = text[len(base) :].strip()
+    if suffix.startswith("-"):
+        return base
+    return text
+
+
 def normalize_context_value(raw_value: str, prefix: str) -> tuple[str, str]:
     value = raw_value.strip()
     if value.startswith(prefix):
         value = value[len(prefix) :].strip()
-    return split_name_code(value)
+    nome, codigo = split_name_code(value)
+    return clean_context_name(nome), codigo
 
 
 def iter_input_files(entries: list[str]) -> list[Path]:
