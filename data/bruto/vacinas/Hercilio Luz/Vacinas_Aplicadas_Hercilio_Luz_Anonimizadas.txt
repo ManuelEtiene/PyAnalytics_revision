@@ -1,0 +1,1003 @@
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC											
+		Secretaria de Saúde											
+Vacinas Aplicadas													
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   													
+Vacina: Vacina meningo C (41)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina meningo C (41) - Rotina (1) - 2ª DOSE (2)			AMCB99AA - 30/03/2027		20/02/2026	1	Tela de Aplicação		
+	XXX			Vacina meningo C (41) - Rotina (1) - 1ª DOSE (1)			AMCB99AA - 30/03/2027		24/02/2026	1	Tela de Aplicação		
+	XXX			Vacina meningo C (41) - Rotina (1) - 2ª DOSE (2)			AMCC06AA - 30/03/2027		22/04/2026	1	Prontuário		
+	XXX			Vacina meningo C (41) - Rotina (1) - 1ª DOSE (1)			AMCC06AA - 30/03/2027		22/04/2026	1	Prontuário		
+	XXX			Vacina meningo C (41) - Rotina (1) - REFORÇO (38)			AMCC06AA - 30/03/2027		29/04/2026	1	Prontuário		
+	XXX			Vacina meningo C (41) - Rotina (1) - 1ª DOSE (1)			AMCC06AA - 30/03/2027		26/05/2026	1	Prontuário		
+	XXX			Vacina meningo C (41) - Rotina (1) - 2ª DOSE (2)			AMCC06AA - 30/03/2027		28/05/2026	1	Prontuário		
+	XXX			Vacina meningo C (41) - Rotina (1) - 2ª DOSE (2)			AMCC06AA - 30/03/2027		09/06/2026	1	Prontuário		
+								Quantidade: 8					
+								Total por Vacina: 8					
+Vacina: Vacina penta (DTP/HepB/Hib) (42)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina penta (DTP/HepB/Hib) (42) - Rotina (1) - 3ª DOSE (3)			2854Z018 - 30/11/2026		20/02/2026	1	Carteirinha		
+	XXX			Vacina penta (DTP/HepB/Hib) (42) - Rotina (1) - 3ª DOSE (3)			2854Z018 - 30/11/2026		03/03/2026	1	Tela de Aplicação		
+	XXX			Vacina penta (DTP/HepB/Hib) (42) - Rotina (1) - 3ª DOSE (3)			2854Z018 - 30/11/2026		03/03/2026	1	Tela de Aplicação		
+	XXX			Vacina penta (DTP/HepB/Hib) (42) - Rotina (1) - 1ª DOSE (1)			2854Z018 - 30/11/2026		06/03/2026	1	Tela de Aplicação		
+	XXX			Vacina penta (DTP/HepB/Hib) (42) - Rotina (1) - 2ª DOSE (2)			2854X032B - 28/02/2027		20/03/2026	1	Tela de Aplicação		
+	XXX			Vacina penta (DTP/HepB/Hib) (42) - Rotina (1) - 1ª DOSE (1)			2854X032B - 28/02/2027		23/03/2026	1	Prontuário		
+	XXX			Vacina penta (DTP/HepB/Hib) (42) - Rotina (1) - 1ª DOSE (1)			2854X032B - 28/02/2027		22/04/2026	1	Prontuário		
+	XXX			Vacina penta (DTP/HepB/Hib) (42) - Rotina (1) - 1ª DOSE (1)			2854X032B - 28/02/2027		23/04/2026	1	Prontuário		
+	XXX			Vacina penta (DTP/HepB/Hib) (42) - Rotina (1) - 2ª DOSE (2)			2854X032B - 28/02/2027		07/05/2026	1	Prontuário		
+	XXX			Vacina penta (DTP/HepB/Hib) (42) - Rotina (1) - 3ª DOSE (3)			2854X032B - 28/02/2027		22/05/2026	1	Prontuário		
+	XXX			Vacina penta (DTP/HepB/Hib) (42) - Rotina (1) - 2ª DOSE (2)			2854X032B - 28/02/2027		25/05/2026	1	Prontuário		
+	XXX			Vacina penta (DTP/HepB/Hib) (42) - Rotina (1) - 2ª DOSE (2)			2854X032B - 28/02/2027		23/06/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost						09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua							Página: 1
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC											
+		Secretaria de Saúde											
+Vacinas Aplicadas													
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   													
+Vacina: Vacina penta (DTP/HepB/Hib) (42)													
+								Quantidade: 12					
+								Total por Vacina: 12					
+Vacina: Vacina rotavírus (45)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina rotavírus (45) - Rotina (1) - 1ª DOSE (1)			279VRT018NA - 30/08/2026		06/03/2026	1	Tela de Aplicação		
+	XXX			Vacina rotavírus (45) - Rotina (1) - 2ª DOSE (2)			279VRT018NA - 30/08/2026		20/03/2026	1	Tela de Aplicação		
+	XXX			Vacina rotavírus (45) - Rotina (1) - 1ª DOSE (1)			279VRT018NA - 30/08/2026		23/03/2026	1	Prontuário		
+	XXX			Vacina rotavírus (45) - Rotina (1) - 1ª DOSE (1)			279VRT018NA - 30/08/2026		22/04/2026	1	Prontuário		
+	XXX			Vacina rotavírus (45) - Rotina (1) - 1ª DOSE (1)			279VRT018NA - 30/08/2026		23/04/2026	1	Prontuário		
+	XXX			Vacina rotavírus (45) - Rotina (1) - 2ª DOSE (2)			279VRT018NA - 30/08/2026		07/05/2026	1	Prontuário		
+	XXX			Vacina rotavírus (45) - Rotina (1) - 2ª DOSE (2)			279VRT018NA - 30/08/2026		25/05/2026	1	Prontuário		
+	XXX			Vacina rotavírus (45) - Rotina (1) - 2ª DOSE (2)			279VRT018NA - 30/08/2026		23/06/2026	1	Prontuário		
+								Quantidade: 8					
+								Total por Vacina: 8					
+Vacina: Vacina DTP (46)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina DTP (46) - Rotina (1) - 2º REFORÇO (7)			2824Q001B - 30/05/2026		11/02/2026	1	Tela de Aplicação		
+	XXX			Vacina DTP (46) - Rotina (1) - 2º REFORÇO (7)			2824Q001B - 30/05/2026		20/02/2026	1	Carteirinha		
+	XXX			Vacina DTP (46) - Rotina (1) - 1º REFORÇO (6)			2824Q001B - 30/08/2027		02/06/2026	1	Prontuário		
+	XXX			Vacina DTP (46) - Rotina (1) - 2º REFORÇO (7)			2824Q001B - 30/08/2027		25/06/2026	1	Prontuário		
+								Quantidade: 4					
+								Total por Vacina: 4					
+Vacina: Vacina hepatite A infantil (55)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina hepatite A infantil (55) - Rotina (1) - ÚNICA (9)			2402294/00 - 04/03/2027		02/06/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost						09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua							Página: 2
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC											
+		Secretaria de Saúde											
+Vacinas Aplicadas													
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   													
+Vacina: Vacina hepatite A infantil (55)													
+								Quantidade: 1					
+								Total por Vacina: 1					
+Vacina: Vacina sarampo, caxumba, rubéola e varicela (56)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina sarampo, caxumba, rubéola e varicela (56) - Rotina (1) - ÚNICA (9)			258VVV008N - 31/01/2027		02/06/2026	1	Prontuário		
+								Quantidade: 1					
+								Total por Vacina: 1					
+Vacina: Vacina dTpa adulto (57)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina dTpa adulto (57) - Rotina (1) - DOSE (8)			2301305/00 - 31/05/2026		17/03/2026	1	Tela de Aplicação		
+	XXX			Vacina dTpa adulto (57) - Rotina (1) - REFORÇO (38)			2301305/00 - 31/05/2026		13/05/2026	1	Prontuário		
+	XXX			Vacina dTpa adulto (57) - Rotina (1) - DOSE (8)			240247/00 - 31/10/2027		15/06/2026	1	Prontuário		
+								Quantidade: 3					
+								Total por Vacina: 3					
+Vacina: Vacina HPV quadrivalente (67)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina HPV quadrivalente (67) - Rotina (1) - ÚNICA (9)			2403355/00 - 09/06/2027		23/02/2026	1	Tela de Aplicação		
+	XXX			Vacina HPV quadrivalente (67) - Rotina (1) - ÚNICA (9)			2402667/00 - 12/04/2027		25/02/2026	1	Tela de Aplicação		
+	XXX			Vacina HPV quadrivalente (67) - Rotina (1) - ÚNICA (9)			2402667/00 - 12/04/2027		03/03/2026	1	Tela de Aplicação		
+	XXX			Vacina HPV quadrivalente (67) - Rotina (1) - ÚNICA (9)			2402667/00 - 12/04/2027		03/03/2026	1	Tela de Aplicação		
+	XXX			Vacina HPV quadrivalente (67) - Rotina (1) - ÚNICA (9)			2402667/00 - 12/04/2027		31/03/2026	1	Prontuário		
+	XXX			Vacina HPV quadrivalente (67) - Rotina (1) - ÚNICA (9)			2403679/00 - 09/07/2027		29/04/2026	1	Prontuário		
+	XXX			Vacina HPV quadrivalente (67) - Rotina (1) - ÚNICA (9)			2403679/00 - 09/07/2027		12/05/2026	1	Prontuário		
+	XXX			Vacina HPV quadrivalente (67) - Rotina (1) - ÚNICA (9)			2402658 - 22/04/2027		16/06/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost						09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua							Página: 3
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC											
+		Secretaria de Saúde											
+Vacinas Aplicadas													
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   													
+Vacina: Vacina HPV quadrivalente (67)													
+								Quantidade: 8					
+								Total por Vacina: 8					
+Vacina: Vacina meningo ACWY (74)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina meningo ACWY (74) - Rotina (1) - REFORÇO (38)			249VML029NA - 31/08/2026		12/02/2026	1	Tela de Aplicação		
+	XXX			Vacina meningo ACWY (74) - Rotina (1) - ÚNICA (9)			249VML029NA - 31/08/2026		06/03/2026	1	Tela de Aplicação		
+	XXX			Vacina meningo ACWY (74) - Rotina (1) - ÚNICA (9)			249VML029NA - 31/08/2026		01/04/2026	1	Prontuário		
+	XXX			Vacina meningo ACWY (74) - Rotina (1) - REFORÇO (38)			249VML029NA - 31/08/2026		22/04/2026	1	Prontuário		
+	XXX			Vacina meningo ACWY (74) - Rotina (1) - REFORÇO (38)			249VML029NA - 31/08/2026		06/05/2026	1	Prontuário		
+	XXX			Vacina meningo ACWY (74) - Rotina (1) - ÚNICA (9)			249VML029NA - 31/08/2026		19/05/2026	1	Prontuário		
+	XXX			Vacina meningo ACWY (74) - Rotina (1) - ÚNICA (9)			249VML029NA - 31/08/2026		26/05/2026	1	Tela de Aplicação		
+	XXX			Vacina meningo ACWY (74) - Rotina (1) - REFORÇO (38)			249VML029NA - 31/08/2026		29/05/2026	1	Prontuário		
+	XXX			Vacina meningo ACWY (74) - Rotina (1) - REFORÇO (38)			249VML029NA - 31/08/2026		16/06/2026	1	Prontuário		
+	XXX			Vacina meningo ACWY (74) - Rotina (1) - REFORÇO (38)			240VML035NA - 30/09/2026		25/06/2026	1	Prontuário		
+	XXX			Vacina meningo ACWY (74) - Rotina (1) - REFORÇO (38)			240VML035NA - 30/09/2026		26/06/2026	1	Prontuário		
+								Quantidade: 11					
+								Total por Vacina: 11					
+Vacina: Vacina dengue (atenuada) (104)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027		18/02/2026	1	Tela de Aplicação		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027		25/02/2026	1	Tela de Aplicação		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027		25/02/2026	1	Tela de Aplicação		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027		02/03/2026	1	Tela de Aplicação		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027		02/03/2026	1	Tela de Aplicação		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027		03/03/2026	1	Tela de Aplicação		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost						09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua							Página: 4
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC										
+		Secretaria de Saúde										
+Vacinas Aplicadas												
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   												
+Vacina: Vacina dengue (atenuada) (104)												
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade	Aplicado	Qtde.	Origem		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027	03/2026	1	Tela de Aplicação		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027	03/2026	1	Tela de Aplicação		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027	03/2026	1	Tela de Aplicação		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027	03/2026	1	Tela de Aplicação		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027	03/2026	1	Prontuário		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027	03/2026	1	Tela de Aplicação		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027	03/2026	1	Prontuário		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027	03/2026	1	Prontuário		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027	03/2026	1	Tela de Aplicação		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027	03/2026	1	Tela de Aplicação		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027	03/2026	1	Tela de Aplicação		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027	03/2026	1	Prontuário		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027	03/2026	1	Prontuário		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027	03/2026	1	Prontuário		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - ÚNICA (9)			570427 - 02/06/2027	03/2026	1	Prontuário		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027	03/2026	1	Prontuário		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027	03/2026	1	Prontuário		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - ÚNICA (9)			570427 - 02/06/2027	04/2026	1	Prontuário		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027	04/2026	1	Prontuário		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027	04/2026	1	Prontuário		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027	04/2026	1	Prontuário		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027	04/2026	1	Prontuário		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027	06/2026	1	Prontuário		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027	06/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost					09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua						Página: 5
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC											
+		Secretaria de Saúde											
+Vacinas Aplicadas													
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   													
+Vacina: Vacina dengue (atenuada) (104)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 2ª DOSE (2)			570427 - 02/06/2027		11/06/2026	1	Prontuário		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 2ª DOSE (2)			570427 - 02/06/2027		16/06/2026	1	Prontuário		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027		23/06/2026	1	Prontuário		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 1ª DOSE (1)			570427 - 02/06/2027		25/06/2026	1	Prontuário		
+	XXX			Vacina dengue (atenuada) (104) - Rotina (1) - 2ª DOSE (2)			570427 - 02/06/2027		26/06/2026	1	Prontuário		
+								Quantidade: 35					
+								Total por Vacina: 35					
+Vacina: Vacina Vírus Sincicial A e B (recombinante) (108)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina Vírus Sincicial A e B (recombinante) (108) - Rotina (1) - ÚNICA (9)			MH9568 - 31/05/2027		10/06/2026	1	Carteirinha		
+								Quantidade: 1					
+								Total por Vacina: 1					
+Vacina: Vacina hepatite B (9)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina hepatite B (9) - Rotina (1) - 2ª DOSE (2)			WVX24505 - 01/05/2027		26/03/2026	1	Prontuário		
+	XXX			Vacina hepatite B (9) - Rotina (1) - 2ª DOSE (2)			WVX24505 - 01/05/2027		26/03/2026	1	Prontuário		
+	XXX			Vacina hepatite B (9) - Rotina (1) - 2ª DOSE (2)			WVX24505 - 01/05/2027		31/03/2026	1	Prontuário		
+	XXX			Vacina hepatite B (9) - Rotina (1) - 2ª DOSE (2)			WVX24505 - 01/05/2027		01/04/2026	1	Prontuário		
+	XXX			Vacina hepatite B (9) - Rotina (1) - 1ª DOSE (1)			WVX24505 - 01/05/2027		01/04/2026	1	Prontuário		
+	XXX			Vacina hepatite B (9) - Rotina (1) - 2ª DOSE (2)			WVX24505 - 01/05/2027		01/04/2026	1	Prontuário		
+	XXX			Vacina hepatite B (9) - Rotina (1) - 1ª DOSE (1)			WVX24505 - 01/05/2027		05/05/2026	1	Prontuário		
+	XXX			Vacina hepatite B (9) - Rotina (1) - 1ª DOSE (1)			WVX24505 - 01/05/2027		05/05/2026	1	Prontuário		
+	XXX			Vacina hepatite B (9) - Rotina (1) - 1ª DOSE (1)			WVX24505 - 01/05/2027		19/05/2026	1	Prontuário		
+	XXX			Vacina hepatite B (9) - Rotina (1) - 2ª DOSE (2)			WVX24505 - 01/05/2027		21/05/2026	1	Prontuário		
+	XXX			Vacina hepatite B (9) - Rotina (1) - 3ª DOSE (3)			WVX24505 - 01/05/2027		30/05/2026	1	Prontuário		
+	XXX			Vacina hepatite B (9) - Rotina (1) - 3ª DOSE (3)			WVX24505 - 01/05/2027		30/05/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost						09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua							Página: 6
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC											
+		Secretaria de Saúde											
+Vacinas Aplicadas													
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   													
+Vacina: Vacina hepatite B (9)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina hepatite B (9) - Rotina (1) - 2ª DOSE (2)			WVX24505 - 01/05/2027		08/06/2026	1	Prontuário		
+	XXX			Vacina hepatite B (9) - Rotina (1) - 3ª DOSE (3)			WVX24505 - 01/05/2027		09/06/2026	1	Prontuário		
+	XXX			Vacina hepatite B (9) - Rotina (1) - 2ª DOSE (2)			WVX24505 - 01/05/2027		11/06/2026	1	Prontuário		
+	XXX			Vacina hepatite B (9) - Rotina (1) - 2ª DOSE (2)			WVX24505 - 01/05/2027		12/06/2026	1	Prontuário		
+	XXX			Vacina hepatite B (9) - Rotina (1) - 2ª DOSE (2)			WVX24505 - 01/05/2027		22/06/2026	1	Prontuário		
+								Quantidade: 17					
+								Total por Vacina: 17					
+Vacina: Vacina febre amarela (14)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina febre amarela (14) - Rotina (1) - REFORÇO (38)			2410967 - 31/10/2027		11/02/2026	1	Tela de Aplicação		
+	XXX			Vacina febre amarela (14) - Rotina (1) - REFORÇO (38)			2410967 - 31/10/2027		20/02/2026	1	Carteirinha		
+	XXX			Vacina febre amarela (14) - Rotina (1) - DOSE (8)			2410967 - 31/10/2027		24/03/2026	1	Prontuário		
+	XXX			Vacina febre amarela (14) - Rotina (1) - ÚNICA (9)			2410967 - 31/10/2027		22/04/2026	1	Prontuário		
+	XXX			Vacina febre amarela (14) - Rotina (1) - REFORÇO (38)			2410966 - 31/10/2027		29/04/2026	1	Prontuário		
+	XXX			Vacina febre amarela (14) - Rotina (1) - DOSE (8)			2410966 - 31/10/2027		29/04/2026	1	Prontuário		
+	XXX			Vacina febre amarela (14) - Rotina (1) - DOSE (8)			2410966 - 31/10/2027		06/05/2026	1	Prontuário		
+	XXX			Vacina febre amarela (14) - Rotina (1) - DOSE (8)			2410966 - 31/10/2027		11/05/2026	1	Prontuário		
+	XXX			Vacina febre amarela (14) - Rotina (1) - DOSE (8)			2410967 - 31/10/2027		30/05/2026	1	Prontuário		
+								Quantidade: 9					
+								Total por Vacina: 9					
+Vacina: Vacina polio injetável (inativada poliomielite) (22)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina polio injetável (inativada poliomielite) (22) - Rotina (1) - REFORÇO (38)			X3H36 - 30/09/2026		11/02/2026	1	Tela de Aplicação		
+	XXX			Vacina polio injetável (inativada poliomielite) (22) - Rotina (1) - 3ª DOSE (3)			X3H851V - 30/09/2026		20/02/2026	1	Carteirinha		
+	XXX			Vacina polio injetável (inativada poliomielite) (22) - Rotina (1) - REFORÇO (38)			X3H851V - 30/09/2026		20/02/2026	1	Carteirinha		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost						09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua							Página: 7
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC											
+		Secretaria de Saúde											
+Vacinas Aplicadas													
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   													
+Vacina: Vacina polio injetável (inativada poliomielite) (22)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina polio injetável (inativada poliomielite) (22) - Rotina (1) - 3ª DOSE (3)			X3H851V - 30/09/2026		03/03/2026	1	Tela de Aplicação		
+	XXX			Vacina polio injetável (inativada poliomielite) (22) - Rotina (1) - 3ª DOSE (3)			X3H851V - 30/09/2026		03/03/2026	1	Tela de Aplicação		
+	XXX			Vacina polio injetável (inativada poliomielite) (22) - Rotina (1) - 1ª DOSE (1)			X3H851V - 30/09/2026		06/03/2026	1	Tela de Aplicação		
+	XXX			Vacina polio injetável (inativada poliomielite) (22) - Rotina (1) - 2ª DOSE (2)			X3H851V - 30/09/2026		20/03/2026	1	Tela de Aplicação		
+	XXX			Vacina polio injetável (inativada poliomielite) (22) - Rotina (1) - 1ª DOSE (1)			X3H851V - 30/09/2026		23/03/2026	1	Prontuário		
+	XXX			Vacina polio injetável (inativada poliomielite) (22) - Rotina (1) - 1ª DOSE (1)			X3H851V - 30/09/2026		22/04/2026	1	Prontuário		
+	XXX			Vacina polio injetável (inativada poliomielite) (22) - Rotina (1) - 1ª DOSE (1)			X3H851V - 30/09/2026		23/04/2026	1	Prontuário		
+	XXX			Vacina polio injetável (inativada poliomielite) (22) - Rotina (1) - 2ª DOSE (2)			Y3C221V - 28/02/2027		07/05/2026	1	Prontuário		
+	XXX			Vacina polio injetável (inativada poliomielite) (22) - Rotina (1) - 3ª DOSE (3)			Y3C221V - 28/02/2027		22/05/2026	1	Prontuário		
+	XXX			Vacina polio injetável (inativada poliomielite) (22) - Rotina (1) - 2ª DOSE (2)			Y3C221V - 28/02/2027		25/05/2026	1	Prontuário		
+	XXX			Vacina polio injetável (inativada poliomielite) (22) - Rotina (1) - REFORÇO (38)			Y3C221V - 28/02/2027		02/06/2026	1	Prontuário		
+	XXX			Vacina polio injetável (inativada poliomielite) (22) - Rotina (1) - 2ª DOSE (2)			Y3C221V - 28/02/2027		23/06/2026	1	Prontuário		
+								Quantidade: 15					
+								Total por Vacina: 15					
+Vacina: Vacina sarampo, caxumba, rubéola (24)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina sarampo, caxumba, rubéola (24) - Rotina (1) - 1ª DOSE (1)			0164VV029 - 30/11/2026		29/04/2026	1	Prontuário		
+	XXX			Vacina sarampo, caxumba, rubéola (24) - Rotina (1) - 1ª DOSE (1)			0164VV029 - 30/11/2026		06/05/2026	1	Prontuário		
+	XXX			Vacina sarampo, caxumba, rubéola (24) - Rotina (1) - DOSE (8)			0164VV029 - 30/11/2026		29/05/2026	1	Prontuário		
+	XXX			Vacina sarampo, caxumba, rubéola (24) - Rotina (1) - DOSE (8)			0164VV029 - 30/11/2026		26/06/2026	1	Prontuário		
+								Quantidade: 4					
+								Total por Vacina: 4					
+Vacina: Vacina difteria e tétano adulto (25)													
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost						09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua							Página: 8
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC										
+		Secretaria de Saúde										
+Vacinas Aplicadas												
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   												
+Vacina: Vacina difteria e tétano adulto (25)												
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade	Aplicado	Qtde.	Origem		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - 1ª DOSE (1)			2334L007A - 31/01/2027	02/2026	1	Carteirinha		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - 2ª DOSE (2)			2334L007A - 31/01/2027	02/2026	1	Tela de Aplicação		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - 2ª DOSE (2)			2334L007A - 31/01/2027	02/2026	1	Tela de Aplicação		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - 1ª DOSE (1)			2334L007A - 31/01/2027	03/2026	1	Tela de Aplicação		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - 1ª DOSE (1)			2334L007A - 31/01/2027	03/2026	1	Tela de Aplicação		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - REFORÇO (38)			2334L007A - 31/01/2027	03/2026	1	Tela de Aplicação		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - 3ª DOSE (3)			2334L007A - 31/01/2027	03/2026	1	Tela de Aplicação		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - REFORÇO (38)			2334L007A - 31/01/2027	03/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - REFORÇO (38)			2334L007A - 31/01/2027	03/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - REFORÇO (38)			2334L007A - 31/01/2027	03/2026	1	Tela de Aplicação		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - 2ª DOSE (2)			2334L007A - 31/01/2027	03/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - REFORÇO (38)			2334L007A - 31/01/2027	03/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - REFORÇO (38)			2334L007A - 31/01/2027	03/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - 2ª DOSE (2)			2334L007A - 31/01/2027	03/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - REFORÇO (38)			2334L007A - 31/01/2027	04/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - 1ª DOSE (1)			2334L007A - 31/01/2027	04/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - 2ª DOSE (2)			2334L007A - 31/01/2027	04/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - 3ª DOSE (3)			2334L007A - 31/01/2027	04/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - REFORÇO (38)			233L007B - 31/01/2027	04/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - 3ª DOSE (3)			2334L007A - 31/01/2027	04/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - 3ª DOSE (3)			2334L007A - 31/01/2027	04/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - REFORÇO (38)			233L007B - 31/01/2027	04/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - REFORÇO (38)			233L007B - 31/01/2027	04/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - REFORÇO (38)			233L007B - 31/01/2027	04/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - REFORÇO (38)			233L007B - 31/01/2027	04/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost					09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua						Página: 9
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC											
+		Secretaria de Saúde											
+Vacinas Aplicadas													
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   													
+Vacina: Vacina difteria e tétano adulto (25)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - 1ª DOSE (1)			233L007B - 31/01/2027		05/05/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - REFORÇO (38)			233L007B - 31/01/2027		06/05/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - REFORÇO (38)			233L007B - 31/01/2027		07/05/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - REFORÇO (38)			233L007B - 31/01/2027		08/05/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - REFORÇO (38)			233L007B - 31/01/2027		08/05/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - REFORÇO (38)			2334L007B - 31/01/2027		14/05/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - REFORÇO (38)			2334L007B - 31/01/2027		18/05/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - REFORÇO (38)			2334L007B - 31/01/2027		20/05/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - REFORÇO (38)			2334L007B - 31/01/2027		22/05/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - 1ª DOSE (1)			2334L007B - 31/01/2027		25/05/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - 3ª DOSE (3)			2334L007B - 31/01/2027		30/05/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - 1ª DOSE (1)			2334L007B - 31/01/2027		03/06/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - 3ª DOSE (3)			2334L007B - 31/01/2027		03/06/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - 3ª DOSE (3)			2334L007B - 31/01/2027		09/06/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - 3ª DOSE (3)			2334L007B - 31/01/2027		11/06/2026	1	Prontuário		
+	XXX			Vacina difteria e tétano adulto (25) - Rotina (1) - 2ª DOSE (2)			2335LO3C - 30/04/2028		19/06/2026	1	Prontuário		
+								Quantidade: 41					
+								Total por Vacina: 41					
+Vacina: Vacina pneumo 10 (26)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina pneumo 10 (26) - Rotina (1) - 1ª DOSE (1)			241VPO004NA - 31/12/2026		06/03/2026	1	Tela de Aplicação		
+	XXX			Vacina pneumo 10 (26) - Rotina (1) - 2ª DOSE (2)			241VPO004NA - 31/12/2026		20/03/2026	1	Tela de Aplicação		
+	XXX			Vacina pneumo 10 (26) - Rotina (1) - 1ª DOSE (1)			241VPO004NA - 31/12/2026		23/03/2026	1	Prontuário		
+	XXX			Vacina pneumo 10 (26) - Rotina (1) - 1ª DOSE (1)			241VPO004NA - 31/12/2026		22/04/2026	1	Prontuário		
+	XXX			Vacina pneumo 10 (26) - Rotina (1) - 1ª DOSE (1)			23PVO012NB - 31/10/2026		23/04/2026	1	Prontuário		
+	XXX			Vacina pneumo 10 (26) - Rotina (1) - REFORÇO (38)			23PVO012NB - 31/10/2026		29/04/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost						09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua							Página: 10
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC											
+		Secretaria de Saúde											
+Vacinas Aplicadas													
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   													
+Vacina: Vacina pneumo 10 (26)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina pneumo 10 (26) - Rotina (1) - REFORÇO (38)			23PVO012NB - 31/10/2026		06/05/2026	1	Prontuário		
+	XXX			Vacina pneumo 10 (26) - Rotina (1) - 2ª DOSE (2)			241VPO004NA - 31/12/2026		07/05/2026	1	Prontuário		
+	XXX			Vacina pneumo 10 (26) - Rotina (1) - 2ª DOSE (2)			241VPO004NA - 31/12/2026		25/05/2026	1	Prontuário		
+	XXX			Vacina pneumo 10 (26) - Rotina (1) - REFORÇO (38)			241VPO004NA - 31/12/2026		29/05/2026	1	Prontuário		
+	XXX			Vacina pneumo 10 (26) - Rotina (1) - 2ª DOSE (2)			241VPO004NA - 31/12/2026		23/06/2026	1	Prontuário		
+	XXX			Vacina pneumo 10 (26) - Rotina (1) - REFORÇO (38)			241VPO004NA - 31/12/2026		26/06/2026	1	Prontuário		
+								Quantidade: 12					
+								Total por Vacina: 12					
+Vacina: Vacina influenza trivalente (33)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027		28/03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601064/00 - 28/02/2027		28/03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027		28/03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027		28/03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601064/00 - 28/02/2027		28/03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601064/00 - 28/02/2027		28/03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027		28/03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027		28/03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601064/00 - 28/02/2027		28/03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027		28/03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027		28/03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027		28/03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027		28/03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027		28/03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027		28/03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027		28/03/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost						09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua							Página: 11
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC										
+		Secretaria de Saúde										
+Vacinas Aplicadas												
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   												
+Vacina: Vacina influenza trivalente (33)												
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade	Aplicado	Qtde.	Origem		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Campanha indiscriminada (5) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Campanha indiscriminada (5) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Campanha indiscriminada (5) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost					09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua						Página: 12
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC										
+		Secretaria de Saúde										
+Vacinas Aplicadas												
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   												
+Vacina: Vacina influenza trivalente (33)												
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade	Aplicado	Qtde.	Origem		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - 1ª DOSE (1)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost					09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua						Página: 13
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC										
+		Secretaria de Saúde										
+Vacinas Aplicadas												
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   												
+Vacina: Vacina influenza trivalente (33)												
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade	Aplicado	Qtde.	Origem		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	03/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601064/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601064/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601064/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost					09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua						Página: 14
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC										
+		Secretaria de Saúde										
+Vacinas Aplicadas												
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   												
+Vacina: Vacina influenza trivalente (33)												
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade	Aplicado	Qtde.	Origem		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601064/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601064/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601064/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601064/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost					09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua						Página: 15
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC										
+		Secretaria de Saúde										
+Vacinas Aplicadas												
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   												
+Vacina: Vacina influenza trivalente (33)												
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade	Aplicado	Qtde.	Origem		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - 1ª DOSE (1)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost					09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua						Página: 16
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC										
+		Secretaria de Saúde										
+Vacinas Aplicadas												
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   												
+Vacina: Vacina influenza trivalente (33)												
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade	Aplicado	Qtde.	Origem		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost					09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua						Página: 17
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC										
+		Secretaria de Saúde										
+Vacinas Aplicadas												
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   												
+Vacina: Vacina influenza trivalente (33)												
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade	Aplicado	Qtde.	Origem		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost					09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua						Página: 18
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC										
+		Secretaria de Saúde										
+Vacinas Aplicadas												
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   												
+Vacina: Vacina influenza trivalente (33)												
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade	Aplicado	Qtde.	Origem		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - 1ª DOSE (1)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			260116/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - 2ª DOSE (2)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	04/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost					09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua						Página: 19
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC										
+		Secretaria de Saúde										
+Vacinas Aplicadas												
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   												
+Vacina: Vacina influenza trivalente (33)												
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade	Aplicado	Qtde.	Origem		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost					09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua						Página: 20
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC										
+		Secretaria de Saúde										
+Vacinas Aplicadas												
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   												
+Vacina: Vacina influenza trivalente (33)												
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade	Aplicado	Qtde.	Origem		
+	XXX											
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	04/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost					09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua						Página: 21
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC										
+		Secretaria de Saúde										
+Vacinas Aplicadas												
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   												
+Vacina: Vacina influenza trivalente (33)												
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade	Aplicado	Qtde.	Origem		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - 2ª DOSE (2)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - 1ª DOSE (1)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - 1ª DOSE (1)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost					09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua						Página: 22
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC										
+		Secretaria de Saúde										
+Vacinas Aplicadas												
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   												
+Vacina: Vacina influenza trivalente (33)												
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade	Aplicado	Qtde.	Origem		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost					09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua						Página: 23
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC										
+		Secretaria de Saúde										
+Vacinas Aplicadas												
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   												
+Vacina: Vacina influenza trivalente (33)												
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade	Aplicado	Qtde.	Origem		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost					09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua						Página: 24
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC										
+		Secretaria de Saúde										
+Vacinas Aplicadas												
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   												
+Vacina: Vacina influenza trivalente (33)												
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade	Aplicado	Qtde.	Origem		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601273/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost					09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua						Página: 25
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC										
+		Secretaria de Saúde										
+Vacinas Aplicadas												
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   												
+Vacina: Vacina influenza trivalente (33)												
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade	Aplicado	Qtde.	Origem		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - 2ª DOSE (2)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	05/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost					09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua						Página: 26
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC										
+		Secretaria de Saúde										
+Vacinas Aplicadas												
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   												
+Vacina: Vacina influenza trivalente (33)												
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade	Aplicado	Qtde.	Origem		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601273/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost					09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua						Página: 27
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC										
+		Secretaria de Saúde										
+Vacinas Aplicadas												
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   												
+Vacina: Vacina influenza trivalente (33)												
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade	Aplicado	Qtde.	Origem		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - 1ª DOSE (1)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2601364/00 - 28/02/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost					09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua						Página: 28
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC										
+		Secretaria de Saúde										
+Vacinas Aplicadas												
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   												
+Vacina: Vacina influenza trivalente (33)												
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade	Aplicado	Qtde.	Origem		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027	06/2026	1	Prontuário		
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost					09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua						Página: 29
+		SECRETARIA MUNICIPAL DA SAUDE DE ARARANGUA - SC											
+		Secretaria de Saúde											
+Vacinas Aplicadas													
+Filtros: Data Inicial: 01/01/2026   Data Final: 30/06/2026   Viajante: Ambos   Gestante: Ambos   Puerpério: Ambos   Sala de Vacinação: 7   Comunicante de hanseníase: Nao   Transcrição: Nao   Destino da Vacina: Todos   Baixa de estoque integrado: Ambos   													
+Vacina: Vacina influenza trivalente (33)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2602235/00 - 30/04/2027		23/06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027		25/06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027		25/06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2602235/00 - 30/04/2027		25/06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027		25/06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027		26/06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - 2ª DOSE (2)			2602235/00 - 30/04/2027		26/06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027		26/06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2602235/00 - 30/04/2027		29/06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - ÚNICA (9)			2602235/00 - 30/04/2027		29/06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Rotina (1) - 2ª DOSE (2)			2602235/00 - 30/04/2027		29/06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027		29/06/2026	1	Prontuário		
+	XXX			Vacina influenza trivalente (33) - Especial (2) - ÚNICA (9)			2602235/00 - 30/04/2027		29/06/2026	1	Prontuário		
+								Quantidade: 498					
+								Total por Vacina: 498					
+Vacina: Vacina varicela (34)													
+	Paciente			Vacina, Estratégia e Dose			Lote e Data de Validade		Aplicado	Qtde.	Origem		
+	XXX			Vacina varicela (34) - Rotina (1) - 2ª DOSE (2)			Z50125008 - 13/02/2027		11/02/2026	1	Tela de Aplicação		
+	XXX			Vacina varicela (34) - Rotina (1) - 2ª DOSE (2)			Z50125008 - 13/02/2027		20/02/2026	1	Carteirinha		
+								Quantidade: 2					
+								Total por Vacina: 2					
+								Quantidade: 690					
+								Total de registros: 690					
+			Relatório emitido pelo sistema G-MUS null		Usuário:	BRUNOTM @ localhost						09/07/2026 08:04	
+			© Inovadora Sistemas de Gestão Ltda.		Base:	10.15.0.182:gmus_ghosp_ararangua							Página: 30
