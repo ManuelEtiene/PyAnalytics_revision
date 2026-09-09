@@ -2,6 +2,7 @@
 
 COD_ARARANGUA = "420140"
 COD_TUBARAO = "420830"
+COD_CRICIUMA = "420460"
 CHUNK_SIZE = 200_000
 
 MAPA_SEXO = {
@@ -207,8 +208,32 @@ CAPITULOS_CID10 = {
 POP_CENSO_2022 = {
     "Araranguá": 71_922,
     "Tubarão": 110_088,
+    "Criciúma": 214_493,
     "SC (total)": 7_610_361,
 }
+
+# Grupos de causa (notebook evitável) — ordem de exibição
+ORDEM_GRUPO_CAUSA = (
+    "Doenças do Aparelho Circulatório",
+    "Neoplasias (Tumores)",
+    "Causas Externas (Acidentes/Violências)",
+    "Doenças do Aparelho Respiratório",
+    "Endócrinas e Metabólicas (ex: Diabetes)",
+    "Doenças do Aparelho Digestivo",
+    "Infecciosas e Parasitárias",
+    "Sintomas e Sinais Mal Definidos",
+    "Outras Causas Específicas",
+    "Mal Definidos / Ignorados",
+)
+
+FAIXAS_INFARTO = [0, 19, 39, 59, 79, 120]
+ROTULOS_FAIXAS_INFARTO = (
+    "Até 19 anos",
+    "20-39 anos",
+    "40-59 anos",
+    "60-79 anos",
+    "80+ anos",
+)
 
 POP_ARARANGUA_VIOLENTAS = 107_089
 
@@ -223,6 +248,8 @@ ROTULO_COLUNA = {
     "CAUSABAS_DESC": "Causa básica",
     "CAUSA_DESC": "Causa",
     "CAUSA_GRUPO": "Grupo de causa",
+    "GRUPO_CAUSA": "Grupo de causa",
+    "FAIXA_INFARTO": "Faixa etária",
     "PARTO": "Tipo de parto",
     "GRAVIDEZ": "Tipo de gravidez",
     "GESTACAO": "Tempo de gestação",
@@ -240,6 +267,8 @@ ROTULO_COLUNA = {
     "OCUPMAE": "Ocupação da mãe",
     "ANO_OBITO": "Ano do óbito",
     "TIPO_VIOLENCIA": "Tipo de violência",
+    "tipo_tratamento": "Tipo de tratamento",
+    "bairro": "Bairro",
 }
 
 

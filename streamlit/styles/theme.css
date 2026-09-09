@@ -791,6 +791,7 @@ section[data-testid="stSidebar"] > div:first-child {
   box-shadow: 0 4px 6px -1px rgba(0, 89, 187, 0.1), 0 2px 4px -1px rgba(0, 89, 187, 0.06);
   padding: 1.5rem;
   min-height: 180px;
+  transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
 .kpi-value {
@@ -826,6 +827,16 @@ section[data-testid="stSidebar"] > div:first-child {
   color: #191c1d;
 }
 
+.chip-blue {
+  background: #d6e6f8;
+  color: #0059bb;
+}
+
+.chip-red {
+  background: #f8d6db;
+  color: #b6152e;
+}
+
 .alert-card {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 0.75rem;
@@ -850,11 +861,13 @@ section[data-testid="stSidebar"] > div:first-child {
   min-height: 3rem;
 }
 
-.st-key-alerta_causa {
+.st-key-alerta_causa,
+.st-key-alerta_med {
   position: relative !important;
 }
 
-.st-key-alerta_causa_acoes {
+.st-key-alerta_causa_acoes,
+.st-key-alerta_med_acoes {
   position: absolute !important;
   right: 1.5rem;
   bottom: 1.5rem;
@@ -866,7 +879,12 @@ section[data-testid="stSidebar"] > div:first-child {
 .st-key-alerta_causa_acoes a[href]:link,
 .st-key-alerta_causa_acoes a[href]:visited,
 .st-key-alerta_causa_acoes a[href]:hover,
-.st-key-alerta_causa_acoes a[href]:active {
+.st-key-alerta_causa_acoes a[href]:active,
+.st-key-alerta_med_acoes a[href],
+.st-key-alerta_med_acoes a[href]:link,
+.st-key-alerta_med_acoes a[href]:visited,
+.st-key-alerta_med_acoes a[href]:hover,
+.st-key-alerta_med_acoes a[href]:active {
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
@@ -884,13 +902,59 @@ section[data-testid="stSidebar"] > div:first-child {
 }
 
 .st-key-alerta_causa_acoes a[href] p,
-.st-key-alerta_causa_acoes a[href] span {
+.st-key-alerta_causa_acoes a[href] span,
+.st-key-alerta_med_acoes a[href] p,
+.st-key-alerta_med_acoes a[href] span {
   color: #ffffff !important;
   text-decoration: none !important;
 }
 
-.st-key-alerta_causa_acoes a[href]:hover {
+.st-key-alerta_causa_acoes a[href]:hover,
+.st-key-alerta_med_acoes a[href]:hover {
   background: #9a1227;
+}
+
+/* KPI Medicamentos: card inteiro clicável → /medicamentos */
+.st-key-kpi_med_registros,
+.st-key-kpi_med_custo {
+  position: relative !important;
+  cursor: pointer;
+}
+
+.st-key-kpi_med_registros:hover .glass-card,
+.st-key-kpi_med_custo:hover .glass-card {
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 89, 187, 0.18);
+}
+
+.st-key-kpi_med_registros .stMarkdown,
+.st-key-kpi_med_registros .glass-card,
+.st-key-kpi_med_custo .stMarkdown,
+.st-key-kpi_med_custo .glass-card {
+  pointer-events: none;
+}
+
+.st-key-kpi_med_registros [data-testid="stElementContainer"]:has([data-testid="stPageLink"]),
+.st-key-kpi_med_registros [data-testid="stPageLink"],
+.st-key-kpi_med_registros [data-testid="stPageLink"] > div,
+.st-key-kpi_med_custo [data-testid="stElementContainer"]:has([data-testid="stPageLink"]),
+.st-key-kpi_med_custo [data-testid="stPageLink"],
+.st-key-kpi_med_custo [data-testid="stPageLink"] > div {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  z-index: 20 !important;
+}
+
+.st-key-kpi_med_registros [data-testid="stPageLink-NavLink"],
+.st-key-kpi_med_custo [data-testid="stPageLink-NavLink"] {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 0 !important;
+  cursor: pointer !important;
 }
 
 .alert-kicker {
@@ -947,7 +1011,7 @@ section[data-testid="stSidebar"] > div:first-child {
 }
 
 .st-key-explore_bases [data-testid="stColumn"] {
-  flex: 1 1 calc(50% - 0.65rem) !important;
+  flex: 1 1 calc(33.333% - 0.9rem) !important;
   min-width: 0 !important;
 }
 
@@ -980,33 +1044,45 @@ section[data-testid="stSidebar"] > div:first-child {
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0.3rem 0;
-  white-space: nowrap;
+  white-space: normal;
+  line-height: 1.2;
 }
 
 .st-key-base_sim,
-.st-key-base_medicamentos {
+.st-key-base_medicamentos,
+.st-key-base_vacinas {
   position: relative !important;
-}
-
-.st-key-base_sim {
   cursor: pointer;
+  overflow: hidden !important;
+  isolation: isolate;
 }
 
 .st-key-base_sim:hover .base-card,
-.st-key-base_medicamentos:hover .base-card {
+.st-key-base_medicamentos:hover .base-card,
+.st-key-base_vacinas:hover .base-card {
   transform: scale(1.05);
   box-shadow: 0 12px 24px rgba(0, 89, 187, 0.18);
 }
 
-/* Markdown não intercepta o clique; só o NavLink /sim cobre o card. */
+/* Markdown não intercepta o clique; o PageLink cobre só o card. */
 .st-key-base_sim .stMarkdown,
-.st-key-base_sim .base-card {
+.st-key-base_sim .base-card,
+.st-key-base_medicamentos .stMarkdown,
+.st-key-base_medicamentos .base-card,
+.st-key-base_vacinas .stMarkdown,
+.st-key-base_vacinas .base-card {
   pointer-events: none;
 }
 
 .st-key-base_sim [data-testid="stElementContainer"]:has([data-testid="stPageLink"]),
 .st-key-base_sim [data-testid="stPageLink"],
-.st-key-base_sim [data-testid="stPageLink"] > div {
+.st-key-base_sim [data-testid="stPageLink"] > div,
+.st-key-base_medicamentos [data-testid="stElementContainer"]:has([data-testid="stPageLink"]),
+.st-key-base_medicamentos [data-testid="stPageLink"],
+.st-key-base_medicamentos [data-testid="stPageLink"] > div,
+.st-key-base_vacinas [data-testid="stElementContainer"]:has([data-testid="stPageLink"]),
+.st-key-base_vacinas [data-testid="stPageLink"],
+.st-key-base_vacinas [data-testid="stPageLink"] > div {
   position: absolute !important;
   inset: 0 !important;
   left: 0 !important;
@@ -1016,29 +1092,28 @@ section[data-testid="stSidebar"] > div:first-child {
   width: 100% !important;
   max-width: none !important;
   height: 100% !important;
+  max-height: 100% !important;
+  margin: 0 !important;
   z-index: 20 !important;
+  overflow: hidden !important;
 }
 
-.st-key-base_sim [data-testid="stPageLink-NavLink"] {
+.st-key-base_sim [data-testid="stPageLink-NavLink"],
+.st-key-base_medicamentos [data-testid="stPageLink-NavLink"],
+.st-key-base_vacinas [data-testid="stPageLink-NavLink"] {
   display: block !important;
   width: 100% !important;
   height: 100% !important;
+  max-height: 100% !important;
   opacity: 0 !important;
   cursor: pointer !important;
 }
 
-.st-key-base_medicamentos {
-  cursor: default;
-}
-
-.st-key-base_medicamentos .base-card {
-  opacity: 0.88;
-}
-
 .st-key-dataset_desabilitado {
   pointer-events: none;
-  opacity: 0.65;
+  opacity: 0.48;
   cursor: default;
+  filter: grayscale(0.35);
 }
 
 .st-key-dataset_desabilitado [data-testid="stExpanderDetails"],
@@ -1046,24 +1121,39 @@ section[data-testid="stSidebar"] > div:first-child {
   display: none !important;
 }
 
+/* "(em breve)" alinhado à direita no título da pasta */
+.st-key-dataset_desabilitado [data-testid="stExpander"] summary {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+.st-key-dataset_desabilitado [data-testid="stExpander"] summary [data-testid="stMarkdownContainer"] {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+}
+
+.st-key-dataset_desabilitado [data-testid="stExpander"] summary::after {
+  content: "(em breve)";
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #717786;
+  white-space: nowrap;
+}
+
 .sim-analises-grade {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   align-items: stretch;
   margin: 0.4rem 0 1.1rem;
 }
 
 .sim-analise-item {
-  grid-column: span 2;
-}
-
-.sim-analise-item:nth-child(4) {
-  grid-column: 2 / span 2;
-}
-
-.sim-analise-item:nth-child(5) {
-  grid-column: 4 / span 2;
+  grid-column: span 1;
 }
 
 .sim-analise-item,
@@ -1077,9 +1167,7 @@ section[data-testid="stSidebar"] > div:first-child {
     grid-template-columns: 1fr;
   }
 
-  .sim-analise-item,
-  .sim-analise-item:nth-child(4),
-  .sim-analise-item:nth-child(5) {
+  .sim-analise-item {
     grid-column: auto;
   }
 }
@@ -1089,6 +1177,66 @@ section[data-testid="stSidebar"] > div:first-child {
   height: 100%;
   box-sizing: border-box;
   transition: transform 180ms ease, box-shadow 180ms ease;
+  border-top: 5px solid #0059bb;
+  background:
+    linear-gradient(180deg, rgba(0, 89, 187, 0.06) 0%, rgba(255, 255, 255, 0.95) 42%),
+    #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.analise-card-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.15rem;
+}
+
+.analise-kicker {
+  margin: 0 !important;
+  color: #0059bb !important;
+  font-weight: 700 !important;
+}
+
+.analise-card .base-card-title {
+  color: #191c1d !important;
+  margin: 0.15rem 0 0.25rem 0 !important;
+}
+
+/* Faixa da bandeira: azul → amarelo → vermelho nos cards */
+.sim-analise-item:nth-child(3n + 1) .analise-card {
+  border-top-color: #0059bb;
+  background:
+    linear-gradient(180deg, rgba(0, 89, 187, 0.08) 0%, rgba(255, 255, 255, 0.96) 45%),
+    #ffffff;
+}
+
+.sim-analise-item:nth-child(3n + 1) .analise-kicker {
+  color: #0059bb !important;
+}
+
+.sim-analise-item:nth-child(3n + 2) .analise-card {
+  border-top-color: #fdc003;
+  background:
+    linear-gradient(180deg, rgba(253, 192, 3, 0.16) 0%, rgba(255, 255, 255, 0.96) 45%),
+    #ffffff;
+}
+
+.sim-analise-item:nth-child(3n + 2) .analise-kicker {
+  color: #a67c00 !important;
+}
+
+.sim-analise-item:nth-child(3n + 3) .analise-card {
+  border-top-color: #b6152e;
+  background:
+    linear-gradient(180deg, rgba(182, 21, 46, 0.08) 0%, rgba(255, 255, 255, 0.96) 45%),
+    #ffffff;
+}
+
+.sim-analise-item:nth-child(3n + 3) .analise-kicker {
+  color: #b6152e !important;
 }
 
 .sim-analise-link {
@@ -1106,10 +1254,32 @@ section[data-testid="stSidebar"] > div:first-child {
 
 .sim-analise-link:hover .analise-card {
   transform: scale(1.03);
-  box-shadow: 0 12px 24px rgba(0, 89, 187, 0.18);
+  box-shadow: 0 12px 24px rgba(0, 89, 187, 0.2);
 }
 
 .sim-analise-soon {
-  opacity: 0.72;
-  cursor: default;
+  opacity: 0.88;
+}
+
+.sim-analise-soon .analise-card {
+  filter: saturate(0.85);
+}
+
+/* Título do hub */
+.pya-titulo-faixa h2 {
+  position: relative;
+}
+
+/* Seção "Sobre a base" — só nos hubs */
+.st-key-hub_base h2,
+.st-key-hub_base [data-testid="stMarkdownContainer"] h2 {
+  color: #0059bb !important;
+}
+
+.st-key-hub_base h3,
+.st-key-hub_base [data-testid="stMarkdownContainer"] h3 {
+  color: #b6152e !important;
+  border-left: 4px solid #fdc003;
+  padding-left: 0.55rem;
+  margin-top: 1rem !important;
 }
