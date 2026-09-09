@@ -1,8 +1,15 @@
-"""Registro das páginas Streamlit e URLs da base SIM."""
+"""Registro das páginas Streamlit e URLs das bases."""
 
 import streamlit as st
 
-from catalog import eh_tema_sim, slug_sim
+from catalog import (
+    eh_tema_med,
+    eh_tema_sim,
+    eh_tema_vac,
+    slug_med,
+    slug_sim,
+    slug_vac,
+)
 from components.tema import params_extra
 
 PAGES: dict = {}
@@ -20,7 +27,7 @@ def page(page_id: str):
 
 
 def href(page_id: str) -> str:
-    """Caminho público (temas SIM: /sim?tema=retrato)."""
+    """Caminho público das bases e temas."""
     return _com_tema(_caminho(page_id))
 
 
@@ -28,6 +35,10 @@ def _caminho(page_id: str) -> str:
     """URL do item, sem o parâmetro de tema. Home fica em /."""
     if eh_tema_sim(page_id):
         return f"/sim?tema={slug_sim(page_id)}"
+    if eh_tema_med(page_id):
+        return f"/medicamentos?tema={slug_med(page_id)}"
+    if eh_tema_vac(page_id):
+        return f"/vacinas?tema={slug_vac(page_id)}"
     pag = page(page_id)
     path = str(getattr(pag, "url_path", None) or "").strip("/")
     return f"/{path}" if path else "/"
@@ -44,9 +55,13 @@ def _com_tema(url: str) -> str:
 
 
 def atalho(page_id: str) -> tuple:
-    """Página e query para st.page_link (temas SIM ficam em /sim)."""
+    """Página e query para st.page_link."""
     if eh_tema_sim(page_id):
         pag, query = page("sim"), {"tema": slug_sim(page_id)}
+    elif eh_tema_med(page_id):
+        pag, query = page("medicamentos"), {"tema": slug_med(page_id)}
+    elif eh_tema_vac(page_id):
+        pag, query = page("vacinas"), {"tema": slug_vac(page_id)}
     else:
         pag, query = page(page_id), {}
     query.update(params_extra())
@@ -63,7 +78,7 @@ def link_pagina(page_id: str, label: str, icon: str | None = None) -> None:
 
 
 def abrir(page_id: str) -> None:
-    """Troca de página; temas SIM usam /sim?tema=."""
+    """Troca de página; temas usam query ?tema=."""
     pag, query = atalho(page_id)
     if query:
         st.switch_page(pag, query_params=query)

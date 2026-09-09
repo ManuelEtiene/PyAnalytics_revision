@@ -22,7 +22,7 @@ from components.footer import render_footer
 from components.header import render_header
 from components.drawer import render_drawer
 from navigation import redir_sim, register
-from views import home, sim_hub, sobre
+from views import home, med_hub, sim_hub, sobre, vac_hub
 
 inject_theme()
 
@@ -31,11 +31,15 @@ _ATALHOS = ("retrato", "evitavel", "onde_morrem", "violentas", "materna")
 
 
 def _paginas() -> dict:
-    """Mapa id do catálogo → st.Page (temas SIM vivem em /sim)."""
+    """Mapa id do catálogo → st.Page (temas vivem no hub da base)."""
     paginas = {
         "home": st.Page(home.render, title="Início", default=True),
         "sobre": st.Page(sobre.render, title="Sobre o projeto PyAnalytics", url_path="sobre"),
         "sim": st.Page(sim_hub.render, title="SIM (Mortalidade)", url_path="sim"),
+        "medicamentos": st.Page(
+            med_hub.render, title="Medicamentos", url_path="medicamentos"
+        ),
+        "vacinas": st.Page(vac_hub.render, title="Vacinações", url_path="vacinas"),
     }
     paginas.update(_redireciona_antigos())
     return paginas

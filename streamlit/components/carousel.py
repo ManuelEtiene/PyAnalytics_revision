@@ -14,7 +14,7 @@ def html_analises(itens: tuple[NavItem, ...]) -> str:
 def _item(item: NavItem) -> str:
     """Um card: status conforme o tema estiver pronto."""
     status = "Disponível" if item.ready else "Em breve"
-    corpo = analise_card(item.short, item.description, status)
+    corpo = analise_card(item.short, item.description, status, item.ready)
     inner = _envolver(item, corpo)
     return f'<div class="sim-analise-item">{inner}</div>'
 

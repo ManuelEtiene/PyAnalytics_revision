@@ -191,22 +191,30 @@ ul[role="listbox"] li:hover,
   color: #ff7a8a !important;
 }
 
-.st-key-alerta_causa_acoes a[href] {
+.st-key-alerta_causa_acoes a[href],
+.st-key-alerta_med_acoes a[href] {
   background: #ff7a8a !important;
   color: #ffffff !important;
 }
 
-.st-key-alerta_causa_acoes a[href]:hover {
+.st-key-alerta_causa_acoes a[href]:hover,
+.st-key-alerta_med_acoes a[href]:hover {
   background: #ff93a0 !important;
 }
 
 .st-key-base_sim:hover .base-card,
-.st-key-base_medicamentos:hover .base-card {
+.st-key-base_medicamentos:hover .base-card,
+.st-key-base_vacinas:hover .base-card {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
 .st-key-dataset_desabilitado {
-  opacity: 0.55;
+  opacity: 0.42;
+  filter: grayscale(0.45);
+}
+
+.st-key-dataset_desabilitado [data-testid="stExpander"] summary::after {
+  color: #9aa3af !important;
 }
 
 .section-title {
@@ -255,6 +263,52 @@ a,
 
 .sim-analise-link:hover .analise-card {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.analise-card {
+  background:
+    linear-gradient(180deg, rgba(0, 89, 187, 0.18) 0%, #1a1e24 45%),
+    #1a1e24 !important;
+  border-color: #2c333d !important;
+}
+
+.sim-analise-item:nth-child(3n + 1) .analise-card {
+  background:
+    linear-gradient(180deg, rgba(0, 89, 187, 0.22) 0%, #1a1e24 45%),
+    #1a1e24 !important;
+}
+
+.sim-analise-item:nth-child(3n + 2) .analise-card {
+  background:
+    linear-gradient(180deg, rgba(253, 192, 3, 0.2) 0%, #1a1e24 45%),
+    #1a1e24 !important;
+}
+
+.sim-analise-item:nth-child(3n + 3) .analise-card {
+  background:
+    linear-gradient(180deg, rgba(182, 21, 46, 0.22) 0%, #1a1e24 45%),
+    #1a1e24 !important;
+}
+
+.analise-card .base-card-title,
+.analise-card .muted {
+  color: #e8eaed !important;
+}
+
+.st-key-hub_base h2,
+.st-key-hub_base [data-testid="stMarkdownContainer"] h2 {
+  color: #6eb0ff !important;
+}
+
+.st-key-hub_base h3,
+.st-key-hub_base [data-testid="stMarkdownContainer"] h3 {
+  color: #ff7a8a !important;
+  border-left-color: #fdc003 !important;
+}
+
+.chip-blue {
+  background: #1e3a5f !important;
+  color: #8ec5ff !important;
 }
 
 /* Expanders e detalhes Streamlit */

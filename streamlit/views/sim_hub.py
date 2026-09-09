@@ -2,7 +2,7 @@
 
 import streamlit as st
 
-from catalog import TOPICS
+from catalog import TOPICS_SIM
 from components.carousel import html_analises
 from components.voltar import faixa_titulo
 from views.sim_evitavel import render as render_evitavel
@@ -39,14 +39,15 @@ def render() -> None:
 
 def _visao_geral() -> None:
     """Página central da SIM, de onde saem os temas."""
-    faixa_titulo("SIM — Sistema de Informações sobre Mortalidade", "home")
-    _grade()
-    _sobre_a_base()
+    with st.container(key="hub_base"):
+        faixa_titulo("SIM — Sistema de Informações sobre Mortalidade", "home")
+        _grade()
+        _sobre_a_base()
 
 
 def _grade() -> None:
     """Cards iguais: 3 na primeira linha, 2 na segunda."""
-    st.html(html_analises(TOPICS))
+    st.html(html_analises(TOPICS_SIM))
 
 
 def _sobre_a_base() -> None:

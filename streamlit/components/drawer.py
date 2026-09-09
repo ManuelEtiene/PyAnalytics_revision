@@ -2,7 +2,7 @@
 
 import streamlit as st
 
-from catalog import TOPICS
+from catalog import TOPICS_MED, TOPICS_SIM, VACINAS
 from navigation import link_pagina
 
 
@@ -15,7 +15,7 @@ def render_drawer() -> None:
 
 
 def render_menu_links() -> None:
-    """Seções Geral e Datasets, com SIM recolhível."""
+    """Seções Geral e Datasets."""
     _secao_geral()
     _secao_datasets()
 
@@ -28,27 +28,28 @@ def _secao_geral() -> None:
 
 
 def _secao_datasets() -> None:
-    """Pastas das bases; Medicamentos ainda não é navegável."""
+    """Pastas das bases; Vacinações fica apagada até a base existir."""
     st.markdown("**Datasets**")
-    _pasta_sim()
-    _item_desabilitado("Medicamentos")
+    _pasta("SIM (Mortalidade)", "sim", TOPICS_SIM, "folder_open")
+    _pasta("Medicamentos", "medicamentos", TOPICS_MED, "medication")
+    _pasta_em_breve(VACINAS.short)
 
 
-def _pasta_sim() -> None:
-    """SIM com visão da base e subtópicos."""
-    with st.expander("SIM (Mortalidade)", expanded=False):
-        _item("sim", "Visão da base", ":material/folder_open:")
-        for topico in TOPICS:
+def _pasta(titulo: str, hub_id: str, topicos, icone: str) -> None:
+    """Expander com visão da base e subtópicos."""
+    with st.expander(titulo, expanded=False):
+        _item(hub_id, "Visão da base", f":material/{icone}:")
+        for topico in topicos:
             _item(topico.id, topico.title, f":material/{topico.icon}:")
 
 
-def _item(page_id: str, label: str, icon: str) -> None:
-    """Um atalho do menu (temas SIM abrem /sim?tema=)."""
-    link_pagina(page_id, label, icon)
-
-
-def _item_desabilitado(label: str) -> None:
-    """Mesmo visual do expander SIM, sem abrir nem navegar."""
+def _pasta_em_breve(titulo: str) -> None:
+    """Base ainda sem conteúdo: apagada e sem navegação."""
     with st.container(key="dataset_desabilitado"):
-        with st.expander(f"{label} (em breve)", expanded=False):
+        with st.expander(titulo, expanded=False):
             pass
+
+
+def _item(page_id: str, label: str, icon: str) -> None:
+    """Um atalho do menu."""
+    link_pagina(page_id, label, icon)

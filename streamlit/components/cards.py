@@ -31,25 +31,31 @@ def alert_card(kicker: str, titulo: str, texto: str, valor: str, detalhe: str) -
     """
 
 
-def base_card(titulo: str, texto: str, status: str) -> str:
+def base_card(titulo: str, texto: str, status: str, pronto: bool = True) -> str:
     """Card quadrado de uma base (SIM, Medicamentos…)."""
+    chip = "chip-yellow" if pronto else "chip-blue"
     return f"""
     <div class="glass-card base-card">
-      <p class="topic-kicker">Base</p>
+      <div class="analise-card-topo">
+        <p class="topic-kicker">Base</p>
+        <span class="chip {chip}">{status}</span>
+      </div>
       <p class="base-card-title">{titulo}</p>
       <p class="muted">{texto}</p>
-      <p class="topic-kicker">{status}</p>
     </div>
     """
 
 
-def analise_card(titulo: str, texto: str, status: str) -> str:
-    """Card de um tema da SIM (carrossel)."""
+def analise_card(titulo: str, texto: str, status: str, pronto: bool = True) -> str:
+    """Card de um tema da base (hub SIM / Medicamentos / Vacinações)."""
+    chip = "chip-yellow" if pronto else "chip-blue"
     return f"""
     <div class="glass-card analise-card">
-      <p class="topic-kicker">Análise</p>
+      <div class="analise-card-topo">
+        <p class="topic-kicker analise-kicker">Análise</p>
+        <span class="chip {chip}">{status}</span>
+      </div>
       <p class="base-card-title">{titulo}</p>
       <p class="muted">{texto}</p>
-      <p class="topic-kicker">{status}</p>
     </div>
     """

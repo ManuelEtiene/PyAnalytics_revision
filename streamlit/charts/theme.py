@@ -258,7 +258,12 @@ def _rotulos_geo(geo) -> list[str]:
     return [n if n in top else "" for n in geo["nome"]]
 
 
-def heatmap(tabela, title: str, escala: str = "Blues") -> go.Figure:
+def heatmap(
+    tabela,
+    title: str,
+    escala: str = "Blues",
+    cor_legenda: str = "Óbitos",
+) -> go.Figure:
     """Heatmap com números contrastantes (escuro em célula clara)."""
     eixo_x = rotulo_coluna(tabela.columns.name)
     eixo_y = rotulo_coluna(tabela.index.name)
@@ -269,11 +274,11 @@ def heatmap(tabela, title: str, escala: str = "Blues") -> go.Figure:
         aspect="auto",
         text_auto=False,
         template=None,
-        labels=dict(x=eixo_x, y=eixo_y, color="Óbitos"),
+        labels=dict(x=eixo_x, y=eixo_y, color=cor_legenda),
     )
     _rotulos_heatmap(fig, dados)
     fig = apply_layout(fig, title)
-    _encaixar_heatmap(fig, eixo_x, eixo_y, len(dados.index))
+    _encaixar_heatmap(fig, eixo_x, eixo_y, len(dados.index), len(dados.columns), cor_legenda)
     return fig
 
 
@@ -287,19 +292,36 @@ def _tabela_heatmap(tabela):
     return dados
 
 
-def _encaixar_heatmap(fig: go.Figure, eixo_x: str, eixo_y: str, n_linhas: int) -> None:
-    """Abre margem dos rótulos e trava o zoom."""
+def _encaixar_heatmap(
+    fig: go.Figure,
+    eixo_x: str,
+    eixo_y: str,
+    n_linhas: int,
+    n_cols: int = 0,
+    cor_legenda: str = "Óbitos",
+) -> None:
+    """Abre margem dos rótulos (inclui título de baixo) e trava o zoom."""
+    angulo = -35 if n_cols >= 6 else 0
+    margem_baixo = 130 if angulo else 80
     fig.update_layout(
-        margin=dict(l=96, r=72, t=56, b=72),
+        margin=dict(l=110, r=80, t=56, b=margem_baixo),
         dragmode=False,
-        height=max(360, min(520, 56 * n_linhas + 140)),
-        coloraxis_colorbar=dict(title="Óbitos"),
+        height=max(400, min(600, 52 * n_linhas + margem_baixo + 80)),
+        coloraxis_colorbar=dict(title=cor_legenda),
     )
     fig.update_xaxes(
-        title=eixo_x, automargin=True, fixedrange=True, tickangle=0, ticks="outside",
+        title=dict(text=eixo_x or "", standoff=28),
+        automargin=True,
+        fixedrange=True,
+        tickangle=angulo,
+        ticks="outside",
+        tickfont=dict(size=10),
     )
     fig.update_yaxes(
-        title=eixo_y, automargin=True, fixedrange=True, ticks="outside",
+        title=dict(text=eixo_y or "", standoff=12),
+        automargin=True,
+        fixedrange=True,
+        ticks="outside",
     )
 
 
