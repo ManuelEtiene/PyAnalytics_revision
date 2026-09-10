@@ -1,5 +1,7 @@
 """Custos sobre as dispensações."""
 
+import streamlit as st
+
 from charts import med_custos as graficos
 from data.prepare_med import load_med, periodo_med
 from views.common import exige
@@ -18,5 +20,17 @@ def render() -> None:
     )
     secao("Evolução mensal", graficos.evolucao_mensal(df, periodo))
     secao("Medicamentos que mais custam", graficos.top_custo(df, periodo))
-    secao("Volume × custo", graficos.quantidade_vs_custo(df, periodo))
+    secao(
+        "Volume × custo",
+        graficos.quantidade_vs_custo(df, periodo),
+        graficos.boxplot_top5_custo(df, periodo),
+    )
     secao("Fabricantes e classes", graficos.top_fabricantes(df, periodo), graficos.top_classes(df, periodo))
+    st.markdown("### Registros atípicos (outliers)")
+    abas = st.tabs(["Custo unitário", "Quantidade", "Custo do evento"])
+    with abas[0]:
+        st.dataframe(graficos.tabela_outliers(df, "unitario"), hide_index=True, width='stretch')
+    with abas[1]:
+        st.dataframe(graficos.tabela_outliers(df, "quantidade"), hide_index=True, width='stretch')
+    with abas[2]:
+        st.dataframe(graficos.tabela_outliers(df, "evento"), hide_index=True, width='stretch')

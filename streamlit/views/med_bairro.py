@@ -22,7 +22,11 @@ def render() -> None:
         graficos.menores_bairros(df, periodo),
     )
     secao("Taxa por habitante (Censo 2022)", graficos.taxa_per_capita(df, periodo))
-    secao("Comparativo de semestres", graficos.comparativo_semestres(df, periodo))
+    secao(
+        "Comparativo de semestres",
+        graficos.comparativo_semestres(df, periodo),
+        graficos.comparativo_semestres_cc(df, periodo),
+    )
     secao(
         "Perfil por centro e bairro",
         graficos.perfil_tipo_cc(df, periodo),

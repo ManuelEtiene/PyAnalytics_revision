@@ -14,6 +14,8 @@ COLS = (
     "saida",
     "material_nome_base",
     "material_nome",
+    "material_tipo",
+    "material_descricao_complementar",
     "classe_terapeutica",
     "tipo_tratamento",
     "fabricante_nome",
@@ -29,8 +31,9 @@ def load_dispensacao() -> pd.DataFrame:
     caminho = csv_dispensacao()
     if not caminho.exists():
         raise FileNotFoundError(
-            f"CSV de dispensação não encontrado em {caminho}. "
-            "Coloque dispensacao_analitico.csv em data/processed/."
+            "Base de medicamentos indisponível. "
+            "Confirme se `dispensacao_analitico.csv` está em `data/processed/` "
+            "(arquivo real, não atalho/symlink)."
         )
     existentes = set(pd.read_csv(caminho, nrows=0).columns)
     colunas = [c for c in COLS if c in existentes]

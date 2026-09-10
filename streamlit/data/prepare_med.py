@@ -1,4 +1,4 @@
-"""Prepara a base de dispensação (custos, destaques e bairro/CC)."""
+"""Prepara a base de dispensação (custos, destaques, bairro, tempo e perfis)."""
 
 from __future__ import annotations
 
@@ -8,6 +8,7 @@ import pandas as pd
 import streamlit as st
 
 from data.load_dispensacao import load_dispensacao
+from data.med_perfis_map import MAPA_PERFIS, PERFIL_OUTROS
 from data.paths import csv_censo_bairros
 
 _PLACEHOLDERS = {
@@ -57,11 +58,13 @@ MESES_S1 = ("2026-01", "2026-02", "2026-03", "2026-04", "2026-05")
 
 @st.cache_data(show_spinner="Preparando dispensação de medicamentos...")
 def load_med() -> pd.DataFrame:
-    """DataFrame pronto: datas, custo, bairro padronizado e população."""
+    """DataFrame pronto: datas, custo, bairro, apresentação e perfil."""
     df = load_dispensacao().copy()
     df = _datas(df)
     df = _custo_e_nulos(df)
     df = _bairro_e_cc(df)
+    df = _apresentacao(df)
+    df = _perfis(df)
     return _junta_censo(df)
 
 
@@ -73,11 +76,36 @@ def periodo_med(df: pd.DataFrame) -> str:
     return f"{meses.min()} a {meses.max()}"
 
 
+def mes_parcial(df: pd.DataFrame) -> str | None:
+    """Mês incompleto (ainda em andamento), se houver."""
+    marcados = df.loc[df["eh_mes_parcial"], "ano_mes"]
+    return None if marcados.empty else str(marcados.iloc[0])
+
+
+def meses_completos(df: pd.DataFrame) -> pd.DataFrame:
+    """Recorte sem o mês parcial (médias, sazonalidade, anomalias)."""
+    return df.loc[~df["eh_mes_parcial"]].copy()
+
+
+def identificar_mes_parcial(df: pd.DataFrame, coluna_data: str = "data") -> pd.Period | None:
+    """Último mês incompleto da base, ou None se já fechou."""
+    ultima = df[coluna_data].max()
+    if pd.isna(ultima):
+        return None
+    fim_mes = ultima.to_period("M").end_time.normalize()
+    if ultima.normalize() < fim_mes:
+        return ultima.to_period("M")
+    return None
+
+
 def _datas(df: pd.DataFrame) -> pd.DataFrame:
-    """Converte data e deriva ano_mes / semestre."""
+    """Converte data, deriva ano_mes e marca mês parcial."""
     df["data"] = pd.to_datetime(df["data"], errors="coerce")
     df["ano_mes"] = df["data"].dt.to_period("M").astype(str)
-    df = df.loc[df["ano_mes"] != "2026-08"].copy()
+    parcial = identificar_mes_parcial(df)
+    df["eh_mes_parcial"] = (
+        df["data"].dt.to_period("M") == parcial if parcial is not None else False
+    )
     df["semestre"] = df["ano_mes"].map(_semestre)
     return df
 
@@ -101,6 +129,44 @@ def _custo_e_nulos(df: pd.DataFrame) -> pd.DataFrame:
     df["custo_medio"] = pd.to_numeric(df["custo_medio"], errors="coerce").fillna(0)
     df["custo_total"] = df["quantidade"] * df["custo_medio"]
     return df
+
+
+def _apresentacao(df: pd.DataFrame) -> pd.DataFrame:
+    """Monta rótulo completo da apresentação (nome + dose + tipo)."""
+    base = df["material_nome_base"].fillna("").astype(str)
+    compl = df.get("material_descricao_complementar", pd.Series("", index=df.index))
+    tipo = df.get("material_tipo", pd.Series("", index=df.index))
+    df["apresentacao_completa"] = (
+        base + " " + compl.fillna("").astype(str) + " " + tipo.fillna("").astype(str)
+    ).str.strip()
+    return df
+
+
+def _perfis(df: pd.DataFrame) -> pd.DataFrame:
+    """Classifica cada registro em um perfil de cuidado."""
+    nome = df["material_nome"].fillna("").astype(str)
+    compl = df.get("material_descricao_complementar", pd.Series("", index=df.index))
+    texto = (nome + " " + compl.fillna("").astype(str)).str.strip()
+    df["perfil_cuidado"] = texto.map(_classificar_perfil)
+    return df
+
+
+def _classificar_perfil(nome: str) -> str:
+    """Primeiro perfil cujo termo aparece no nome normalizado."""
+    norm = _ascii_upper(nome)
+    if not norm:
+        return PERFIL_OUTROS
+    for perfil, termos in MAPA_PERFIS.items():
+        for termo in termos:
+            if termo in norm:
+                return perfil
+    return PERFIL_OUTROS
+
+
+def _ascii_upper(texto: str) -> str:
+    """Remove acentos e deixa em maiúsculas para match de keywords."""
+    limpo = unicodedata.normalize("NFKD", str(texto)).encode("ASCII", "ignore").decode("ASCII")
+    return limpo.upper()
 
 
 def _bairro_e_cc(df: pd.DataFrame) -> pd.DataFrame:

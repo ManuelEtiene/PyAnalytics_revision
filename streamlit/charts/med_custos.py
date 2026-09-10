@@ -60,11 +60,27 @@ def top_custo(df: pd.DataFrame, periodo: str):
     serie = _agg_med(df).sort_values("custo_total", ascending=False).head(10)
     if serie.empty:
         return vazio()
+    total = float(df["custo_total"].sum()) or 1.0
     plot = serie.set_index("material_nome_base")["custo_total"]
     plot.index = [abrevia(i, 40) for i in plot.index]
     fig = bar_horizontal(plot, f"Top 10 medicamentos por custo — {periodo}", mostrar_pct=False)
-    return fig, insight_top(plot, "Concentração do orçamento em poucos itens.")
+    lider = plot.index[0]
+    pct = 100 * float(plot.iloc[0]) / total
+    return fig, f'"{lider}" concentra {pct:.1f}% do custo total. Concentração em poucos itens.'
 
+
+def tabela_outliers(df: pd.DataFrame, criterio: str) -> pd.DataFrame:
+    """Top 10 registros atípicos por custo unitário, quantidade ou evento."""
+    cols = {
+        "unitario": (["data", "material_nome", "custo_medio", "quantidade", "custo_total", "fabricante_nome"], "custo_medio"),
+        "quantidade": (["data", "material_nome", "quantidade", "custo_medio", "custo_total", "centro_custo_nome"], "quantidade"),
+        "evento": (["data", "material_nome", "quantidade", "custo_medio", "custo_total", "fabricante_nome"], "custo_total"),
+    }
+    colunas, ordem = cols[criterio]
+    tabela = df.sort_values(ordem, ascending=False).loc[:, colunas].head(10).copy()
+    if "data" in tabela.columns:
+        tabela["data"] = pd.to_datetime(tabela["data"]).dt.strftime("%d/%m/%Y")
+    return tabela.reset_index(drop=True)
 
 def quantidade_vs_custo(df: pd.DataFrame, periodo: str):
     """Dispersão quantidade × custo por medicamento."""
@@ -78,8 +94,28 @@ def quantidade_vs_custo(df: pd.DataFrame, periodo: str):
         "Quantidade (mil un.)",
         "Custo (R$ mil)",
     )
-    r = base["quantidade_total"].corr(base["custo_total"])
-    return fig, f"Correlação linear volume×custo: r = {r:.2f} (valores próximos de 0 = pouco ligados)."
+    pearson = base["quantidade_total"].corr(base["custo_total"])
+    spearman = base["quantidade_total"].corr(base["custo_total"], method="spearman")
+    return (
+        fig,
+        f"Pearson r = {pearson:.2f} · Spearman ρ = {spearman:.2f} "
+        "(próximo de 0 = volume e custo pouco ligados).",
+    )
+
+
+def boxplot_top5_custo(df: pd.DataFrame, periodo: str):
+    """Distribuição da quantidade por saída nos 5 itens de maior custo."""
+    from charts.theme import boxplot
+
+    top5 = _agg_med(df).sort_values("custo_total", ascending=False).head(5)["material_nome_base"]
+    grupos = {
+        abrevia(str(nome), 22): df.loc[df["material_nome_base"] == nome, "quantidade"]
+        for nome in top5
+    }
+    if not grupos:
+        return vazio()
+    fig = boxplot(grupos, f"Quantidade por saída — Top 5 em custo · {periodo}")
+    return fig, "Caixas largas = protocolos com retirada variável (ex.: trimestral)."
 
 
 def top_fabricantes(df: pd.DataFrame, periodo: str):

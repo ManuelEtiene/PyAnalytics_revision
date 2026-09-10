@@ -127,7 +127,7 @@ def taxa_populacao(ara, tub, sc, periodo: str):
     """9. Média anual de óbitos por 100 mil hab. (Censo 2022)."""
     anos = max(int(sc["ANO_OBITO"].max() - sc["ANO_OBITO"].min()) + 1, 1)
     obitos = pd.Series({"Araranguá": len(ara), "Tubarão": len(tub), "SC (total)": len(sc)})
-    pop = pd.Series(POP_CENSO_2022)
+    pop = pd.Series(POP_CENSO_2022).reindex(obitos.index)
     taxa = (obitos / anos / pop * 100_000).round(1)
     fig = bar_vertical(taxa, f"Óbitos/100 mil hab./ano — Araranguá × Tubarão × SC, {periodo}", False)
     return fig, "Normalização pelo Censo 2022; número bruto favorece cidades maiores."

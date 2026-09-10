@@ -124,8 +124,37 @@ def comparativo_semestres(df: pd.DataFrame, periodo: str):
     return fig, "Comparação justa: 5 meses em cada semestre."
 
 
+def comparativo_semestres_cc(df: pd.DataFrame, periodo: str):
+    """Centros de custo: 5 meses vs 5 meses."""
+    base = df.loc[
+        df["ano_mes"].isin(MESES_S2 + MESES_S1)
+        & (df["centro_custo_nome"] != "Sem Centro de Custo")
+    ].copy()
+    if base.empty:
+        return vazio()
+    base["periodo_5m"] = base["ano_mes"].map(
+        lambda m: "S2/2025 (5m)" if m in MESES_S2 else "S1/2026 (5m)"
+    )
+    top = (
+        base.groupby("centro_custo_nome")["quantidade"]
+        .sum()
+        .sort_values(ascending=False)
+        .head(8)
+        .index
+    )
+    tabela = (
+        base.loc[base["centro_custo_nome"].isin(top)]
+        .groupby(["centro_custo_nome", "periodo_5m"])["quantidade"]
+        .sum()
+        .unstack(fill_value=0)
+    )
+    tabela = tabela.reindex(tabela.sum(axis=1).sort_values(ascending=False).index)
+    fig = barras_agrupadas(tabela, f"Centros de custo — semestres comparáveis · {periodo}")
+    return fig, "Mesma janela justa de 5 meses aplicada aos centros de custo."
+
+
 def heatmap_bairro_tipo(df: pd.DataFrame, periodo: str):
-    """Heatmap tipo de tratamento × top 20 bairros (%)."""
+    """Heatmap tipo de tratamento × top 30 bairros (%)."""
     base = df.loc[df["tipo_tratamento"].notna() & ~df["bairro_malformado"]]
     contagem = base.groupby("bairro_padronizado").size()
     validos = contagem[contagem >= 50].index
@@ -134,7 +163,7 @@ def heatmap_bairro_tipo(df: pd.DataFrame, periodo: str):
         .groupby("bairro_padronizado")["quantidade"]
         .sum()
         .sort_values(ascending=False)
-        .head(20)
+        .head(30)
         .index
     )
     recorte = base.loc[base["bairro_padronizado"].isin(top)]
@@ -155,7 +184,7 @@ def heatmap_bairro_tipo(df: pd.DataFrame, periodo: str):
     tabela.columns.name = "tipo_tratamento"
     fig = heatmap(
         tabela.round(0),
-        f"Tipo de tratamento × bairro (% no bairro) — Top 20 · {periodo}",
+        f"Tipo de tratamento × bairro (% no bairro) — Top 30 · {periodo}",
         "YlGnBu",
         cor_legenda="% no bairro",
     )

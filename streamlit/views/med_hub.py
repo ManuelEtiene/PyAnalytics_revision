@@ -2,19 +2,20 @@
 
 import streamlit as st
 
-from catalog import TOPICS_MED, get_item
+from catalog import TOPICS_MED
 from components.carousel import html_analises
 from components.voltar import faixa_titulo
 from views.med_bairro import render as render_bairro
 from views.med_custos import render as render_custos
 from views.med_destaques import render as render_destaques
-from views.sim_tema import cabecalho
+from views.med_perfis import render as render_perfis
+from views.med_tempo import render as render_tempo
 
 _TEMAS = {
-    "tempo": "med_tempo",
+    "tempo": render_tempo,
     "destaques": render_destaques,
     "bairro-cc": render_bairro,
-    "perfis": "med_perfis",
+    "perfis": render_perfis,
     "custos": render_custos,
 }
 
@@ -25,9 +26,6 @@ def render() -> None:
     destino = _TEMAS.get(tema)
     if callable(destino):
         destino()
-        return
-    if isinstance(destino, str):
-        _placeholder(destino)
         return
     _visao_geral()
 
@@ -48,11 +46,3 @@ def _visao_geral() -> None:
             "Registros de **dispensação da Farmácia Básica Municipal de Araranguá**, "
             "com medicamento, bairro, centro de custo, quantidade e custo médio."
         )
-
-
-def _placeholder(item_id: str) -> None:
-    """Tema ainda sem gráficos — mostra a pergunta-guia."""
-    item = get_item(item_id)
-    cabecalho(item.title, "Farmácia Básica · em preparação", "medicamentos")
-    st.info("Análise em preparação. Em breve os gráficos desta história.")
-    st.markdown(f"**Pergunta-guia:** {item.description}")

@@ -2,8 +2,9 @@
 
 from __future__ import annotations
 
-import plotly.graph_objects as go
+import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
 import streamlit as st
 
 from data.constants import rotulo_coluna
@@ -99,9 +100,11 @@ def adaptar_tema(fig: go.Figure) -> go.Figure:
 
 def rotulo(valor: float, total: float, mostrar_pct: bool) -> str:
     """Texto da barra: n ou n (pct%)."""
+    if valor is None or (isinstance(valor, float) and valor != valor):  # NaN
+        return "—"
     if mostrar_pct and total:
         return f"{int(valor)} ({100 * valor / total:.1f}%)"
-    return f"{int(valor)}" if valor == int(valor) else f"{valor:.1f}"
+    return f"{int(valor)}" if float(valor) == int(valor) else f"{float(valor):.1f}"
 
 
 def bar_vertical(serie, title: str, mostrar_pct: bool = True, color: str = PRIMARY):
@@ -213,6 +216,36 @@ def linha(serie, title: str) -> go.Figure:
         )
     )
     return apply_layout(fig, title)
+
+
+def pizza(serie, title: str, top: int = 8) -> go.Figure:
+    """Pizza com top-N fatias e residual agrupado."""
+    ordenada = serie.sort_values(ascending=False)
+    principais = ordenada.head(top)
+    residual = ordenada.iloc[top:].sum()
+    if residual > 0:
+        principais = pd.concat(
+            [principais, pd.Series({"Outros (menor expressão)": residual})]
+        )
+    fig = go.Figure(
+        go.Pie(
+            labels=[str(i) for i in principais.index],
+            values=list(principais.values),
+            hole=0.35,
+            marker=dict(colors=PALETTE * 3),
+            textinfo="percent+label",
+            textposition="outside",
+            automargin=True,
+        )
+    )
+    fig = apply_layout(fig, title)
+    # Margens largas: rótulos externos (ex.: Anti-infecciosos) não cortam
+    fig.update_layout(
+        showlegend=False,
+        height=520,
+        margin=dict(l=48, r=48, t=64, b=96),
+    )
+    return fig
 
 
 def dispersao(x, y, title: str, xlabel: str = "", ylabel: str = "") -> go.Figure:
