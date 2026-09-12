@@ -2,22 +2,18 @@
 Limpeza e padronização — Sanga da Toca
 pyanalytics#17
 
-Versão para VS Code / Python local.
-
 Ordem de busca do CSV bruto:
 1. Caminho padrão local.
 2. Clone do repositório GitLab privado.
 3. Se as duas tentativas falharem, solicita o caminho do CSV no terminal.
 
-A lógica de limpeza é a mesma da versão Colab:
+A lógica de limpeza é a mesma :
 - mapeamento das colunas pelo cabeçalho de cada bloco do G-MUS;
 - decomposição de "Vacina, Estratégia e Dose";
 - separação de lote e validade;
 - preservação de datas incompletas;
 - manutenção de doses truncadas, sem inventar valores.
 
-Não é definida uma quantidade esperada de registros, pois essa informação
-não consta no arquivo-base enviado para Sanga da Toca.
 """
 
 from pathlib import Path
@@ -304,10 +300,6 @@ def validar(registros):
 
     if len(registros) != QUANTIDADE_ESPERADA:
         raise AssertionError(f"Quantidade inesperada de registros: {len(registros)}. Esperado: {QUANTIDADE_ESPERADA}.")
-
-    # Não exige uma origem específica: o arquivo enviado não informa
-    # uma regra de validação desse tipo para Sanga da Toca.
-
 
 if __name__ == "__main__":
     limpa_base()

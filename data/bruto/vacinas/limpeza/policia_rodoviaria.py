@@ -2,8 +2,6 @@
 Limpeza e padronização da base de vacinas aplicadas.
 Sala de Vacinação / Bairro: POLÍCIA RODOVIÁRIA — pyanalytics#17
 
-Versão para VS Code / Python local.
-
 O script busca o CSV bruto em três etapas, na ordem:
     1. Caminho padrão local (CAMINHO_PADRAO, abaixo).
     2. Clone do repositório GitLab privado (REPO_URL) — usa o token em
