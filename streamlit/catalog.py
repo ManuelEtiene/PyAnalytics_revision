@@ -15,6 +15,7 @@ class NavItem:
     ready: bool = True
     icon: str = "description"
     group: str = ""
+    kicker: str = "Análise"
 
 
 HOME = NavItem(
@@ -121,6 +122,16 @@ TOPICS_SIM = (
 )
 
 TOPICS_MED = (
+    NavItem(
+        id="med_busca",
+        title="Onde encontrar um medicamento?",
+        short="Busca",
+        description="Pesquise um medicamento e veja os lugares com dispensação no último mês.",
+        keywords=("busca", "pesquisar", "encontrar", "estoque", "medicamentos"),
+        icon="search",
+        group="Medicamentos",
+        kicker="Busca",
+    ),
     NavItem(
         id="med_tempo",
         title="Como a dispensação muda ao longo do tempo?",
@@ -290,6 +301,7 @@ def slug_sim(item_id: str) -> str:
 def slug_med(item_id: str) -> str:
     """Slug do tema Medicamentos (/medicamentos?tema=bairro-cc)."""
     mapa = {
+        "med_busca": "busca",
         "med_tempo": "tempo",
         "med_destaques": "destaques",
         "med_bairro": "bairro-cc",

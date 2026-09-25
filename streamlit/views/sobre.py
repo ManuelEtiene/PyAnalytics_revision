@@ -9,8 +9,8 @@ _REPO_LOGO = Path(__file__).resolve().parents[2] / "assets" / "IconPyAnalytics.p
 _LOCAL_LOGO = Path(__file__).resolve().parents[1] / "assets" / "pyanalytics.png"
 LOGO = _REPO_LOGO if _REPO_LOGO.exists() else _LOCAL_LOGO
 
-INTEGRANTES = (
-    "Andréa Sabedra Bordin",
+PROFESSORA = ("Andréa Sabedra Bordin", "andrea.bordin@ufsc.br")
+ACADEMICOS = (
     "André Gaspar",
     "Nathália Geraldino Ribas",
     "Igor de Matos da Rosa",
@@ -82,11 +82,15 @@ def _como_usar() -> None:
     st.markdown(
         "Fonte dos óbitos: [SIM / Dados Abertos do Ministério da Saúde]"
         "(https://apidadosabertos.saude.gov.br/vigilancia-e-meio-ambiente/"
-        "sistema-de-informacao-sobre-mortalidade)."
+        "sistema-de-informacao-sobre-mortalidade).  \n"
+        "Fonte dos medicamentos e vacinações: Secretaria Municipal de Araranguá."
     )
 
 
 def _integrantes() -> None:
     """Equipe do projeto de extensão."""
     st.markdown("### Integrantes")
-    st.markdown("\n".join(f"- {nome}" for nome in INTEGRANTES))
+    nome, email = PROFESSORA
+    linhas = [f"- Profa. [{nome}](mailto:{email})"]
+    linhas.extend(f"- Acadêmico {nome}" for nome in ACADEMICOS)
+    st.markdown("\n".join(linhas))

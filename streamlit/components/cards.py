@@ -46,13 +46,19 @@ def base_card(titulo: str, texto: str, status: str, pronto: bool = True) -> str:
     """
 
 
-def analise_card(titulo: str, texto: str, status: str, pronto: bool = True) -> str:
+def analise_card(
+    titulo: str,
+    texto: str,
+    status: str,
+    pronto: bool = True,
+    kicker: str = "Análise",
+) -> str:
     """Card de um tema da base (hub SIM / Medicamentos / Vacinações)."""
     chip = "chip-yellow" if pronto else "chip-blue"
     return f"""
     <div class="glass-card analise-card">
       <div class="analise-card-topo">
-        <p class="topic-kicker analise-kicker">Análise</p>
+        <p class="topic-kicker analise-kicker">{kicker}</p>
         <span class="chip {chip}">{status}</span>
       </div>
       <p class="base-card-title">{titulo}</p>

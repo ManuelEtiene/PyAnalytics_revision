@@ -59,6 +59,14 @@ div[class*="st-key-pya_cookie"] {
   flex: 1;
 }
 
+.pya-titulo-faixa h2:empty {
+  display: none;
+}
+
+.pya-titulo-faixa:has(h2:empty) {
+  justify-content: flex-end;
+}
+
 .pya-voltar {
   flex-shrink: 0;
   display: inline-flex !important;
@@ -92,6 +100,30 @@ html:has(.pya-flag-claro) .pya-voltar:visited {
   max-width: 1024px;
   padding-top: 4.25rem !important;
   padding-bottom: 2rem;
+  min-height: 100vh;
+}
+
+[data-testid="stMain"] {
+  min-height: 100vh;
+}
+
+[data-testid="stMainBlockContainer"] > div {
+  min-height: calc(100vh - 6.5rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.st-key-pya_footer,
+[data-testid="stVerticalBlock"] > div:has(> .st-key-pya_footer) {
+  margin-top: auto !important;
+}
+
+[data-testid="stVerticalBlock"] > div:has(.st-key-pya_drawer) {
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
 }
 
 /* Esconde a sidebar nativa (o menu é o drawer .st-key-pya_drawer) */
@@ -723,9 +755,11 @@ a.pya-title:hover {
   transform: scale(1.12);
 }
 
-/* Combobox de busca (React Aria Selectbox do Streamlit) */
+/* Combobox de busca (header e medicamentos) */
 .st-key-nav_search .react-aria-ComboBox > [role="group"],
-.st-key-nav_search [data-testid="stSelectbox"] [role="group"] {
+.st-key-nav_search [data-testid="stSelectbox"] [role="group"],
+.st-key-med_busca_q .react-aria-ComboBox > [role="group"],
+.st-key-med_busca_q [data-testid="stSelectbox"] [role="group"] {
   border-top: 1.5px solid #414754 !important;
   border-right: 1.5px solid #414754 !important;
   border-bottom: 1.5px solid #414754 !important;
@@ -737,14 +771,18 @@ a.pya-title:hover {
 }
 
 .st-key-nav_search .react-aria-ComboBox > [role="group"]:focus-within,
-.st-key-nav_search [data-testid="stSelectbox"] [role="group"]:focus-within {
+.st-key-nav_search [data-testid="stSelectbox"] [role="group"]:focus-within,
+.st-key-med_busca_q .react-aria-ComboBox > [role="group"]:focus-within,
+.st-key-med_busca_q [data-testid="stSelectbox"] [role="group"]:focus-within {
   background: #f7f8f9 !important;
   border-color: #0059bb !important;
   box-shadow: 0 0 0 2px rgba(0, 89, 187, 0.25) !important;
 }
 
 .st-key-nav_search input[role="combobox"],
-.st-key-nav_search input {
+.st-key-nav_search input,
+.st-key-med_busca_q input[role="combobox"],
+.st-key-med_busca_q input {
   color: #191c1d !important;
   -webkit-text-fill-color: #191c1d !important;
   background: transparent !important;
@@ -752,10 +790,20 @@ a.pya-title:hover {
   box-shadow: none !important;
 }
 
-.st-key-nav_search input::placeholder {
+.st-key-nav_search input::placeholder,
+.st-key-med_busca_q input::placeholder {
   color: #717786 !important;
   -webkit-text-fill-color: #717786 !important;
   opacity: 1 !important;
+}
+
+.st-key-med_busca_q .react-aria-ComboBox > [role="group"],
+.st-key-med_busca_q [data-testid="stSelectbox"] [role="group"] {
+  min-height: 3.2rem !important;
+}
+
+.st-key-med_busca_q input {
+  font-size: 1.05rem !important;
 }
 
 .stTextInput input {
@@ -1283,3 +1331,28 @@ section[data-testid="stSidebar"] > div:first-child {
   padding-left: 0.55rem;
   margin-top: 1rem !important;
 }
+
+/* Busca de medicamento (barra estilo Google) */
+.st-key-med_busca_hero {
+  min-height: 38vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.med-busca-logo {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  text-align: center;
+  color: #0059bb;
+  margin: 0 0 0.35rem 0;
+}
+
+.med-busca-periodo {
+  text-align: center;
+  color: #717786;
+  font-size: 0.95rem;
+  margin: 0 0 1.15rem 0;
+}
+

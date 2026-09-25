@@ -95,7 +95,7 @@ def quantidade_vs_custo(df: pd.DataFrame, periodo: str):
         "Custo (R$ mil)",
     )
     pearson = base["quantidade_total"].corr(base["custo_total"])
-    spearman = base["quantidade_total"].corr(base["custo_total"], method="spearman")
+    spearman = base["quantidade_total"].rank().corr(base["custo_total"].rank())
     return (
         fig,
         f"Pearson r = {pearson:.2f} · Spearman ρ = {spearman:.2f} "
