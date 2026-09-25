@@ -78,9 +78,11 @@ div[class*="st-key-pya_drawer"] {
   color: #e8eaed !important;
 }
 
-/* Combobox de busca no dark mode */
+/* Combobox de busca no dark mode (header e medicamentos) */
 .st-key-nav_search .react-aria-ComboBox > [role="group"],
-.st-key-nav_search [data-testid="stSelectbox"] [role="group"] {
+.st-key-nav_search [data-testid="stSelectbox"] [role="group"],
+.st-key-med_busca_q .react-aria-ComboBox > [role="group"],
+.st-key-med_busca_q [data-testid="stSelectbox"] [role="group"] {
   background: #2c333d !important;
   border: 1.5px solid #5a6573 !important;
   box-shadow: none !important;
@@ -88,14 +90,18 @@ div[class*="st-key-pya_drawer"] {
 }
 
 .st-key-nav_search .react-aria-ComboBox > [role="group"]:focus-within,
-.st-key-nav_search [data-testid="stSelectbox"] [role="group"]:focus-within {
+.st-key-nav_search [data-testid="stSelectbox"] [role="group"]:focus-within,
+.st-key-med_busca_q .react-aria-ComboBox > [role="group"]:focus-within,
+.st-key-med_busca_q [data-testid="stSelectbox"] [role="group"]:focus-within {
   background: #1a1e24 !important;
   border-color: #6ba6ff !important;
   box-shadow: 0 0 0 2px rgba(107, 166, 255, 0.3) !important;
 }
 
 .st-key-nav_search input[role="combobox"],
-.st-key-nav_search input {
+.st-key-nav_search input,
+.st-key-med_busca_q input[role="combobox"],
+.st-key-med_busca_q input {
   color: #e8eaed !important;
   -webkit-text-fill-color: #e8eaed !important;
   caret-color: #e8eaed !important;
@@ -103,27 +109,31 @@ div[class*="st-key-pya_drawer"] {
   border: none !important;
 }
 
-.st-key-nav_search input::placeholder {
+.st-key-nav_search input::placeholder,
+.st-key-med_busca_q input::placeholder {
   color: #9aa3b2 !important;
   -webkit-text-fill-color: #9aa3b2 !important;
   opacity: 1 !important;
 }
 
 /* Chevron: não forçar fill em path[fill=none] (vira quadrado) */
-.st-key-nav_search [role="group"] > button {
+.st-key-nav_search [role="group"] > button,
+.st-key-med_busca_q [role="group"] > button {
   color: #e8eaed !important;
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
 }
 
-.st-key-nav_search [role="group"] > button svg {
+.st-key-nav_search [role="group"] > button svg,
+.st-key-med_busca_q [role="group"] > button svg {
   color: #e8eaed !important;
   background: transparent !important;
   fill: currentColor !important;
 }
 
-.st-key-nav_search [role="group"] > button svg path[fill="none"] {
+.st-key-nav_search [role="group"] > button svg path[fill="none"],
+.st-key-med_busca_q [role="group"] > button svg path[fill="none"] {
   fill: none !important;
 }
 
@@ -304,6 +314,14 @@ a,
 .st-key-hub_base [data-testid="stMarkdownContainer"] h3 {
   color: #ff7a8a !important;
   border-left-color: #fdc003 !important;
+}
+
+.med-busca-logo {
+  color: #6ba6ff !important;
+}
+
+.med-busca-periodo {
+  color: #9aa3b2 !important;
 }
 
 .chip-blue {

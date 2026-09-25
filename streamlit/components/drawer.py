@@ -40,7 +40,12 @@ def _pasta(titulo: str, hub_id: str, topicos, icone: str) -> None:
     with st.expander(titulo, expanded=False):
         _item(hub_id, "Visão da base", f":material/{icone}:")
         for topico in topicos:
-            _item(topico.id, topico.title, f":material/{topico.icon}:")
+            _item(topico.id, _rotulo(topico), f":material/{topico.icon}:")
+
+
+def _rotulo(topico) -> str:
+    """Busca usa o nome curto; análises ficam com o título completo."""
+    return topico.short if topico.id == "med_busca" else topico.title
 
 
 def _pasta_em_breve(titulo: str) -> None:

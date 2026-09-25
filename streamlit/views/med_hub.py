@@ -6,12 +6,14 @@ from catalog import TOPICS_MED
 from components.carousel import html_analises
 from components.voltar import faixa_titulo
 from views.med_bairro import render as render_bairro
+from views.med_busca import render as render_busca
 from views.med_custos import render as render_custos
 from views.med_destaques import render as render_destaques
 from views.med_perfis import render as render_perfis
 from views.med_tempo import render as render_tempo
 
 _TEMAS = {
+    "busca": render_busca,
     "tempo": render_tempo,
     "destaques": render_destaques,
     "bairro-cc": render_bairro,

@@ -100,15 +100,22 @@ def adaptar_tema(fig: go.Figure) -> go.Figure:
 
 def rotulo(valor: float, total: float, mostrar_pct: bool) -> str:
     """Texto da barra: n ou n (pct%)."""
-    if valor is None or (isinstance(valor, float) and valor != valor):  # NaN
+    try:
+        numero = float(valor)
+    except (TypeError, ValueError):
+        return "—"
+    if numero != numero:  # NaN
         return "—"
     if mostrar_pct and total:
-        return f"{int(valor)} ({100 * valor / total:.1f}%)"
-    return f"{int(valor)}" if float(valor) == int(valor) else f"{float(valor):.1f}"
+        return f"{int(numero)} ({100 * numero / total:.1f}%)"
+    if numero == int(numero):
+        return f"{int(numero)}"
+    return f"{numero:.1f}"
 
 
 def bar_vertical(serie, title: str, mostrar_pct: bool = True, color: str = PRIMARY):
     """Gráfico de barras verticais com rótulo."""
+    serie = pd.Series(serie).dropna()
     total = float(serie.sum()) if len(serie) else 0
     textos = [rotulo(v, total, mostrar_pct) for v in serie.values]
     fig = go.Figure(
@@ -126,6 +133,7 @@ def bar_vertical(serie, title: str, mostrar_pct: bool = True, color: str = PRIMA
 
 def bar_horizontal(serie, title: str, mostrar_pct: bool = True, cores=None):
     """Gráfico de barras horizontais (maior no topo)."""
+    serie = pd.Series(serie).dropna()
     total = float(serie.sum()) if len(serie) else 0
     textos = [rotulo(v, total, mostrar_pct) for v in serie.values]
     fig = go.Figure(
