@@ -320,8 +320,13 @@ a,
   color: #6ba6ff !important;
 }
 
-.med-busca-periodo {
+.med-busca-periodo,
+.med-busca-fonte {
   color: #9aa3b2 !important;
+}
+
+.med-busca-kpi .kpi-value {
+  color: #6ba6ff !important;
 }
 
 .chip-blue {

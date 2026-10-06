@@ -5,6 +5,7 @@ from pathlib import Path
 CSV_NAME = "sim_sc_processado_analitico.csv"
 CSV_STEM = CSV_NAME.removesuffix(".csv")
 CSV_DISPENSACAO = "dispensacao_analitico.csv"
+CSV_REMUME = "remume.csv"
 CSV_CENSO_BAIRROS = "ararangua_bairros_ibge_censo2022_normalizacao.csv"
 
 
@@ -79,6 +80,11 @@ def cache_dir() -> Path:
 def csv_dispensacao() -> Path:
     """CSV analítico de dispensação de medicamentos."""
     return _acha(CSV_DISPENSACAO) or (pasta_processed() / CSV_DISPENSACAO)
+
+
+def csv_remume() -> Path:
+    """CSV processado da REMUME (lista municipal)."""
+    return _acha(CSV_REMUME) or (pasta_processed() / CSV_REMUME)
 
 
 def csv_censo_bairros() -> Path:

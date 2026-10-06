@@ -6,7 +6,8 @@ from catalog import NavItem, bases
 from components.cards import alert_card, base_card, kpi_card
 from data.kpis import resumo_home
 from data.kpis_med import resumo_home_med
-from data.paths import csv_dispensacao
+from data.kpis_remume import resumo_home_remume
+from data.paths import csv_dispensacao, csv_remume
 from navigation import link_pagina
 from views.common import load_or_stop
 
@@ -15,9 +16,13 @@ def render() -> None:
     """Monta a Home com destaques da SIM e de Medicamentos."""
     kpis = resumo_home(load_or_stop())
     kpis_med = _kpis_med_seguros()
+    kpis_remume = _kpis_remume_seguros()
     _kpis_sim(kpis)
     st.write("")
     _alerta_sim(kpis)
+    if kpis_remume:
+        st.write("")
+        _destaque_remume(kpis_remume)
     if kpis_med:
         st.write("")
         _kpis_med(kpis_med)
@@ -42,13 +47,32 @@ def _kpis_med_seguros() -> dict | None:
         return None
 
 
+def _kpis_remume_seguros() -> dict | None:
+    """Carrega destaque da REMUME; None se o CSV ainda não existir."""
+    try:
+        if not csv_remume().exists():
+            return None
+        from data.load_remume import load_remume
+
+        df = load_remume()
+        if df is None or getattr(df, "empty", True):
+            return None
+        return resumo_home_remume(df)
+    except Exception:
+        return None
+
+
 def _kpis_sim(kpis: dict) -> None:
-    """Dois cards grandes: total de óbitos e % hospital."""
+    """Dois cards grandes da SIM (hover/clique = padrão da Home)."""
     col1, col2 = st.columns(2)
     with col1:
-        st.markdown(_card_total_sim(kpis), unsafe_allow_html=True)
+        with st.container(key="kpi_home_sim_obitos"):
+            st.markdown(_card_total_sim(kpis), unsafe_allow_html=True)
+            _botao_dataset("sim", "kpi_home_sim_obitos_acoes")
     with col2:
-        st.markdown(_card_hospital(kpis), unsafe_allow_html=True)
+        with st.container(key="kpi_home_sim_hospital"):
+            st.markdown(_card_hospital(kpis), unsafe_allow_html=True)
+            _botao_dataset("sim", "kpi_home_sim_hospital_acoes")
 
 
 def _card_total_sim(kpis: dict) -> str:
@@ -91,17 +115,38 @@ def _html_alerta_sim(kpis: dict) -> str:
     )
 
 
+def _destaque_remume(kpis: dict) -> None:
+    """Card da REMUME: leva direto à busca de locais de dispensação."""
+    with st.container(key="kpi_home_remume_busca"):
+        st.markdown(_html_remume(kpis), unsafe_allow_html=True)
+        _botao_dataset("med_busca", "kpi_home_remume_busca_acoes")
+
+
+def _html_remume(kpis: dict) -> str:
+    """HTML do destaque REMUME que leva à busca de locais."""
+    return alert_card(
+        "Onde tirar um medicamento",
+        "Busque aqui as informações de local do medicamento",
+        (
+            "Consulte a REMUME e veja em qual unidade ou farmácia "
+            "cada item é dispensado."
+        ),
+        _br(kpis["medicamentos"]),
+        "medicamentos na lista · clique para buscar",
+    )
+
+
 def _kpis_med(kpis: dict) -> None:
     """Cards de volume e custo da farmácia básica (clique abre Medicamentos)."""
     col1, col2 = st.columns(2)
     with col1:
-        with st.container(key="kpi_med_registros"):
+        with st.container(key="kpi_home_med_registros"):
             st.markdown(_card_registros_med(kpis), unsafe_allow_html=True)
-            _botao_dataset("medicamentos", "kpi_med_registros_acoes")
+            _botao_dataset("medicamentos", "kpi_home_med_registros_acoes")
     with col2:
-        with st.container(key="kpi_med_custo"):
+        with st.container(key="kpi_home_med_custo"):
             st.markdown(_card_custo_med(kpis), unsafe_allow_html=True)
-            _botao_dataset("medicamentos", "kpi_med_custo_acoes")
+            _botao_dataset("medicamentos", "kpi_home_med_custo_acoes")
 
 
 def _card_registros_med(kpis: dict) -> str:

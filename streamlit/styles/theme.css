@@ -891,6 +891,16 @@ section[data-testid="stSidebar"] > div:first-child {
   border-left: 4px solid #ba1a1a;
   box-shadow: 0 4px 6px -1px rgba(0, 89, 187, 0.1);
   padding: 1.5rem;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+/* Destaque REMUME na Home: borda azul (leva à busca) */
+.st-key-kpi_home_remume_busca .alert-card {
+  border-left-color: #0059bb;
+}
+
+.st-key-kpi_home_remume_busca .alert-kicker {
+  color: #0059bb !important;
 }
 
 .alert-footer {
@@ -962,32 +972,27 @@ section[data-testid="stSidebar"] > div:first-child {
   background: #9a1227;
 }
 
-/* KPI Medicamentos: card inteiro clicável → /medicamentos */
-.st-key-kpi_med_registros,
-.st-key-kpi_med_custo {
+/* Home: cards KPI clicáveis (SIM, REMUME, Medicamentos) — hover único */
+[class*="st-key-kpi_home"]:not([class*="_acoes"]) {
   position: relative !important;
   cursor: pointer;
 }
 
-.st-key-kpi_med_registros:hover .glass-card,
-.st-key-kpi_med_custo:hover .glass-card {
+[class*="st-key-kpi_home"]:not([class*="_acoes"]):hover .glass-card,
+[class*="st-key-kpi_home"]:not([class*="_acoes"]):hover .alert-card {
   transform: scale(1.03);
   box-shadow: 0 12px 24px rgba(0, 89, 187, 0.18);
 }
 
-.st-key-kpi_med_registros .stMarkdown,
-.st-key-kpi_med_registros .glass-card,
-.st-key-kpi_med_custo .stMarkdown,
-.st-key-kpi_med_custo .glass-card {
+[class*="st-key-kpi_home"]:not([class*="_acoes"]) .stMarkdown,
+[class*="st-key-kpi_home"]:not([class*="_acoes"]) .glass-card,
+[class*="st-key-kpi_home"]:not([class*="_acoes"]) .alert-card {
   pointer-events: none;
 }
 
-.st-key-kpi_med_registros [data-testid="stElementContainer"]:has([data-testid="stPageLink"]),
-.st-key-kpi_med_registros [data-testid="stPageLink"],
-.st-key-kpi_med_registros [data-testid="stPageLink"] > div,
-.st-key-kpi_med_custo [data-testid="stElementContainer"]:has([data-testid="stPageLink"]),
-.st-key-kpi_med_custo [data-testid="stPageLink"],
-.st-key-kpi_med_custo [data-testid="stPageLink"] > div {
+[class*="st-key-kpi_home"]:not([class*="_acoes"]) [data-testid="stElementContainer"]:has([data-testid="stPageLink"]),
+[class*="st-key-kpi_home"]:not([class*="_acoes"]) [data-testid="stPageLink"],
+[class*="st-key-kpi_home"]:not([class*="_acoes"]) [data-testid="stPageLink"] > div {
   position: absolute !important;
   inset: 0 !important;
   width: 100% !important;
@@ -996,8 +1001,7 @@ section[data-testid="stSidebar"] > div:first-child {
   z-index: 20 !important;
 }
 
-.st-key-kpi_med_registros [data-testid="stPageLink-NavLink"],
-.st-key-kpi_med_custo [data-testid="stPageLink-NavLink"] {
+[class*="st-key-kpi_home"]:not([class*="_acoes"]) [data-testid="stPageLink-NavLink"] {
   display: block !important;
   width: 100% !important;
   height: 100% !important;
@@ -1354,5 +1358,33 @@ section[data-testid="stSidebar"] > div:first-child {
   color: #717786;
   font-size: 0.95rem;
   margin: 0 0 1.15rem 0;
+}
+
+.med-busca-fonte {
+  margin: 0 0 1rem 0 !important;
+}
+
+.med-busca-resumo {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 0 0 1.25rem 0;
+}
+
+.med-busca-kpi {
+  min-height: auto !important;
+  padding: 1rem 1.15rem !important;
+}
+
+.med-busca-kpi .kpi-value {
+  font-size: 1.75rem;
+  margin-top: 0.35rem;
+  word-break: break-word;
+}
+
+@media (max-width: 720px) {
+  .med-busca-resumo {
+    grid-template-columns: 1fr;
+  }
 }
 
