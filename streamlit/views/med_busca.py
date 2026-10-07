@@ -55,13 +55,6 @@ def _resultado(df, nome: str) -> None:
     dados = recorte(df, nome)
     info = resumo(dados)
     st.markdown(f"### {nome}")
-    st.markdown(
-        '<p class="muted med-busca-fonte">'
-        "Locais de dispensação pela REMUME (unidades e farmácia) — "
-        "não é o endereço do paciente."
-        "</p>",
-        unsafe_allow_html=True,
-    )
     st.markdown(_html_resumo(info), unsafe_allow_html=True)
 
     apresentacoes = tabela_apresentacoes(dados)
