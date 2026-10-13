@@ -7,16 +7,18 @@ from components.cards import alert_card, base_card, kpi_card
 from data.kpis import resumo_home
 from data.kpis_med import resumo_home_med
 from data.kpis_remume import resumo_home_remume
-from data.paths import csv_dispensacao, csv_remume
+from data.kpis_vac import resumo_home_vac
+from data.paths import csv_dispensacao, csv_remume, csv_vacinas
 from navigation import link_pagina
 from views.common import load_or_stop
 
 
 def render() -> None:
-    """Monta a Home com destaques da SIM e de Medicamentos."""
+    """Monta a Home com destaques da SIM, Medicamentos e Vacinações."""
     kpis = resumo_home(load_or_stop())
     kpis_med = _kpis_med_seguros()
     kpis_remume = _kpis_remume_seguros()
+    kpis_vac = _kpis_vac_seguros()
     _kpis_sim(kpis)
     st.write("")
     _alerta_sim(kpis)
@@ -28,6 +30,11 @@ def render() -> None:
         _kpis_med(kpis_med)
         st.write("")
         _alerta_med(kpis_med)
+    if kpis_vac:
+        st.write("")
+        _kpis_vac(kpis_vac)
+        st.write("")
+        _alerta_vac(kpis_vac)
     st.write("")
     _atalhos()
 
@@ -58,6 +65,21 @@ def _kpis_remume_seguros() -> dict | None:
         if df is None or getattr(df, "empty", True):
             return None
         return resumo_home_remume(df)
+    except Exception:
+        return None
+
+
+def _kpis_vac_seguros() -> dict | None:
+    """Carrega KPIs de vacinações; None se o CSV ainda não existir."""
+    try:
+        if not csv_vacinas().exists():
+            return None
+        from data.prepare_vac import load_vac
+
+        df = load_vac()
+        if df is None or getattr(df, "empty", True):
+            return None
+        return resumo_home_vac(df)
     except Exception:
         return None
 
@@ -186,6 +208,59 @@ def _html_alerta_med(kpis: dict) -> str:
         "Item que mais concentra o gasto estimado na dispensação pública.",
         _reais(kpis["top_custo"]),
         f"{kpis['top_pct']:.1f}% do custo total no período",
+    )
+
+
+def _kpis_vac(kpis: dict) -> None:
+    """Cards de volume e bairros da vacinação (clique abre Vacinações)."""
+    col1, col2 = st.columns(2)
+    with col1:
+        with st.container(key="kpi_home_vac_registros"):
+            st.markdown(_card_registros_vac(kpis), unsafe_allow_html=True)
+            _botao_dataset("vacinas", "kpi_home_vac_registros_acoes")
+    with col2:
+        with st.container(key="kpi_home_vac_bairros"):
+            st.markdown(_card_bairros_vac(kpis), unsafe_allow_html=True)
+            _botao_dataset("vacinas", "kpi_home_vac_bairros_acoes")
+
+
+def _card_registros_vac(kpis: dict) -> str:
+    """Card do volume de aplicações."""
+    return kpi_card(
+        "Aplicações registradas",
+        _br(kpis["total"]),
+        f"Araranguá · {kpis['periodo']}",
+        f"{_br(kpis['vacinas'])} vacinas",
+        "chip-yellow",
+    )
+
+
+def _card_bairros_vac(kpis: dict) -> str:
+    """Card da quantidade de bairros (pessoa vacinada)."""
+    return kpi_card(
+        "Bairros",
+        _br(kpis["bairros"]),
+        "bairro da pessoa vacinada na base",
+        "Vacinações",
+        "chip-gray",
+    )
+
+
+def _alerta_vac(kpis: dict) -> None:
+    """Destaque da vacina mais aplicada no período."""
+    with st.container(key="alerta_vac"):
+        st.markdown(_html_alerta_vac(kpis), unsafe_allow_html=True)
+        _botao_dataset("vacinas", "alerta_vac_acoes")
+
+
+def _html_alerta_vac(kpis: dict) -> str:
+    """HTML do card da vacina mais frequente."""
+    return alert_card(
+        "Vacina mais aplicada",
+        kpis["top_vacina"],
+        "Imunizante com maior volume de aplicações registradas no período.",
+        _br(kpis["top_n"]),
+        f"{kpis['top_pct']:.1f}% do total com data válida",
     )
 
 

@@ -35,17 +35,17 @@ def apply_layout(fig: go.Figure, title: str) -> go.Figure:
         font=dict(family="Inter, sans-serif", color=texto, size=13),
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
-        margin=dict(l=8, r=8, t=56, b=8),
+        margin=dict(l=16, r=24, t=56, b=48),
         title_font=dict(family="Hanken Grotesk, sans-serif", size=18, color=texto),
         legend=dict(bgcolor="rgba(0,0,0,0)", font=dict(color=texto)),
         coloraxis_colorbar=dict(tickfont=dict(color=texto), title_font=dict(color=texto)),
     )
     fig.update_xaxes(
-        showgrid=False, color=texto,
+        showgrid=False, color=texto, automargin=True,
         tickfont=dict(color=texto), title_font=dict(color=texto),
     )
     fig.update_yaxes(
-        gridcolor=grade, zeroline=False, color=texto,
+        gridcolor=grade, zeroline=False, color=texto, automargin=True,
         tickfont=dict(color=texto), title_font=dict(color=texto),
     )
     _titulos_eixo_legiveis(fig)
@@ -74,8 +74,18 @@ def tem_heatmap(fig: go.Figure) -> bool:
 
 
 def tema_plotly(fig: go.Figure) -> str | None:
-    """Heatmap não usa o tema Streamlit (ele força letra branca nas células)."""
-    return None if tem_heatmap(fig) else "streamlit"
+    """Tema Streamlit; barras H e heatmap ficam sem tema (evita cortar rótulos)."""
+    if tem_heatmap(fig) or _tem_barra_horizontal(fig):
+        return None
+    return "streamlit"
+
+
+def _tem_barra_horizontal(fig: go.Figure) -> bool:
+    """True se a figura tem barra horizontal com rótulo fora."""
+    return any(
+        getattr(t, "type", "") == "bar" and getattr(t, "orientation", None) == "h"
+        for t in fig.data
+    )
 
 
 def adaptar_tema(fig: go.Figure) -> go.Figure:
@@ -135,11 +145,13 @@ def bar_horizontal(serie, title: str, mostrar_pct: bool = True, cores=None):
     """Gráfico de barras horizontais (maior no topo)."""
     serie = pd.Series(serie).dropna()
     total = float(serie.sum()) if len(serie) else 0
-    textos = [rotulo(v, total, mostrar_pct) for v in serie.values]
+    valores = [float(v) for v in serie.values]
+    textos = [rotulo(v, total, mostrar_pct) for v in valores]
+    xmax = max(valores) if valores else 1.0
     fig = go.Figure(
         go.Bar(
             y=[str(i) for i in serie.index],
-            x=list(serie.values),
+            x=valores,
             orientation="h",
             text=textos,
             textposition="outside",
@@ -148,7 +160,20 @@ def bar_horizontal(serie, title: str, mostrar_pct: bool = True, cores=None):
         )
     )
     fig.update_yaxes(autorange="reversed")
-    return apply_layout(fig, title)
+    fig = apply_layout(fig, title)
+    # Esquerda: nomes; direita: "n (xx.x%)" fora da barra
+    esquerda = _margem_esquerda(serie.index)
+    pad = 1.42 if mostrar_pct else 1.22
+    fig.update_xaxes(range=[0, xmax * pad], automargin=True)
+    fig.update_yaxes(automargin=True)
+    fig.update_layout(margin=dict(l=esquerda, r=108, t=56, b=56))
+    return fig
+
+
+def _margem_esquerda(rotulos) -> int:
+    """Margem esquerda conforme o maior nome do eixo Y."""
+    maior = max((len(str(r)) for r in rotulos), default=12)
+    return int(max(96, min(240, maior * 8 + 28)))
 
 
 def barras_empilhadas(tabela, title: str, horizontal: bool = False, cores=None):

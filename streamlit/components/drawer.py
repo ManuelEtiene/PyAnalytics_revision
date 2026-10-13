@@ -2,7 +2,7 @@
 
 import streamlit as st
 
-from catalog import TOPICS_MED, TOPICS_SIM, VACINAS
+from catalog import TOPICS_MED, TOPICS_SIM, TOPICS_VAC
 from navigation import link_pagina
 
 
@@ -28,11 +28,11 @@ def _secao_geral() -> None:
 
 
 def _secao_datasets() -> None:
-    """Pastas das bases; Vacinações fica apagada até a base existir."""
+    """Pastas das bases com visão geral e temas."""
     st.markdown("**Datasets**")
     _pasta("SIM (Mortalidade)", "sim", TOPICS_SIM, "folder_open")
     _pasta("Medicamentos", "medicamentos", TOPICS_MED, "medication")
-    _pasta_em_breve(VACINAS.short)
+    _pasta("Vacinações", "vacinas", TOPICS_VAC, "vaccines")
 
 
 def _pasta(titulo: str, hub_id: str, topicos, icone: str) -> None:
@@ -46,13 +46,6 @@ def _pasta(titulo: str, hub_id: str, topicos, icone: str) -> None:
 def _rotulo(topico) -> str:
     """Busca usa o nome curto; análises ficam com o título completo."""
     return topico.short if topico.id == "med_busca" else topico.title
-
-
-def _pasta_em_breve(titulo: str) -> None:
-    """Base ainda sem conteúdo: apagada e sem navegação."""
-    with st.container(key="dataset_desabilitado"):
-        with st.expander(titulo, expanded=False):
-            pass
 
 
 def _item(page_id: str, label: str, icon: str) -> None:

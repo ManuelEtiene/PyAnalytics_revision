@@ -7,6 +7,7 @@ CSV_STEM = CSV_NAME.removesuffix(".csv")
 CSV_DISPENSACAO = "dispensacao_analitico.csv"
 CSV_REMUME = "remume.csv"
 CSV_CENSO_BAIRROS = "ararangua_bairros_ibge_censo2022_normalizacao.csv"
+CSV_VACINAS = "vacinas_analitico.csv"
 
 
 def streamlit_dir() -> Path:
@@ -90,3 +91,8 @@ def csv_remume() -> Path:
 def csv_censo_bairros() -> Path:
     """População por bairro (Censo IBGE 2022) para taxas per capita."""
     return _acha(CSV_CENSO_BAIRROS) or (pasta_processed() / CSV_CENSO_BAIRROS)
+
+
+def csv_vacinas() -> Path:
+    """CSV analítico de aplicações de vacinas."""
+    return _acha(CSV_VACINAS) or (pasta_processed() / CSV_VACINAS)
