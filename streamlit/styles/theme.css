@@ -1388,3 +1388,52 @@ section[data-testid="stSidebar"] > div:first-child {
   }
 }
 
+.med-docs {
+  min-height: auto !important;
+  padding: 1.15rem 1.35rem !important;
+  border-left: 4px solid #fdc003;
+  margin: 0.75rem 0 1.25rem 0;
+}
+
+.med-docs-titulo {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0059bb;
+  margin: 0.15rem 0 0.75rem 0;
+}
+
+.med-docs-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.9rem 0;
+}
+
+.med-docs-lista li {
+  position: relative;
+  padding: 0.45rem 0 0.45rem 1.85rem;
+  color: #191c1d;
+  border-bottom: 1px solid rgba(225, 227, 228, 0.9);
+}
+
+.med-docs-lista li:last-child {
+  border-bottom: none;
+}
+
+.med-docs-lista li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 50%;
+  background: #fdc003;
+  box-shadow: inset 0 0 0 2px #0059bb;
+}
+
+.med-docs-nota {
+  margin: 0 !important;
+  font-size: 0.9rem;
+}
+

@@ -329,6 +329,15 @@ a,
   color: #6ba6ff !important;
 }
 
+.med-docs-titulo {
+  color: #6ba6ff !important;
+}
+
+.med-docs-lista li {
+  color: #e8eaed !important;
+  border-bottom-color: #2c333d;
+}
+
 .chip-blue {
   background: #1e3a5f !important;
   color: #8ec5ff !important;

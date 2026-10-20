@@ -15,6 +15,14 @@ from data.med_busca import (
 from views.common import exige
 
 
+DOCS_RETIRADA = (
+    "Receituário válido do SUS",
+    "Cartão SUS — para residentes do município de Araranguá/SC",
+    "Documento de identidade do paciente",
+    "Documento de identidade do responsável, se outra pessoa retirar",
+)
+
+
 def render() -> None:
     """Medicamento → apresentações e unidades de dispensação (REMUME)."""
     df = exige(load_busca, "Nenhum medicamento encontrado na REMUME.")
@@ -22,6 +30,7 @@ def render() -> None:
     escolha = _busca(df)
     if escolha:
         _resultado(df, escolha)
+    _documentos()
 
 
 def _busca(df):
@@ -98,3 +107,30 @@ def _texto_acesso(farmacia: bool, ubs: bool) -> str:
     if ubs:
         return "UBS"
     return "Farmácia"
+
+
+def _documentos() -> None:
+    """Documentos exigidos na Farmácia Básica Municipal de Araranguá."""
+    st.markdown(_html_documentos(), unsafe_allow_html=True)
+
+
+def _html_documentos() -> str:
+    """Card com a lista oficial de documentos para retirada."""
+    itens = "".join(_item_documento(texto) for texto in DOCS_RETIRADA)
+    return (
+        '<div class="glass-card med-docs">'
+        '<p class="topic-kicker">Farmácia Básica Municipal de Araranguá</p>'
+        '<p class="med-docs-titulo">Documentos para retirar o medicamento</p>'
+        f'<ul class="med-docs-lista">{itens}</ul>'
+        '<p class="muted med-docs-nota">'
+        "A dispensação segue as normas e os critérios de cada medicamento. "
+        "Alguns itens podem exigir documentação extra. "
+        "Em caso de dúvida, procure a equipe da farmácia."
+        "</p>"
+        "</div>"
+    )
+
+
+def _item_documento(texto: str) -> str:
+    """Um item da lista de documentos."""
+    return f"<li>{texto}</li>"
