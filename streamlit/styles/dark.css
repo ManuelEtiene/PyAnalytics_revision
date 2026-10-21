@@ -70,12 +70,23 @@ div[class*="st-key-pya_drawer"] {
   color: #e8eaed !important;
 }
 
+.st-key-pya_menu_overlay,
+div[class*="st-key-pya_menu_overlay"] {
+  background: rgba(0, 0, 0, 0.55) !important;
+}
+
 .st-key-pya_drawer a,
 .st-key-pya_drawer p,
 .st-key-pya_drawer span,
+.st-key-pya_drawer button,
 .st-key-pya_drawer [data-testid="stMarkdownContainer"],
 .st-key-pya_drawer [data-testid="stMarkdownContainer"] * {
   color: #e8eaed !important;
+}
+
+.st-key-pya_drawer button:hover {
+  color: #6ba6ff !important;
+  background: #243044 !important;
 }
 
 /* Combobox de busca no dark mode (header e medicamentos) */

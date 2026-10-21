@@ -20,7 +20,7 @@ from catalog import slug_sim
 from components.chrome import inject_theme
 from components.footer import render_footer
 from components.header import render_header
-from components.drawer import render_drawer
+from components.drawer import fechar_se_mudou_pagina, render_drawer
 from navigation import redir_sim, register
 from views import home, med_hub, sim_hub, sobre, vac_hub
 
@@ -61,6 +61,7 @@ def _redireciona_antigos() -> dict:
 paginas = _paginas()
 register(paginas)
 pg = st.navigation(list(paginas.values()), position="hidden")
+fechar_se_mudou_pagina()
 render_header()
 pg.run()
 render_footer()

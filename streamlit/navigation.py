@@ -79,6 +79,7 @@ def link_pagina(page_id: str, label: str, icon: str | None = None) -> None:
 
 def abrir(page_id: str) -> None:
     """Troca de página; temas usam query ?tema=."""
+    st.session_state.menu_aberto = False
     pag, query = atalho(page_id)
     if query:
         st.switch_page(pag, query_params=query)

@@ -118,7 +118,8 @@ html:has(.pya-flag-claro) .pya-voltar:visited {
   margin-top: auto !important;
 }
 
-[data-testid="stVerticalBlock"] > div:has(.st-key-pya_drawer) {
+[data-testid="stVerticalBlock"] > div:has(.st-key-pya_drawer),
+[data-testid="stVerticalBlock"] > div:has(.st-key-pya_menu_overlay) {
   height: 0 !important;
   min-height: 0 !important;
   margin: 0 !important;
@@ -300,6 +301,69 @@ div[class*="st-key-pya_drawer"] {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+.st-key-pya_menu_overlay,
+div[class*="st-key-pya_menu_overlay"] {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 999990 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  min-height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: rgba(17, 24, 39, 0.4) !important;
+  cursor: pointer !important;
+}
+
+.st-key-pya_menu_overlay [data-testid="stVerticalBlock"],
+.st-key-pya_menu_overlay [data-testid="stElementContainer"],
+.st-key-pya_menu_overlay [data-testid="stButton"] {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.st-key-pya_menu_overlay button {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+}
+
+.st-key-pya_menu_overlay button p,
+.st-key-pya_menu_overlay button [data-testid="stMarkdownContainer"] {
+  display: none !important;
+}
+
+body:has(.st-key-pya_drawer) .st-key-header_home {
+  pointer-events: none !important;
+  opacity: 0.35;
+}
+
+.st-key-pya_drawer button {
+  width: 100% !important;
+  justify-content: flex-start !important;
+  text-align: left !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  color: #191c1d !important;
+  font-weight: 500 !important;
+}
+
+.st-key-pya_drawer button:hover {
+  color: #0059bb !important;
+  background: #eef3fb !important;
 }
 
 /* Light mode: nav, drawer e links (evita herdar paleta escura do Streamlit) */

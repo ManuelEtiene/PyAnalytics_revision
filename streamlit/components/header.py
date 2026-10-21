@@ -6,6 +6,7 @@ from pathlib import Path
 import streamlit as st
 
 from catalog import all_items
+from components.drawer import nova_geracao_menu
 from components.tema import ativo, alternar
 from navigation import abrir, href, link_pagina
 
@@ -109,10 +110,10 @@ def _marca() -> None:
 
 def _botao_menu() -> None:
     """Abre ou fecha o menu lateral fixo na tela."""
-    if st.button(
-        "Menu",
-        key="abrir_menu",
-        icon=":material/menu:",
-        type="tertiary",
-    ):
-        st.session_state.menu_aberto = not st.session_state.get("menu_aberto", False)
+    aberto = st.session_state.get("menu_aberto", False)
+    icone = ":material/close:" if aberto else ":material/menu:"
+    if st.button("Menu", key="abrir_menu", icon=icone, type="tertiary"):
+        st.session_state.menu_aberto = not aberto
+        if not aberto:
+            nova_geracao_menu()
+            st.session_state._menu_acabou_de_abrir = True
