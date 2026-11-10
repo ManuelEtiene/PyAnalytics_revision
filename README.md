@@ -1,3 +1,5 @@
+# PyAnalytics_revision
+Revisão e adaptação do código
 <div align="center">
   <img src="assets/IconPyAnalytics.png" alt="PyAnalytics" width="180"/>
 </div>
