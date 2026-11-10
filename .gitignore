@@ -39,3 +39,7 @@ streamlit/.cache/
 
 # Config local do Streamlit
 .streamlit/
+
+
+#arquivos maiores que 100 MB
+data/processed/
