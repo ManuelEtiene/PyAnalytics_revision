@@ -210,14 +210,15 @@ def barras_agrupadas(tabela, title: str, horizontal: bool = False):
     return apply_layout(fig, title)
 
 
-def boxplot(grupos: dict, title: str) -> go.Figure:
-    """Caixas sem outliers, uma por categoria."""
+def boxplot(grupos: dict, title: str, cores: list | None = None) -> go.Figure:
+    """Caixas sem outliers, uma por categoria, com suporte a cores distintas."""
     fig = go.Figure()
+    paleta = cores or PALETTE
     for i, (nome, valores) in enumerate(grupos.items()):
         fig.add_box(
             y=list(valores),
             name=str(nome),
-            marker_color=PALETTE[i % len(PALETTE)],
+            marker_color=paleta[i % len(paleta)],
             boxpoints=False,
         )
     return apply_layout(fig, title)

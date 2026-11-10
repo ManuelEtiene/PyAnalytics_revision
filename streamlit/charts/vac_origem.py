@@ -3,8 +3,8 @@
 from __future__ import annotations
 
 import pandas as pd
+import plotly.express as px
 
-from charts.theme import heatmap
 from charts.texto import insight_top, vazio
 from charts.vac_common import (
     com_data,
@@ -28,7 +28,7 @@ def evolucao_origem(df: pd.DataFrame, periodo: str):
 
 
 def origem_por_bairro(df: pd.DataFrame, periodo: str, n_bairros: int = 8):
-    """Heatmap bairro × origem (top bairros da pessoa vacinada)."""
+    """Gráfico de barras horizontais 100% empilhadas: Bairro × origem."""
     base = com_data(df)
     tops = base["bairro"].value_counts().head(n_bairros).index
     tab = (
@@ -43,8 +43,29 @@ def origem_por_bairro(df: pd.DataFrame, periodo: str, n_bairros: int = 8):
     )
     if tab.empty:
         return vazio()
+    
     tab = tab.loc[tab.sum(axis=1).sort_values(ascending=False).index]
-    tab.index.name = "Bairro"
-    tab.columns.name = "Origem"
-    fig = heatmap(tab, f"Bairro × origem do registro — {periodo}", cor_legenda="Aplicações")
+    
+    # Conversão para percentual (100% empilhado) por bairro
+    tab_perc = tab.div(tab.sum(axis=1), axis=0) * 100
+    df_plot = tab_perc.reset_index().melt(
+        id_vars="bairro", var_name="Origem", value_name="Percentual"
+    )
+    
+    fig = px.bar(
+        df_plot,
+        x="Percentual",
+        y="bairro",
+        color="Origem",
+        orientation="h",
+        title=f"Bairro × origem do registro (100% empilhado) — {periodo}",
+        labels={"Percentual": "Participação (%)", "bairro": "Bairro", "Origem": "Origem"},
+    )
+    fig.update_layout(
+        barmode="stack",
+        yaxis={"categoryorder": "total ascending"},
+        xaxis_title="Participação (%)",
+        yaxis_title="Bairro",
+    )
+    
     return fig, insight_top(base["origem"].value_counts())

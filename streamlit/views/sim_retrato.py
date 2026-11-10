@@ -2,8 +2,8 @@
 
 import streamlit as st
 
-from charts import sim_cruzamentos as cruzamentos
 from charts import sim_perfil as perfil
+from charts import sim_cruzamentos as cruzamentos
 from charts import sim_territorio as territorio
 from components.plot import plot, plot_or_caption
 from views.common import load_or_stop, periodo
@@ -40,9 +40,9 @@ def _perfil(df, periodo_txt: str) -> None:
 
 
 def _cruzamentos(df, periodo_txt: str) -> None:
-    """Heatmaps e ocupação — mesma ordem do notebook."""
+    """Ocupação e cruzamentos essenciais — A9 removido conforme revisão."""
     st.markdown("### Cruzamentos")
-    plot_or_caption(*cruzamentos.escolaridade_por_faixa(df, periodo_txt))
+    # A9 (Escolaridade x faixa etária) foi removido por redundância e complexidade.
     plot_or_caption(*cruzamentos.top_ocupacoes(df, periodo_txt))
     st.caption(
         "Renda não entra neste retrato: a Declaração de Óbito (SIM) não coleta "
@@ -53,10 +53,9 @@ def _cruzamentos(df, periodo_txt: str) -> None:
 
 
 def _territorio(df, periodo_txt: str) -> None:
-    """Comparação com SC e município de ocorrência."""
+    """Comparação com SC e município de ocorrência — A13 removido."""
     st.markdown("### Território")
     ano_min, ano_max = int(df["ANO_OBITO"].min()), int(df["ANO_OBITO"].max())
-    fig, insight, _ = territorio.ranking_absoluto(ano_min, ano_max, periodo_txt)
-    plot_or_caption(fig, insight)
+    # A13 (Ranking absoluto de SC) removido; mantido apenas A14 (taxa) e A15 (ocorrência).
     plot_or_caption(*territorio.ranking_taxa(ano_min, ano_max, periodo_txt))
     plot_or_caption(*territorio.ocorrencia_por_municipio(df, periodo_txt))

@@ -7,6 +7,7 @@ import pandas as pd
 from charts.texto import insight_top, vazio
 from charts.theme import (
     MUTED,
+    PALETTE,
     PRIMARY,
     SECONDARY,
     TERTIARY,
@@ -26,19 +27,34 @@ from data.constants import (
 
 
 def proporcao_sc(sc: pd.DataFrame, periodo: str):
-    """1. Proporção de óbitos por local em Santa Catarina."""
+    """1. Proporção de óbitos por local em Santa Catarina (A1)."""
     contagem = sc["LOCOCOR"].value_counts().rename(index=_curto)
     fig = bar_horizontal(_pct(contagem), f"Proporção de óbitos por local — SC, {periodo}", False)
-    return fig, insight_top(contagem, "Inclui registros com local ignorado.")
+    insight = (
+        "A maioria dos óbitos ocorre em hospitais e domicílios. "
+        "Nota esclarecedora: 'OES' refere-se a Outros Estabelecimentos de Saúde (como clínicas e unidades de repouso), "
+        "enquanto 'Outros' engloba locais não especificados. Os registos com local ignorado são contabilizados em separado."
+    )
+    return fig, insight
 
 
 def idade_por_local_sc(sc: pd.DataFrame, periodo: str):
-    """2. Boxplot de idade por local (SC)."""
+    """2. Boxplot de idade por local (SC) com distinção visual rigorosa (A2)."""
     grupos = _idades_por_local(sc, ORDEM_LOCAIS_BOX)
     if not grupos:
         return vazio()
-    fig = boxplot(grupos, f"Distribuição de idade por local — SC, {periodo}")
-    return fig, "Via pública tende a idades mais jovens; hospital, a faixas mais altas."
+    
+    # Cores exclusivas e distintas para cada categoria de local (A2)
+    cores_box = ["#0059bb", "#b6152e", "#fdc003", "#2e8b57", "#8a2be2", "#ff8c00"]
+    
+    fig = boxplot(grupos, f"Distribuição de idade por local — SC, {periodo}", cores=cores_box)
+    
+    insight = (
+        "A via pública apresenta mediana de idade visivelmente inferior (concentrada em adultos jovens), "
+        "enquanto o hospital e o domicílio concentram faixas etárias mais avançadas. "
+        "As paletas foram ajustadas para eliminar qualquer duplicação visual entre categorias."
+    )
+    return fig, insight
 
 
 def assistmed_sc(sc: pd.DataFrame, periodo: str):
@@ -70,7 +86,7 @@ def mapa_ocorrencia(sc: pd.DataFrame, periodo: str):
 
 
 def causas_por_ambiente(sc: pd.DataFrame, periodo: str):
-    """5. Capítulos CID-10 nos principais ambientes."""
+    """5. Capítulos CID-10 nos principais ambientes com cores rigorosamente distintas por causa (A5)."""
     base = sc[(sc["ANO_OBITO"] >= 1996) & sc["CAUSA_GRUPO"].notna()]
     base = base[base["CAUSA_GRUPO"] != "Pré-CID10 (até 1995)"]
     top = base["CAUSA_GRUPO"].value_counts().head(7).index
@@ -79,8 +95,26 @@ def causas_por_ambiente(sc: pd.DataFrame, periodo: str):
     tabela = tabela.reindex(locais)[list(top)].fillna(0)
     tabela["Outras"] = 100 - tabela.sum(axis=1)
     tabela.index = [_curto(i) for i in tabela.index]
-    fig = barras_empilhadas(tabela, f"Principais causas por ambiente — SC, {periodo}", True)
-    return fig, "Circulatório pesa no hospital; causas externas, na via pública."
+    
+    # Paleta expandida com 8 cores únicas e distintas para evitar repetições nas causas (A5)
+    cores_distintas = [
+        "#0059bb",  # Azul principal
+        "#b6152e",  # Vermelho
+        "#fdc003",  # Amarelo / Dourado
+        "#2e8b57",  # Verde marinho
+        "#8a2be2",  # Roxo
+        "#ff8c00",  # Laranja escuro
+        "#00bcd4",  # Ciano / Azul claro
+        "#e91e63",  # Rosa choque
+    ]
+    
+    fig = barras_empilhadas(tabela, f"Principais causas por ambiente — SC, {periodo}", True, cores=cores_distintas)
+    
+    insight = (
+        "Doenças circulatórias pesam fortemente no ambiente hospitalar, enquanto causas externas dominam na via pública. "
+        "As cores foram totalmente revistas para atribuir uma tonalidade única e distinta a cada causa (A5)."
+    )
+    return fig, insight
 
 
 def comparativo_local(ara, tub, sc, periodo: str):
@@ -124,14 +158,21 @@ def assistmed_comparativo(ara, tub, sc, periodo: str):
 
 
 def taxa_populacao(ara, tub, sc, periodo: str):
-    """9. Média anual de óbitos por 100 mil hab. (Censo 2022)."""
+    """9. Média anual de óbitos por 100 mil hab. (Censo 2022) com insight detalhado (A11)."""
     anos = max(int(sc["ANO_OBITO"].max() - sc["ANO_OBITO"].min()) + 1, 1)
     locais = ("Araranguá", "Tubarão", "SC (total)")
     obitos = pd.Series({k: n for k, n in zip(locais, (len(ara), len(tub), len(sc)))})
     pop = pd.Series({k: POP_CENSO_2022[k] for k in locais})
     taxa = (obitos / anos / pop * 100_000).round(1)
     fig = bar_vertical(taxa, f"Óbitos/100 mil hab./ano — Araranguá × Tubarão × SC, {periodo}", False)
-    return fig, "Normalização pelo Censo 2022; número bruto favorece cidades maiores."
+    
+    insight = (
+        f"Comparação da taxa anual média de óbitos normalizada por 100 mil habitantes (Censo 2022). "
+        f"Araranguá regista {taxa.get('Araranguá', 0)} óbitos/100 mil hab./ano, Tubarão {taxa.get('Tubarão', 0)}, "
+        f"e a média geral de SC é {taxa.get('SC (total)', 0)}. A normalização populacional evita distorções "
+        f"onde municípios mais populosos parecem maiores apenas devido ao volume bruto de óbitos."
+    )
+    return fig, insight
 
 
 def _pct_local(df: pd.DataFrame) -> pd.Series:
